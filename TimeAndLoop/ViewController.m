@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView"];
+    NSArray *ar = @[@"kvo",@"-----",@"自定义alertView"];
     _arr = ar;
     
     UITableView *table = [[UITableView alloc]initWithFrame:self.view.bounds];
