@@ -14,8 +14,14 @@ static UITextField *textField = nil;
 static char cannelKey;
 static char sureKey;
 
+@interface TTAlertView ()
 
+@property(nonatomic, strong)UIView *alertView;
+
+@end
 @implementation TTAlertView
+
+
 + (TTAlertView *)sharedAlertView
 {
     static TTAlertView *alert = nil;
@@ -59,6 +65,9 @@ static char sureKey;
     textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     textField.layer.cornerRadius = 3;
     textField.layer.masksToBounds = YES;
+    
+    textField.delegate = [TTAlertView sharedAlertView];
+    
     return textField;
  }
 
@@ -84,10 +93,46 @@ static char sureKey;
     UIButton *cannelBt = [TTAlertView buildButtonWithFrame:CGRectMake(0, bgView.height - 44, bgView.width/2, 44) title:@"取消"];
     objc_setAssociatedObject([TTAlertView sharedAlertView], &cannelKey, cannel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [cannelBt setBackgroundColor:[UIColor colorWithRed:0xb1/255.0f green:0xb1/255.0f blue:0xb1/255.0f alpha:1]];
-    [cannelBt addTarget:[TTAlertView  sharedAlertView]action:@selector(cannelCallActionBlock:) forControlEvents:UIControlEventTouchUpInside];
+    [cannelBt addTarget:[TTAlertView  sharedAlertView] action:@selector(cannelCallActionBlock:) forControlEvents:UIControlEventTouchUpInside];
   
     [bgView addSubview:cannelBt];
     [bgView addSubview:sureBt];
+    
+    [TTAlertView sharedAlertView].alertView = bgView;
+    
+    [TTAlertView registerForKeyboardNotifications];
+    
+}
+
+
++ (void)registerForKeyboardNotifications{
+    [[NSNotificationCenter defaultCenter] addObserver:[TTAlertView sharedAlertView]
+                                             selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:[TTAlertView sharedAlertView] selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification{
+    NSDictionary *info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    NSLog(@"hight_hitht:%f",kbSize.height);
+//    if (!self.listViewScrolled) {
+//        self.listView.top -= kbSize.height;
+//        self.listViewScrolled = YES;
+//    }
+    self.alertView.center = CGPointMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - kbSize.height)/2 + 15);
+
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)aNotification{
+    NSDictionary *info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    NSLog(@"hight_hitht:%f",kbSize.height);
+//    if (self.listViewScrolled) {
+//        self.listViewScrolled = NO;
+//        self.listView.top += kbSize.height;
+//    }
+    
 }
 
 + (void)showWithCommitBlock:(void(^)(NSString *codeString))success  andCannel:(dispatch_block_t)cannel {
@@ -156,6 +201,16 @@ static char sureKey;
         [[[UIApplication sharedApplication] delegate].window makeKeyAndVisible];
         alertWindow = nil;
     });
+}
+
+#pragma mark - TextFieldDelegate 
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
 }
 
 

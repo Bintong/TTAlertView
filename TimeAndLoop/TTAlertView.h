@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TTAlertView : UIView
+@interface TTAlertView : UIView <UITextFieldDelegate>
 
 
 
