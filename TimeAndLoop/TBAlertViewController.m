@@ -53,10 +53,29 @@
 - (void)alertView_1:(id)sender {
     UIButton *bt = (UIButton *)sender;
     if (bt.tag == 1) {
-        [TTAlertView showWithCommitBlock:^(NSString *codeString){
-            NSLog(@"确定 %@",codeString);
-        } andCannel:^{
-            NSLog(@"取消");
+        [TTAlertView showAlertViewWithTitle:@"已向185****3212的手机号发送短信"  commitBlock:^(NSString *codeString) {
+            NSLog(@"手动输入的text 是 %@",codeString);
+        } cannel:^{
+            NSLog(@"点击了取消");
+        }];
+    }
+    
+    if (bt.tag == 2) {
+        [TTAlertView showAlertViewWithTitle:@"已向185****3212的手机号发送短信"
+                                commitBlock:^(NSString *codeString) {
+                                    NSLog(@"手动输入的text 是 %@",codeString);
+                                } rightBlock:^{
+                                    NSLog(@"还是获取验证码---倒计时开始");
+                                } cannel:^{
+                                    NSLog(@"点击了取消");
+                                }];
+    }
+    
+    if (bt.tag == 3) {
+        [TTAlertView showAlertViewWithTitle:@"请使用手机发送CXXD至10010获取验证码"  commitBlock:^(NSString *codeString) {
+            NSLog(@"手动输入的text 是 %@",codeString);
+        } cannel:^{
+            NSLog(@"点击了取消");
         }];
     }
 }
