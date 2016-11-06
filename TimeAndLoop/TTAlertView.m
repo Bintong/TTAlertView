@@ -231,13 +231,16 @@ static char rightKey;
             [subView removeFromSuperview];
         }
         
-        
-//        [self endAnimation:alertWindow dur:5];
-        [alertWindow resignKeyWindow];
-        alertWindow.windowLevel = UIWindowLevelNormal;
-        [[[UIApplication sharedApplication] delegate].window makeKeyAndVisible];
-        alertWindow = nil;
-     
+        [[NSNotificationCenter defaultCenter] removeObserver:[TTAlertView sharedAlertView]];
+        [UIView animateWithDuration:0.4 animations:^{
+            alertWindow.layer.opacity = 0;
+        } completion:^(BOOL finished) {
+            [alertWindow resignKeyWindow];
+            alertWindow.windowLevel = UIWindowLevelNormal;
+            [[[UIApplication sharedApplication] delegate].window makeKeyAndVisible];
+            alertWindow = nil;
+        }];
+
     });
 }
 
@@ -288,16 +291,16 @@ static char rightKey;
     [outView.layer addAnimation:animation forKey:@"scale-layer"];
 }
 
-+ (void)endAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
-    
-    CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"opactiy"];
-    theAnimation.duration = dur;
-    theAnimation.repeatCount = 1; // 重复次数
-    theAnimation.autoreverses = NO;
-    theAnimation.fromValue = [NSNumber numberWithFloat:1];
-    theAnimation.toValue = [NSNumber numberWithFloat:0];
-    [outView.layer addAnimation:theAnimation forKey:@"animationOpactiy"];
-
-}
+//+ (void)endAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
+//    
+//    CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"opactiy"];
+//    theAnimation.duration = dur;
+//    theAnimation.repeatCount = 1; // 重复次数
+//    theAnimation.autoreverses = NO;
+//    theAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+//    theAnimation.toValue = [NSNumber numberWithFloat:0];
+//    [outView.layer addAnimation:theAnimation forKey:@"animationOpactiy"];
+//
+//}
 
 @end
