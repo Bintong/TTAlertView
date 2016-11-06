@@ -8,7 +8,7 @@
 
 #import "TTAlertView.h"
 #import <objc/runtime.h>
-
+#import <QuartzCore/QuartzCore.h>
 static UIWindow *alertWindow = nil;
 static UITextField *textField = nil;
 static char cannelKey;
@@ -38,7 +38,9 @@ static char rightKey;
     alertWindow.autoresizesSubviews = YES;
     alertWindow.hidden = NO;
     alertWindow.windowLevel = 100+ UIWindowLevelStatusBar;
+  
     [alertWindow makeKeyAndVisible];
+
 }
 
 + (UILabel *)labelWithFontSize:(CGFloat)fontSize FontColor:(UIColor *)fontColor  frame:(CGRect)frame Text:(NSString *)text{
@@ -89,7 +91,6 @@ static char rightKey;
     bgView.backgroundColor = [UIColor whiteColor];
     bgView.layer.cornerRadius = 5;
     bgView.layer.masksToBounds = YES;
-    [alertWindow addSubview:bgView];
     UILabel *lab = [TTAlertView labelWithFontSize:(fontfloat > 0 ?fontfloat:14) FontColor:HB_COLOR_B frame:CGRectMake(15,0, bgView.width - 30, 75) Text:title];
     [bgView addSubview:lab];
     //textField
@@ -128,6 +129,8 @@ static char rightKey;
     [TTAlertView sharedAlertView].alertView = bgView;
     [TTAlertView registerForKeyboardNotifications];
     
+    [TTAlertView beginAnimation:bgView dur:0.1];
+    [alertWindow addSubview:bgView];
 }
 
 
@@ -227,13 +230,18 @@ static char rightKey;
         for (UIView *subView in alertWindow.subviews) {
             [subView removeFromSuperview];
         }
-        alertWindow.hidden = YES;
+        
+        
+//        [self endAnimation:alertWindow dur:5];
         [alertWindow resignKeyWindow];
         alertWindow.windowLevel = UIWindowLevelNormal;
         [[[UIApplication sharedApplication] delegate].window makeKeyAndVisible];
         alertWindow = nil;
+     
     });
 }
+
+
 
 
 -(void)startTime:(UIButton *)startActionButton{
@@ -268,6 +276,28 @@ static char rightKey;
 }
 
 
++(void)beginAnimation:(UIView *)outView dur:(CFTimeInterval)dur   {
+    
+    // 设定为缩放
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.duration = dur;
+    animation.repeatCount = 1;
+    animation.autoreverses = YES; // 动画结束时执行逆动画
+    animation.fromValue = [NSNumber numberWithFloat:1.0];
+    animation.toValue = [NSNumber numberWithFloat:1.05];
+    [outView.layer addAnimation:animation forKey:@"scale-layer"];
+}
 
++ (void)endAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
+    
+    CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"opactiy"];
+    theAnimation.duration = dur;
+    theAnimation.repeatCount = 1; // 重复次数
+    theAnimation.autoreverses = NO;
+    theAnimation.fromValue = [NSNumber numberWithFloat:1];
+    theAnimation.toValue = [NSNumber numberWithFloat:0];
+    [outView.layer addAnimation:theAnimation forKey:@"animationOpactiy"];
+
+}
 
 @end
