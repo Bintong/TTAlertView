@@ -34,7 +34,7 @@ static char rightKey;
 }
 + (void)buildWindow {
     alertWindow = [[UIWindow alloc]initWithFrame:SCREEN_BOUNDS];
-    alertWindow.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.7];
+    alertWindow.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     alertWindow.autoresizesSubviews = YES;
     alertWindow.hidden = NO;
     alertWindow.windowLevel = 100+ UIWindowLevelStatusBar;
@@ -90,7 +90,7 @@ static char rightKey;
     bgView.layer.cornerRadius = 5;
     bgView.layer.masksToBounds = YES;
     [alertWindow addSubview:bgView];
-    UILabel *lab = [TTAlertView labelWithFontSize:(fontfloat > 0 ?fontfloat:15) FontColor:HB_COLOR_B frame:CGRectMake(15,0, bgView.width - 30, 75) Text:title];
+    UILabel *lab = [TTAlertView labelWithFontSize:(fontfloat > 0 ?fontfloat:14) FontColor:HB_COLOR_B frame:CGRectMake(15,0, bgView.width - 30, 75) Text:title];
     [bgView addSubview:lab];
     //textField
     UITextField *midTextField = [TTAlertView textFieldFrame:CGRectMake(15, lab.bottom, bgView.width - 30, 40) placeHolder:@"请输入短信验证码"];
@@ -193,6 +193,8 @@ static char rightKey;
     dispatch_block_t block_right = (dispatch_block_t)objc_getAssociatedObject(self, &rightKey);
     if (block_right) {
         block_right();
+        [[TTAlertView sharedAlertView] startTime:(UIButton *)sender];
+
     }
 
 }
@@ -231,6 +233,38 @@ static char rightKey;
         [[[UIApplication sharedApplication] delegate].window makeKeyAndVisible];
         alertWindow = nil;
     });
+}
+
+
+-(void)startTime:(UIButton *)startActionButton{
+    __block int timeout = 60; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<=0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                [startActionButton setTitle:@"发送验证码" forState:UIControlStateNormal];
+                startActionButton.userInteractionEnabled = YES;
+            });
+        }else{
+            
+            NSString *strTime = [NSString stringWithFormat:@"%.d", timeout];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                //NSLog(@"____%@",strTime);
+                [UIView beginAnimations:nil context:nil];
+                [UIView setAnimationDuration:1];
+                [startActionButton setTitle:[NSString stringWithFormat:@"%@S",strTime] forState:UIControlStateNormal];
+                [UIView commitAnimations];
+                startActionButton.userInteractionEnabled = NO;
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
 }
 
 
