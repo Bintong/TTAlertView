@@ -279,7 +279,7 @@ static char rightKey;
 }
 
 
-+(void)beginAnimation:(UIView *)outView dur:(CFTimeInterval)dur   {
++(void)beginAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
     
     // 设定为缩放
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];

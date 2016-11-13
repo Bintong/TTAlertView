@@ -10,12 +10,6 @@
 
 @interface TTAlertView : UIView <UITextFieldDelegate>
 
-
-
-
-+ (void)show;
-
-
 + (void)showAlertViewWithTitle:(NSString *)title commitBlock:(void(^)(NSString *codeString))commit cannel:(dispatch_block_t)cannel ;
 
 + (void)showAlertViewWithTitle:(NSString *)title
