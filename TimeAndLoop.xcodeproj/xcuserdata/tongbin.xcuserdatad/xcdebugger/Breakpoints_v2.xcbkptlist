@@ -47,8 +47,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "300"
             endingLineNumber = "300"
-            landmarkName = "+endAnimation:dur:"
-            landmarkType = "7">
+            landmarkName = "@implementation TTAlertView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/RunLoopDemoViewController.m"
-            timestampString = "500796919.010424"
+            timestampString = "501257318.245195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-log"
             landmarkType = "7">
          </BreakpointContent>

@@ -280,7 +280,6 @@ static char rightKey;
 
 
 +(void)beginAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
-    
     // 设定为缩放
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     animation.duration = dur;
@@ -289,6 +288,7 @@ static char rightKey;
     animation.fromValue = [NSNumber numberWithFloat:1.0];
     animation.toValue = [NSNumber numberWithFloat:1.05];
     [outView.layer addAnimation:animation forKey:@"scale-layer"];
+    animation.removedOnCompletion = NO;
 }
 
 //+ (void)endAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
