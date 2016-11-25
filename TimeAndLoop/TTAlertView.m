@@ -291,16 +291,6 @@ static char rightKey;
     animation.removedOnCompletion = NO;
 }
 
-//+ (void)endAnimation:(UIView *)outView dur:(CFTimeInterval)dur {
-//    
-//    CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"opactiy"];
-//    theAnimation.duration = dur;
-//    theAnimation.repeatCount = 1; // 重复次数
-//    theAnimation.autoreverses = NO;
-//    theAnimation.fromValue = [NSNumber numberWithFloat:1.0];
-//    theAnimation.toValue = [NSNumber numberWithFloat:0];
-//    [outView.layer addAnimation:theAnimation forKey:@"animationOpactiy"];
-//
-//}
+
 
 @end
