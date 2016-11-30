@@ -24,6 +24,9 @@
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */; };
 		A69243BD1DD8C903005C2834 /* RunLoopDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */; };
+		A6E77B961DE7E72E008FCD68 /* TTAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */; };
+		A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */; };
+		A6E77B9E1DE7E8DB008FCD68 /* AlertTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,11 @@
 		A69243B91DD8C903005C2834 /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunLoopDemoViewController.xib; sourceTree = "<group>"; };
+		A6E77B941DE7E72E008FCD68 /* TTAlertTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertTable.h; sourceTree = "<group>"; };
+		A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertTable.m; sourceTree = "<group>"; };
+		A6E77B9A1DE7E8DB008FCD68 /* AlertTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTableController.h; sourceTree = "<group>"; };
+		A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertTableController.m; sourceTree = "<group>"; };
+		A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A6E77B931DE7E715008FCD68 /* tableviewAlert */,
 				A69243B81DD8C8EA005C2834 /* runloop */,
 				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A6351AE71DB9F0A800221579 /* AppDelegate.m */,
@@ -192,6 +201,18 @@
 			name = runloop;
 			sourceTree = "<group>";
 		};
+		A6E77B931DE7E715008FCD68 /* tableviewAlert */ = {
+			isa = PBXGroup;
+			children = (
+				A6E77B941DE7E72E008FCD68 /* TTAlertTable.h */,
+				A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */,
+				A6E77B9A1DE7E8DB008FCD68 /* AlertTableController.h */,
+				A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */,
+				A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */,
+			);
+			name = tableviewAlert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +276,7 @@
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
+				A6E77B9E1DE7E8DB008FCD68 /* AlertTableController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +290,7 @@
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A677427F1DCC9373003528EA /* TTAlertView.m in Sources */,
+				A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A6351B1C1DB9F9A700221579 /* NSObject+KVO.m in Sources */,
 				A612EF0A1DBF53F40051DFD4 /* UIView+Frame.m in Sources */,
@@ -277,6 +300,7 @@
 				A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */,
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A6351AE51DB9F0A800221579 /* main.m in Sources */,
+				A6E77B961DE7E72E008FCD68 /* TTAlertTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
