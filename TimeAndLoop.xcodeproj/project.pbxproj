@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66B052220B9C43C75F32AC13 /* libPods-TimeAndLoop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B79B68A8F3A49A962622024E /* libPods-TimeAndLoop.a */; };
 		A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A612EF061DBF53F40051DFD4 /* UIView+DrawLine.m */; };
 		A612EF0A1DBF53F40051DFD4 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A612EF081DBF53F40051DFD4 /* UIView+Frame.m */; };
 		A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A612EF351DC332B00051DFD4 /* arrow@2x.png */; };
@@ -24,12 +25,17 @@
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */; };
 		A69243BD1DD8C903005C2834 /* RunLoopDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */; };
+		A6D78B961E026E8200FFB1C2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B951E026E8200FFB1C2 /* BaseViewController.m */; };
+		A6D78B991E026F6A00FFB1C2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B981E026F6A00FFB1C2 /* HomeViewController.m */; };
+		A6D78B9D1E02F55E00FFB1C2 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B9C1E02F55E00FFB1C2 /* HttpRequest.m */; };
+		A6D78BA01E02F59200FFB1C2 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */; };
 		A6E77B961DE7E72E008FCD68 /* TTAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */; };
 		A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */; };
 		A6E77B9E1DE7E8DB008FCD68 /* AlertTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66A41CCD20FA435F7A808989 /* Pods-TimeAndLoop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeAndLoop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeAndLoop/Pods-TimeAndLoop.debug.xcconfig"; sourceTree = "<group>"; };
 		A612EF051DBF53F40051DFD4 /* UIView+DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawLine.h"; sourceTree = "<group>"; };
 		A612EF061DBF53F40051DFD4 /* UIView+DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawLine.m"; sourceTree = "<group>"; };
 		A612EF071DBF53F40051DFD4 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -67,11 +73,21 @@
 		A69243B91DD8C903005C2834 /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunLoopDemoViewController.xib; sourceTree = "<group>"; };
+		A6D78B941E026E8100FFB1C2 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		A6D78B951E026E8200FFB1C2 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		A6D78B971E026F6A00FFB1C2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A6D78B981E026F6A00FFB1C2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A6D78B9B1E02F55E00FFB1C2 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		A6D78B9C1E02F55E00FFB1C2 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		A6D78B9E1E02F59200FFB1C2 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadParam.h; sourceTree = "<group>"; };
+		A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadParam.m; sourceTree = "<group>"; };
 		A6E77B941DE7E72E008FCD68 /* TTAlertTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertTable.h; sourceTree = "<group>"; };
 		A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertTable.m; sourceTree = "<group>"; };
 		A6E77B9A1DE7E8DB008FCD68 /* AlertTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTableController.h; sourceTree = "<group>"; };
 		A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertTableController.m; sourceTree = "<group>"; };
 		A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTableController.xib; sourceTree = "<group>"; };
+		B79B68A8F3A49A962622024E /* libPods-TimeAndLoop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeAndLoop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0084A38BE8D1A584628DFF7 /* Pods-TimeAndLoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeAndLoop.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeAndLoop/Pods-TimeAndLoop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +95,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B052220B9C43C75F32AC13 /* libPods-TimeAndLoop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86C3540D54B500005C8E6186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B79B68A8F3A49A962622024E /* libPods-TimeAndLoop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A612EF041DBF53E70051DFD4 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +145,8 @@
 				A6351AFC1DB9F0A800221579 /* TimeAndLoopTests */,
 				A6351B071DB9F0A800221579 /* TimeAndLoopUITests */,
 				A6351AE11DB9F0A800221579 /* Products */,
+				DC663E0675A62E2791A390AE /* Pods */,
+				86C3540D54B500005C8E6186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,10 +161,15 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A6D78B9A1E02F4DB00FFB1C2 /* Net */,
 				A6E77B931DE7E715008FCD68 /* tableviewAlert */,
 				A69243B81DD8C8EA005C2834 /* runloop */,
 				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A6351AE71DB9F0A800221579 /* AppDelegate.m */,
+				A6D78B971E026F6A00FFB1C2 /* HomeViewController.h */,
+				A6D78B981E026F6A00FFB1C2 /* HomeViewController.m */,
+				A6D78B941E026E8100FFB1C2 /* BaseViewController.h */,
+				A6D78B951E026E8200FFB1C2 /* BaseViewController.m */,
 				A6351AE91DB9F0A800221579 /* ViewController.h */,
 				A6351AEA1DB9F0A800221579 /* ViewController.m */,
 				A6351B161DB9F71E00221579 /* KVO */,
@@ -201,6 +233,17 @@
 			name = runloop;
 			sourceTree = "<group>";
 		};
+		A6D78B9A1E02F4DB00FFB1C2 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78B9B1E02F55E00FFB1C2 /* HttpRequest.h */,
+				A6D78B9C1E02F55E00FFB1C2 /* HttpRequest.m */,
+				A6D78B9E1E02F59200FFB1C2 /* UploadParam.h */,
+				A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
 		A6E77B931DE7E715008FCD68 /* tableviewAlert */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +256,15 @@
 			name = tableviewAlert;
 			sourceTree = "<group>";
 		};
+		DC663E0675A62E2791A390AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66A41CCD20FA435F7A808989 /* Pods-TimeAndLoop.debug.xcconfig */,
+				E0084A38BE8D1A584628DFF7 /* Pods-TimeAndLoop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6351B0D1DB9F0A800221579 /* Build configuration list for PBXNativeTarget "TimeAndLoop" */;
 			buildPhases = (
+				EE8C09DA19BD680DF168BFC4 /* [CP] Check Pods Manifest.lock */,
 				A6351ADC1DB9F0A800221579 /* Sources */,
 				A6351ADD1DB9F0A800221579 /* Frameworks */,
 				A6351ADE1DB9F0A800221579 /* Resources */,
+				1335C183D9704E5BD196D757 /* [CP] Embed Pods Frameworks */,
+				75DC268DE2CF982B48A4BA14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,24 +337,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1335C183D9704E5BD196D757 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeAndLoop/Pods-TimeAndLoop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75DC268DE2CF982B48A4BA14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeAndLoop/Pods-TimeAndLoop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE8C09DA19BD680DF168BFC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6351ADC1DB9F0A800221579 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
+				A6D78B961E026E8200FFB1C2 /* BaseViewController.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A677427F1DCC9373003528EA /* TTAlertView.m in Sources */,
 				A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A6351B1C1DB9F9A700221579 /* NSObject+KVO.m in Sources */,
+				A6D78B991E026F6A00FFB1C2 /* HomeViewController.m in Sources */,
 				A612EF0A1DBF53F40051DFD4 /* UIView+Frame.m in Sources */,
 				A6351B221DBC7F0100221579 /* Message.m in Sources */,
 				A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */,
 				A6351B1F1DB9FFCE00221579 /* ObservationInfo.m in Sources */,
+				A6D78BA01E02F59200FFB1C2 /* UploadParam.m in Sources */,
 				A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */,
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A6351AE51DB9F0A800221579 /* main.m in Sources */,
+				A6D78B9D1E02F55E00FFB1C2 /* HttpRequest.m in Sources */,
 				A6E77B961DE7E72E008FCD68 /* TTAlertTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +517,7 @@
 		};
 		A6351B0E1DB9F0A800221579 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66A41CCD20FA435F7A808989 /* Pods-TimeAndLoop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeAndLoop/text.pch";
@@ -422,6 +530,7 @@
 		};
 		A6351B0F1DB9F0A800221579 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0084A38BE8D1A584628DFF7 /* Pods-TimeAndLoop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeAndLoop/text.pch";
