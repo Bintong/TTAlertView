@@ -24,6 +24,8 @@
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */; };
 		A69243BD1DD8C903005C2834 /* RunLoopDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */; };
+		C62E224E1EDF0A0A00B1E24E /* NotifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62E224C1EDF0A0A00B1E24E /* NotifyViewController.m */; };
+		C62E224F1EDF0A0A00B1E24E /* NotifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C62E224D1EDF0A0A00B1E24E /* NotifyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		A69243B91DD8C903005C2834 /* RunLoopDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopDemoViewController.h; sourceTree = "<group>"; };
 		A69243BA1DD8C903005C2834 /* RunLoopDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopDemoViewController.m; sourceTree = "<group>"; };
 		A69243BB1DD8C903005C2834 /* RunLoopDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunLoopDemoViewController.xib; sourceTree = "<group>"; };
+		C62E224B1EDF0A0A00B1E24E /* NotifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyViewController.h; sourceTree = "<group>"; };
+		C62E224C1EDF0A0A00B1E24E /* NotifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyViewController.m; sourceTree = "<group>"; };
+		C62E224D1EDF0A0A00B1E24E /* NotifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +131,7 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				C62E22451EDF099E00B1E24E /* Notify */,
 				A69243B81DD8C8EA005C2834 /* runloop */,
 				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A6351AE71DB9F0A800221579 /* AppDelegate.m */,
@@ -192,6 +198,16 @@
 			name = runloop;
 			sourceTree = "<group>";
 		};
+		C62E22451EDF099E00B1E24E /* Notify */ = {
+			isa = PBXGroup;
+			children = (
+				C62E224B1EDF0A0A00B1E24E /* NotifyViewController.h */,
+				C62E224C1EDF0A0A00B1E24E /* NotifyViewController.m */,
+				C62E224D1EDF0A0A00B1E24E /* NotifyViewController.xib */,
+			);
+			name = Notify;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +269,7 @@
 				A69243BD1DD8C903005C2834 /* RunLoopDemoViewController.xib in Resources */,
 				A6351AF31DB9F0A800221579 /* LaunchScreen.storyboard in Resources */,
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
+				C62E224F1EDF0A0A00B1E24E /* NotifyViewController.xib in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
 			);
@@ -266,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
+				C62E224E1EDF0A0A00B1E24E /* NotifyViewController.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A677427F1DCC9373003528EA /* TTAlertView.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
