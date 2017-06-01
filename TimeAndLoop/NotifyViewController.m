@@ -25,27 +25,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(timeShow) userInfo:nil repeats:YES];
-    
-    
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    
-    
+//
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(timeShow) userInfo:nil repeats:YES];
+//    
+//    
+//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//    
+//    
     
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)addobsserverRunLoop {
-    CFRunLoopRef runloop = CFRunLoopGetCurrent();
-    CFRunLoopObserverContext context = {
-        0,()
-    }
-}
-
-- (void)timeShow {
-    NSLog(@"time ");
-}
+//- (void)addobsserverRunLoop {
+//    CFRunLoopRef runloop = CFRunLoopGetCurrent();
+//    CFRunLoopObserverContext context = {
+//        0,()
+//    }
+//}
+//
+//- (void)timeShow {
+//    NSLog(@"time ");
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

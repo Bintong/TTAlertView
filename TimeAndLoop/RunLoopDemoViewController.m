@@ -8,6 +8,9 @@
 
 #import "RunLoopDemoViewController.h"
 
+typedef void(^RunLoopBlock)(void);
+
+
 @interface RunLoopDemoViewController ()
 
 @property(nonatomic, strong) NSThread *thread1;
@@ -15,26 +18,94 @@
 @property(nonatomic, strong) NSThread *thread3;
 @property(nonatomic, strong) NSThread *thread4;
 
+@property (strong, nonatomic) NSTimer *timer ;
+@property (strong, nonatomic) NSTimer *timerrunloop;
+
+@property(nonatomic, strong) NSMutableArray *tasks;
+@property(nonatomic, assign) NSUInteger maxLength;
+
 
 @end
 
 @implementation RunLoopDemoViewController
-
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.timer invalidate];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunLoopByNormal) object:nil];
-    [self.thread1 start];
     
-    self.thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunloopByCFObserver) object:nil];
-    [self.thread2 start];
+    _tasks = [NSMutableArray array];
+    _maxLength = 18;
     
-    self.thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunLoopByTimer) object:nil];
-    [self.thread3 start];
-    self.thread4 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunloopByCFSource) object:nil];
-    [self.thread4 start];
+    
+//    self.thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunLoopByNormal) object:nil];
+//    [self.thread1 start];
+//    
+//    self.thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunloopByCFObserver) object:nil];
+//    [self.thread2 start];
+//    
+//    self.thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunLoopByTimer) object:nil];
+//    [self.thread3 start];
+//    self.thread4 = [[NSThread alloc] initWithTarget:self selector:@selector(createRunloopByCFSource) object:nil];
+//    [self.thread4 start];
+    
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(timeShow) userInfo:nil repeats:YES];
+//    
+//    
+//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [self addobsserverRunLoop];
+    _timerrunloop = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timeMethod) userInfo:nil repeats:YES];
+}
+
+- (void)timeMethod{
     
 }
+
+//添加新任务
+- (void)addTask:(RunLoopBlock)block {
+    [self.tasks addObject:block];
+    if (self.tasks.count > self.maxLength) {
+        [self.tasks removeObjectAtIndex:0];
+    }
+}
+static void CallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+    NSLog(@"run loop call back");
+    
+    NSLog(@"%@",info);
+    RunLoopDemoViewController *vc = (__bridge RunLoopDemoViewController *)info;
+    if (vc.tasks.count == 0) {
+        return;
+    }
+    RunLoopBlock task = vc.tasks.firstObject;
+    task();
+    [vc.tasks removeObjectAtIndex:0];
+}
+
+- (void)addobsserverRunLoop {
+    CFRunLoopRef runloop = CFRunLoopGetCurrent();
+   //第一一个上下文
+    CFRunLoopObserverContext context = {
+      0,(__bridge void *)(self),&CFRetain,&CFRelease,NULL
+    };
+    
+    //创建一个观察者
+    static CFRunLoopObserverRef defaultObserver;
+    defaultObserver  = CFRunLoopObserverCreate(NULL, kCFRunLoopAfterWaiting, YES, 0, &CallBack, &context);
+    
+    //添加runloop的观察者
+    //模式
+    CFRunLoopAddObserver(runloop, defaultObserver, kCFRunLoopCommonModes);
+    
+    CFRelease(defaultObserver);
+    
+}
+
+- (void)timeShow {
+    NSLog(@"time ");
+}
+
 - (IBAction)runloop1:(id)sender {
     //每次都能输出,说明存活
     [self performSelector:@selector(testLog:) onThread:self.thread1 withObject:nil waitUntilDone:NO];
