@@ -7,8 +7,18 @@
 //
 
 #import "HomeViewController.h"
-
+#import "HomeNetManager.h"
+#import "SelecterToolsScrolView.h"
+#import "SelecterContentScrollView.h"
+#import "IFanrViewController.h"
+#import "RenrenViewController.h"
+#import "DZNSegmentedControl.h"
 @interface HomeViewController ()
+
+@property(nonatomic,retain)NSArray *titleArr;
+@property(nonatomic,retain)NSMutableArray *vcArr;
+@property(nonatomic,retain)SelecterToolsScrolView *selectTools;
+@property(nonatomic,retain)SelecterContentScrollView *contentScrView;
 
 @end
 
@@ -16,7 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"萌下";
+    _titleArr = @[@"爱范儿",@"人人产品经理"];
+    
+    
+//    HomeNetManager *net =   [[HomeNetManager alloc] init];
+//    [net requestHomeData:^(id result) {
+//        NSLog(@"---------reslut----%@",result);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

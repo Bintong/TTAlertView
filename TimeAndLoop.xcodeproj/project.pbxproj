@@ -29,6 +29,16 @@
 		A6D78B991E026F6A00FFB1C2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B981E026F6A00FFB1C2 /* HomeViewController.m */; };
 		A6D78B9D1E02F55E00FFB1C2 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B9C1E02F55E00FFB1C2 /* HttpRequest.m */; };
 		A6D78BA01E02F59200FFB1C2 /* UploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */; };
+		A6D78BA31E03008D00FFB1C2 /* HomeNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BA21E03008D00FFB1C2 /* HomeNetManager.m */; };
+		A6D78BB31E06BE6700FFB1C2 /* DragRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BAA1E06BE6700FFB1C2 /* DragRefreshView.m */; };
+		A6D78BB41E06BE6700FFB1C2 /* HBDragRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BAC1E06BE6700FFB1C2 /* HBDragRefresh.m */; };
+		A6D78BB51E06BE6700FFB1C2 /* RefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BAE1E06BE6700FFB1C2 /* RefreshFooterView.m */; };
+		A6D78BB61E06BE6700FFB1C2 /* RefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BB01E06BE6700FFB1C2 /* RefreshHeaderView.m */; };
+		A6D78BB71E06BE6700FFB1C2 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BB21E06BE6700FFB1C2 /* UIScrollView+Refresh.m */; };
+		A6D78BBD1E06D86500FFB1C2 /* SelecterToolsScrolView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BBA1E06D86500FFB1C2 /* SelecterToolsScrolView.m */; };
+		A6D78BBE1E06D86500FFB1C2 /* SelecterContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BBC1E06D86500FFB1C2 /* SelecterContentScrollView.m */; };
+		A6D78BC31E06D93700FFB1C2 /* IFanrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BC21E06D93700FFB1C2 /* IFanrViewController.m */; };
+		A6D78BC61E06D94600FFB1C2 /* RenrenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D78BC51E06D94600FFB1C2 /* RenrenViewController.m */; };
 		A6E77B961DE7E72E008FCD68 /* TTAlertTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */; };
 		A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E77B9B1DE7E8DB008FCD68 /* AlertTableController.m */; };
 		A6E77B9E1DE7E8DB008FCD68 /* AlertTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E77B9C1DE7E8DB008FCD68 /* AlertTableController.xib */; };
@@ -81,6 +91,26 @@
 		A6D78B9C1E02F55E00FFB1C2 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		A6D78B9E1E02F59200FFB1C2 /* UploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadParam.h; sourceTree = "<group>"; };
 		A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadParam.m; sourceTree = "<group>"; };
+		A6D78BA11E03008D00FFB1C2 /* HomeNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNetManager.h; sourceTree = "<group>"; };
+		A6D78BA21E03008D00FFB1C2 /* HomeNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNetManager.m; sourceTree = "<group>"; };
+		A6D78BA91E06BE6700FFB1C2 /* DragRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragRefreshView.h; sourceTree = "<group>"; };
+		A6D78BAA1E06BE6700FFB1C2 /* DragRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragRefreshView.m; sourceTree = "<group>"; };
+		A6D78BAB1E06BE6700FFB1C2 /* HBDragRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBDragRefresh.h; sourceTree = "<group>"; };
+		A6D78BAC1E06BE6700FFB1C2 /* HBDragRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBDragRefresh.m; sourceTree = "<group>"; };
+		A6D78BAD1E06BE6700FFB1C2 /* RefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshFooterView.h; sourceTree = "<group>"; };
+		A6D78BAE1E06BE6700FFB1C2 /* RefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshFooterView.m; sourceTree = "<group>"; };
+		A6D78BAF1E06BE6700FFB1C2 /* RefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshHeaderView.h; sourceTree = "<group>"; };
+		A6D78BB01E06BE6700FFB1C2 /* RefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshHeaderView.m; sourceTree = "<group>"; };
+		A6D78BB11E06BE6700FFB1C2 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		A6D78BB21E06BE6700FFB1C2 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		A6D78BB91E06D86500FFB1C2 /* SelecterToolsScrolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelecterToolsScrolView.h; sourceTree = "<group>"; };
+		A6D78BBA1E06D86500FFB1C2 /* SelecterToolsScrolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelecterToolsScrolView.m; sourceTree = "<group>"; };
+		A6D78BBB1E06D86500FFB1C2 /* SelecterContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelecterContentScrollView.h; sourceTree = "<group>"; };
+		A6D78BBC1E06D86500FFB1C2 /* SelecterContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelecterContentScrollView.m; sourceTree = "<group>"; };
+		A6D78BC11E06D93700FFB1C2 /* IFanrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFanrViewController.h; sourceTree = "<group>"; };
+		A6D78BC21E06D93700FFB1C2 /* IFanrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFanrViewController.m; sourceTree = "<group>"; };
+		A6D78BC41E06D94600FFB1C2 /* RenrenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenrenViewController.h; sourceTree = "<group>"; };
+		A6D78BC51E06D94600FFB1C2 /* RenrenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenrenViewController.m; sourceTree = "<group>"; };
 		A6E77B941DE7E72E008FCD68 /* TTAlertTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertTable.h; sourceTree = "<group>"; };
 		A6E77B951DE7E72E008FCD68 /* TTAlertTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertTable.m; sourceTree = "<group>"; };
 		A6E77B9A1DE7E8DB008FCD68 /* AlertTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertTableController.h; sourceTree = "<group>"; };
@@ -161,6 +191,8 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A6D78BB81E06D85200FFB1C2 /* ToolBarTop */,
+				A6D78BA71E06BDC900FFB1C2 /* PullAndDraw */,
 				A6D78B9A1E02F4DB00FFB1C2 /* Net */,
 				A6E77B931DE7E715008FCD68 /* tableviewAlert */,
 				A69243B81DD8C8EA005C2834 /* runloop */,
@@ -168,6 +200,10 @@
 				A6351AE71DB9F0A800221579 /* AppDelegate.m */,
 				A6D78B971E026F6A00FFB1C2 /* HomeViewController.h */,
 				A6D78B981E026F6A00FFB1C2 /* HomeViewController.m */,
+				A6D78BC01E06D90100FFB1C2 /* renren */,
+				A6D78BBF1E06D8EA00FFB1C2 /* IFaner */,
+				A6D78BA11E03008D00FFB1C2 /* HomeNetManager.h */,
+				A6D78BA21E03008D00FFB1C2 /* HomeNetManager.m */,
 				A6D78B941E026E8100FFB1C2 /* BaseViewController.h */,
 				A6D78B951E026E8200FFB1C2 /* BaseViewController.m */,
 				A6351AE91DB9F0A800221579 /* ViewController.h */,
@@ -242,6 +278,60 @@
 				A6D78B9F1E02F59200FFB1C2 /* UploadParam.m */,
 			);
 			name = Net;
+			sourceTree = "<group>";
+		};
+		A6D78BA71E06BDC900FFB1C2 /* PullAndDraw */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78BA81E06BE6700FFB1C2 /* DragRefreshView */,
+				A6D78BB11E06BE6700FFB1C2 /* UIScrollView+Refresh.h */,
+				A6D78BB21E06BE6700FFB1C2 /* UIScrollView+Refresh.m */,
+			);
+			name = PullAndDraw;
+			sourceTree = "<group>";
+		};
+		A6D78BA81E06BE6700FFB1C2 /* DragRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78BA91E06BE6700FFB1C2 /* DragRefreshView.h */,
+				A6D78BAA1E06BE6700FFB1C2 /* DragRefreshView.m */,
+				A6D78BAB1E06BE6700FFB1C2 /* HBDragRefresh.h */,
+				A6D78BAC1E06BE6700FFB1C2 /* HBDragRefresh.m */,
+				A6D78BAD1E06BE6700FFB1C2 /* RefreshFooterView.h */,
+				A6D78BAE1E06BE6700FFB1C2 /* RefreshFooterView.m */,
+				A6D78BAF1E06BE6700FFB1C2 /* RefreshHeaderView.h */,
+				A6D78BB01E06BE6700FFB1C2 /* RefreshHeaderView.m */,
+			);
+			path = DragRefreshView;
+			sourceTree = "<group>";
+		};
+		A6D78BB81E06D85200FFB1C2 /* ToolBarTop */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78BB91E06D86500FFB1C2 /* SelecterToolsScrolView.h */,
+				A6D78BBA1E06D86500FFB1C2 /* SelecterToolsScrolView.m */,
+				A6D78BBB1E06D86500FFB1C2 /* SelecterContentScrollView.h */,
+				A6D78BBC1E06D86500FFB1C2 /* SelecterContentScrollView.m */,
+			);
+			name = ToolBarTop;
+			sourceTree = "<group>";
+		};
+		A6D78BBF1E06D8EA00FFB1C2 /* IFaner */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78BC11E06D93700FFB1C2 /* IFanrViewController.h */,
+				A6D78BC21E06D93700FFB1C2 /* IFanrViewController.m */,
+			);
+			name = IFaner;
+			sourceTree = "<group>";
+		};
+		A6D78BC01E06D90100FFB1C2 /* renren */ = {
+			isa = PBXGroup;
+			children = (
+				A6D78BC41E06D94600FFB1C2 /* RenrenViewController.h */,
+				A6D78BC51E06D94600FFB1C2 /* RenrenViewController.m */,
+			);
+			name = renren;
 			sourceTree = "<group>";
 		};
 		A6E77B931DE7E715008FCD68 /* tableviewAlert */ = {
@@ -391,19 +481,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
+				A6D78BB61E06BE6700FFB1C2 /* RefreshHeaderView.m in Sources */,
 				A6D78B961E026E8200FFB1C2 /* BaseViewController.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A677427F1DCC9373003528EA /* TTAlertView.m in Sources */,
 				A6E77B9D1DE7E8DB008FCD68 /* AlertTableController.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A6351B1C1DB9F9A700221579 /* NSObject+KVO.m in Sources */,
+				A6D78BBE1E06D86500FFB1C2 /* SelecterContentScrollView.m in Sources */,
+				A6D78BB51E06BE6700FFB1C2 /* RefreshFooterView.m in Sources */,
 				A6D78B991E026F6A00FFB1C2 /* HomeViewController.m in Sources */,
+				A6D78BB31E06BE6700FFB1C2 /* DragRefreshView.m in Sources */,
 				A612EF0A1DBF53F40051DFD4 /* UIView+Frame.m in Sources */,
 				A6351B221DBC7F0100221579 /* Message.m in Sources */,
+				A6D78BB41E06BE6700FFB1C2 /* HBDragRefresh.m in Sources */,
 				A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */,
 				A6351B1F1DB9FFCE00221579 /* ObservationInfo.m in Sources */,
+				A6D78BC31E06D93700FFB1C2 /* IFanrViewController.m in Sources */,
 				A6D78BA01E02F59200FFB1C2 /* UploadParam.m in Sources */,
+				A6D78BA31E03008D00FFB1C2 /* HomeNetManager.m in Sources */,
 				A69243BC1DD8C903005C2834 /* RunLoopDemoViewController.m in Sources */,
+				A6D78BBD1E06D86500FFB1C2 /* SelecterToolsScrolView.m in Sources */,
+				A6D78BC61E06D94600FFB1C2 /* RenrenViewController.m in Sources */,
+				A6D78BB71E06BE6700FFB1C2 /* UIScrollView+Refresh.m in Sources */,
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A6351AE51DB9F0A800221579 /* main.m in Sources */,
 				A6D78B9D1E02F55E00FFB1C2 /* HttpRequest.m in Sources */,

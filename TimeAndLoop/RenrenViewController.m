@@ -1,22 +1,22 @@
+
 //
-//  BaseViewController.m
+//  RenrenViewController.m
 //  TimeAndLoop
 //
-//  Created by BinTong on 2016/12/15.
+//  Created by BinTong on 2016/12/18.
 //  Copyright © 2016年 TongBin. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "RenrenViewController.h"
 
-@interface BaseViewController ()
+@interface RenrenViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation RenrenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
