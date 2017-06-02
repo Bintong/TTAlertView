@@ -11,7 +11,7 @@
 typedef void(^RunLoopBlock)(void);
 
 
-@interface RunLoopDemoViewController ()
+@interface RunLoopDemoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong) NSThread *thread1;
 @property(nonatomic, strong) NSThread *thread2;
@@ -23,6 +23,9 @@ typedef void(^RunLoopBlock)(void);
 
 @property(nonatomic, strong) NSMutableArray *tasks;
 @property(nonatomic, assign) NSUInteger maxLength;
+@property(nonatomic, strong) UITableView *listView;
+
+
 
 
 @end
@@ -59,6 +62,19 @@ typedef void(^RunLoopBlock)(void);
     _timerrunloop = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timeMethod) userInfo:nil repeats:YES];
 }
 
+
+
+- (void)createTableView {
+    self.listView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS style:UITableViewStylePlain];
+    self.listView.showsVerticalScrollIndicator = NO;
+
+    self.listView.backgroundColor = [UIColor clearColor];
+    self.listView.delegate = self;
+    self.listView.dataSource = self;
+    self.listView.rowHeight = 50;
+    self.listView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.listView];
+}
 - (void)timeMethod{
     
 }
@@ -102,9 +118,49 @@ static void CallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
     
 }
 
-- (void)timeShow {
-    NSLog(@"time ");
+//- (void)timeShow {
+//    NSLog(@"time ");
+//}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CMainCell = @"CMainCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CMainCell];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier: CMainCell];
+    }
+    
+//    cell.textLabel.text = _arr[indexPath.row];
+    [self addTask:^{
+        
+    }];
+    [self addTask:^{
+        
+    }];
+    [self addTask:^{
+        
+    }];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+}
+
+
 
 - (IBAction)runloop1:(id)sender {
     //每次都能输出,说明存活
