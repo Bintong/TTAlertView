@@ -15,3 +15,5 @@
 #define HB_COLOR_E RGBCOLOR(0xCC,0xCC,0xCC) //用于特别弱的文字
 #define HB_COLOR_F RGBCOLOR(0xF2,0xF0,0xF0) //用于分割线、标签秒变
 #define HB_COLOR_G RGBCOLOR(0xEC,0xED,0xED) //用于模块分割的底色
+
+#define kLineColor  [UIColor colorHexString:@"DEDEDE"]

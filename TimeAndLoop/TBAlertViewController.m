@@ -38,6 +38,17 @@
     [bt_3 setTitle:@"弹框3" forState:UIControlStateNormal];
     [self.view addSubview:bt_3];
     
+    
+    
+    UIButton *bt_4 = [self buildButton:CGRectMake(44, bt_3.bottom + 20, SCREEN_WIDTH - 88, 44)];
+    bt_4.tag = 4;
+    [bt_4 setTitle:@"弹框4" forState:UIControlStateNormal];
+    [self.view addSubview:bt_4];
+    
+    UIButton *bt_5 = [self buildButton:CGRectMake(44, bt_4.bottom + 20, SCREEN_WIDTH - 88, 44)];
+    bt_5.tag = 5;
+    [bt_5 setTitle:@"弹框5" forState:UIControlStateNormal];
+    [self.view addSubview:bt_5];
     // Do any additional setup after loading the view.
 }
 
@@ -53,15 +64,10 @@
 - (void)alertView_1:(id)sender {
     UIButton *bt = (UIButton *)sender;
     if (bt.tag == 1) {
-        [TTAlertView showAlertViewWithTitle:@"已向185****3212的手机号发送短信"  commitBlock:^(NSString *codeString) {
-            NSLog(@"手动输入的text 是 %@",codeString);
-        } cannel:^{
-            NSLog(@"点击了取消");
-        }];
-    }
-    
-    if (bt.tag == 2) {
-        [TTAlertView showAlertViewWithTitle:@"已向185****3212的手机号发送短信"
+        NSString *temp_phoneAccount = @"15810841102";
+        NSString *phoneNum_After = [temp_phoneAccount stringByReplacingOccurrencesOfString:[temp_phoneAccount substringWithRange:NSMakeRange(3,4)] withString:@"****"];
+        NSString *alertStr = [NSString stringWithFormat:@"已向%@的手机号发送短信",phoneNum_After];
+        [TTAlertView showAlertViewWithTitle:alertStr
                                 commitBlock:^(NSString *codeString) {
                                     NSLog(@"手动输入的text 是 %@",codeString);
                                 } rightBlock:^{
@@ -71,13 +77,47 @@
                                 }];
     }
     
+    if (bt.tag == 2) {
+        
+            [TTAlertView showAlertViewWithTitle:@"请输入查询密码" bottomTitle:@"若遗忘查询密码,可以致电运营商服务电话设置" placeholder:@"请输入查询密码" commitBlock:^(NSString *codeString) {
+                
+            } cannel:^{
+                
+            }];
+        
+    }
+    
     if (bt.tag == 3) {
-        [TTAlertView showAlertViewWithTitle:@"请使用手机发送CXXD至10010获取验证码"  commitBlock:^(NSString *codeString) {
-            NSLog(@"手动输入的text 是 %@",codeString);
+        [TTAlertView showNOSubAlertViewTitle:@"请编辑短信发送CXXD至10001获取验证码请编辑短信发送CXXD至10001获取验证码" placeholder:@"请输入短信验证码" commitBlock:^(NSString *codeString) {
+            NSLog(@"code string %@",codeString );
+//            [TTAlertView remove];
+            
         } cannel:^{
-            NSLog(@"点击了取消");
+            
         }];
     }
+    
+    if (bt.tag == 4) {
+        [TTAlertView showTextFieldWithPlaceHolder:@"请输入动态口令密码" commitBlock:^(NSString *codeString) {
+            
+        } cannel:^{
+            
+        }];
+    }
+    
+    if (bt.tag == 5) {
+        UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+        bt.backgroundColor = [UIColor redColor];
+        [TTAlertView showTextFieldWithVerificationPlaceHolder:@"请输入右侧图片验证码" rightButton:bt
+                                                   rightClick:^(UIButton *button) {
+                                                       
+                                                   } commitBlock:^(NSString *codeString) {
+                                                       
+                                                   } cannel:^{
+                                                       
+                                                   }];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,6 +125,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

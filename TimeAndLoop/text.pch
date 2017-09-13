@@ -14,7 +14,14 @@
 #import "UIView+DrawLine.h"
 #import "HBUIColor.h"
 #import "UIView+Frame.h"
+#import "UIColor+Hex.h"
+#import "HBCheckValid.h"
+#import "NSDictionary+Resolve.h"
+#import "NSString+Resolve.h"
+#import "NSArray+Resolve.h"
+#import "FileManager.h"
 
+#import "UIView+DrawLine.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

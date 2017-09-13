@@ -1,16 +1,13 @@
 //
-//  ViewController.h
+//  CreditController.h
 //  TimeAndLoop
 //
-//  Created by BinTong on 2016/10/21.
+//  Created by BinTong on 2016/10/24.
 //  Copyright © 2016年 TongBin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface CreditController : UIViewController
 
 @end
-

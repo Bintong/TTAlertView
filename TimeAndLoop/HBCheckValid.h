@@ -1,0 +1,21 @@
+//
+//  HBCheckValid.h
+//  HBankXLoan
+//
+//  Created by zftank on 2016/12/27.
+//  Copyright © 2016年 HBankXLoan. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface HBCheckValid : NSObject
+
++ (BOOL)checkStringValid:(NSString *)string;//判断字符串长度是否大于0
+
+
++ (BOOL)checkArrayValid:(NSArray *)array;//判断数组长度是否大于0
+
+
++ (BOOL)checkDictionaryValid:(NSDictionary *)dictionary;//判断字典长度是否大于0
+
+@end

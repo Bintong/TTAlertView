@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "KVOViewController.h"
+#import "CreditController.h"
 #import "TBAlertViewController.h"
-#import "RunLoopDemoViewController.h"
-#import "NotifyViewController.h"
+#import "TextFieldViewController.h"
+#import "ResultViewController.h"
+#import "InfoPutController.h"
+#import "SMSViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
@@ -21,7 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"-----",@"自定义alertView",@"runloop_autorelease",@"kvo"];
+    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui"];
+    
+    
     _arr = ar;
     
     UITableView *table = [[UITableView alloc]initWithFrame:self.view.bounds];
@@ -29,6 +34,21 @@
     table.delegate = self;
     table.dataSource = self;
     [table reloadData];
+    
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"",@"2",@"",@"3",@"", nil];
+    NSString *key1 = @"2";
+    NSString *key2 = @"key2";
+    NSDictionary *dict = @{@"1":key1,@"2":@"",@"3":key2,@"4": @(false)};
+    NSLog(@"----------dic is %@",dict);
+    
+    NSString *str = [dict objectForKey:@"3"];
+    NSLog(@"djkfdj=======str is %ld--------------%@",str.integerValue,str);
+    
+    
+    NSURL *url = [NSURL URLWithString:nil];
+    
+    NSLog(@"==== is %@",url.absoluteURL);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,17 +79,25 @@
         ctr = [[KVOViewController alloc] init];
     }
     if (indexPath.row == 1) {
-        ctr = [[ViewController alloc] init];
+        ctr = [[CreditController alloc] init];
         
     }
     if (indexPath.row == 2) {
         ctr = [[TBAlertViewController alloc] init];
     }
+    
     if (indexPath.row == 3) {
-        ctr = [[RunLoopDemoViewController alloc] init];
+        ctr = [[TextFieldViewController alloc] init];
     }
-    if (indexPath.row == 4) {
-        ctr = [[NotifyViewController alloc] init];
+    
+    if (indexPath.row == 6) {
+        ctr = [[ResultViewController alloc] init];
+    }
+    if (indexPath.row == 7) {
+        ctr = [[InfoPutController alloc] init];
+    }
+    if (indexPath.row == 9){
+        ctr = [[ SMSViewController alloc]init];
     }
     [self.navigationController pushViewController:ctr animated:YES];
     
