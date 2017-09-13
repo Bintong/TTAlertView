@@ -54,6 +54,7 @@
 		A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */; };
 		A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
+		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,8 @@
 		A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		A6FF46851F68E03000112C22 /* LeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
+		A6FF46861F68E03000112C22 /* LeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,7 @@
 		A612EF041DBF53E70051DFD4 /* Houbank */ = {
 			isa = PBXGroup;
 			children = (
+				A6FF46841F68E01300112C22 /* Instrument */,
 				A64AFB6C1E77EE4700558869 /* infoputView */,
 				A60592B11E5AC28F00C0E2FB /* Net */,
 				A6EA81BD1E49DE53000669C1 /* TextFieldDelegate */,
@@ -390,6 +394,15 @@
 			name = TextFieldDelegate;
 			sourceTree = "<group>";
 		};
+		A6FF46841F68E01300112C22 /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				A6FF46851F68E03000112C22 /* LeakViewController.h */,
+				A6FF46861F68E03000112C22 /* LeakViewController.m */,
+			);
+			name = Instrument;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +511,7 @@
 				A612EF161DBF544C0051DFD4 /* CreditController.m in Sources */,
 				A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */,
 				A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */,
+				A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */,
 				A64C42D71DC73E1C00DDFE84 /* TaobaoVerificationController.m in Sources */,
 				A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */,
 				A6351B1F1DB9FFCE00221579 /* ObservationInfo.m in Sources */,

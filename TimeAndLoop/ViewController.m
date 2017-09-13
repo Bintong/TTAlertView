@@ -14,6 +14,8 @@
 #import "ResultViewController.h"
 #import "InfoPutController.h"
 #import "SMSViewController.h"
+
+#import "LeakViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
@@ -24,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui"];
+    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument"];
     
     
     _arr = ar;
@@ -98,6 +100,10 @@
     }
     if (indexPath.row == 9){
         ctr = [[ SMSViewController alloc]init];
+    }
+    
+    if (indexPath.row == 10) {
+        ctr = [[LeakViewController alloc] init];
     }
     [self.navigationController pushViewController:ctr animated:YES];
     
