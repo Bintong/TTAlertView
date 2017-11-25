@@ -33,57 +33,39 @@
         
         UIView *view = self.contentView;
         [view bottomLineX:20 width:SCREEN_WIDTH color:kLineColor];
-        
-        UIView *subTitleView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 50)];
-        UILabel *qiquanLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, 120, 50) Text:@"期权ETF50第1期"];
-        UILabel *trendLab = [self labelWithFontSize:9 FontColor:JF_COLOR_C frame:CGRectMake(qiquanLab.right, 0, 100, 50) Text:@"期权看涨"];
-        [subTitleView addSubview:trendLab];
+        //header
+        UIView *subTitleView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 55)];
+        UILabel *qiquanLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, 120, 55) Text:@"季账户-9个月"];
         [subTitleView addSubview:qiquanLab];
         
         [view addSubview:subTitleView];
         
-        UILabel *leftMidLab = [self labelWithFontSize:32 FontColor:JF_COLOR_A frame:CGRectMake(20, 20, 60, 0) Text:@"8%"];
+        UILabel *leftMidLab = [self labelWithFontSize:20 FontColor:JF_COLOR_A frame:CGRectMake(20, 20, 70, 0) Text:@"8.5%"];
         [leftMidLab sizeToFit];
-        leftMidLab.top = subTitleView.bottom + 10;
+        leftMidLab.top = subTitleView.bottom;
         [view addSubview:leftMidLab];
         
-        UILabel *subNumLab = [self labelWithFontSize:18 FontColor:JF_COLOR_B frame:CGRectMake(0, 0,50, 14) Text:@"+18%"];
-        UILabel *subNumTextLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(0, subNumLab.bottom + 10, 50, 14) Text:@"浮动最高"];
-        UIView *subNumView = [[UIView alloc] initWithFrame:CGRectMake(leftMidLab.right + 5, 0, 50, 40)];
-        [subNumView addSubview:subNumLab];
-        [subNumView addSubview:subNumTextLab];
-        subNumView.centerY = leftMidLab.centerY;
-        [view addSubview:subNumView];
+        UILabel *subNumTextLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(20, leftMidLab.bottom + 5, 105, 14) Text:@"期望年化回报率"];
+        [view addSubview:subNumTextLab];
         
-        UIView *vline = [[UIView alloc] initWithFrame:CGRectMake(subNumView.right + 20, 10, 1, 40)];
+        UIView *vline = [[UIView alloc] initWithFrame:CGRectMake(subNumTextLab.right, subTitleView.bottom, 1, 40)];
         vline.backgroundColor = kLineColor;
-        vline.centerY = subNumView.centerY;
         [view addSubview:vline];
         
         
-        UILabel *dayLab = [self labelWithFontSize:16 FontColor:JF_COLOR_B frame:CGRectMake(vline.right + 20, subNumView.top, 200, 16) Text:@"封闭期1000天"];
+        UILabel *dayLab = [self labelWithFontSize:16 FontColor:JF_COLOR_B frame:CGRectMake(vline.right + 25, 0, 200, 16) Text:@"封闭期9个月"];
+        dayLab.centerY = leftMidLab.centerY;
         [view addSubview:dayLab];
-        UILabel *statueLab = [self labelWithFontSize:14 FontColor:JF_COLOR_A frame:CGRectMake(vline.right + 20, dayLab.bottom + 10, 146/2, 14) Text:@"还有机会"];
+        UILabel *statueLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(vline.right + 25, dayLab.bottom + 10, 146/2, 14) Text:@"100元起投"];
         
         [view addSubview:statueLab];
-        UIView *vline_2 = [[UIView alloc] initWithFrame:CGRectMake(vline.right + 157/2, 10, 1, 12)];
+        UIView *vline_2 = [[UIView alloc] initWithFrame:CGRectMake(vline.right + 172/2, 10, 1, 10)];
         vline_2.backgroundColor = kLineColor;
         vline_2.centerY = statueLab.centerY;
         [view addSubview:vline_2];
         
-        UILabel *beginMoneyLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(vline_2.right + 5, statueLab.top, 150, 14) Text:@"100000元起投"];
-        [view addSubview:beginMoneyLab];
-        
-        //进度条
-        UIView *progressLine = [[UIView alloc] initWithFrame:CGRectMake(20, vline.bottom + 30, SCREEN_WIDTH - 40 - 35, 3)];
-        progressLine.backgroundColor = JF_COLOR_A;
-        [view addSubview:progressLine];
-        
-        //进度
-        UILabel *proLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(progressLine.right + 5, 0, 35, 12) Text:@"100%"];
-        proLab.centerY = progressLine.centerY;
-        [view addSubview:proLab];
-        
+        UILabel *browNum = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(vline_2.right + 5, statueLab.top, SCREEN_WIDTH - 40 - vline_2.right - 5, 14) Text:@"已有623,3934人出借"];
+        [view addSubview:browNum];
     }
     
     return self;
