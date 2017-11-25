@@ -47,13 +47,13 @@
     
     
     
-    UIView *topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+    UIView *topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
     topHeaderView.backgroundColor = [UIColor whiteColor];
     [topHeaderView bottomLineX:0 width:1 color:kLineColor];
     
-    UILabel *netLoanLab = [self labelWithFontSize:14 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 60) Text:@"网贷总资产:"];
+    UILabel *netLoanLab = [self labelWithFontSize:15 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 40) Text:@"网贷总资产:"];
     [topHeaderView addSubview:netLoanLab];
-    UILabel *numLab = [self labelWithFontSize:13 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 60) Text:@"1234567元"];
+    UILabel *numLab = [self labelWithFontSize:13 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 40) Text:@"1234567元"];
     [numLab sizeToFit];
     numLab.left = netLoanLab.right + 5;
     numLab.centerY = netLoanLab.centerY;
@@ -76,7 +76,8 @@
     [headerView addSubview:topHeaderView];
     //scrollview
  
-    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(topHeaderView.bottom + 10, 0, SCREEN_WIDTH, 100)];
+    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, topHeaderView.bottom + 7, SCREEN_WIDTH, 70)];
+    banner.backgroundColor = [UIColor whiteColor];
     [headerView addSubview:banner];
     //
     
@@ -84,7 +85,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 151;
+    return 150;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
