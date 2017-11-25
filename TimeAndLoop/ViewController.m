@@ -16,9 +16,17 @@
 #import "SMSViewController.h"
 
 #import "LeakViewController.h"
+
+#import "RouterController.h"
+#import "JLRoutes.h"
+#import "JFInvestViewController.h"
+#import "JFRegularViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
+
+
+
 
 @end
 
@@ -26,7 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument"];
+    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg"];
     
     
     _arr = ar;
@@ -105,6 +113,17 @@
     if (indexPath.row == 10) {
         ctr = [[LeakViewController alloc] init];
     }
+    
+    if (indexPath.row == 11) {
+        ctr = [[RouterController alloc] init];
+    }
+    if (indexPath.row == 12) {
+        ctr = [[JFInvestViewController alloc] init];
+    }
+    if (indexPath.row == 13) {
+        ctr = [[JFRegularViewController alloc] init];
+    }
+    
     [self.navigationController pushViewController:ctr animated:YES];
     
 }

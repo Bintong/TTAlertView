@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>dariel</key>
+	<dict>
+		<key>dariel://item2</key>
+		<string>RouterTwoViewController</string>
+	</dict>
+	<key>New item</key>
+	<string></string>
+	<key>dariel://item2</key>
+	<string>RouterTwoViewController</string>
+</dict>
+</plist>

@@ -17,3 +17,5 @@
 #define HB_COLOR_G RGBCOLOR(0xEC,0xED,0xED) //用于模块分割的底色
 
 #define kLineColor  [UIColor colorHexString:@"DEDEDE"]
+
+#define HB_COLOR_BG RGBCOLOR(0xF6,0xF5,0xF7) //背景

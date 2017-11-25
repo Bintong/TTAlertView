@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^TestBlock)(void);
+
 @interface LeakViewController : UIViewController
+
+@property (nonatomic, copy) TestBlock block;
+
 
 @end

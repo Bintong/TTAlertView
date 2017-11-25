@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "JLRoutes.h"
+#import <objc/runtime.h>
+#import "DCURLRouter.h"
 @interface AppDelegate ()
 
 @end
@@ -23,10 +26,32 @@
     
     self.window.rootViewController = na;
     [self.window makeKeyAndVisible];
+    [DCURLRouter loadConfigDictFromPlist:@"DCURLRouter.plist"];
+
     
     return YES;
 }
 
+-(void)paramToVc:(UIViewController *) v param:(NSDictionary<NSString *,NSString *> *)parameters{
+    //        runtime将参数传递至需要跳转的控制器
+    unsigned int outCount = 0;
+    objc_property_t * properties = class_copyPropertyList(v.class , &outCount);
+    for (int i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        NSString *key = [NSString stringWithUTF8String:property_getName(property)];
+        NSString *param = parameters[key];
+        if (param != nil) {
+            [v setValue:param forKey:key];
+        }
+    }
+}
+
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options
+{
+    return [JLRoutes routeURL:url];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
