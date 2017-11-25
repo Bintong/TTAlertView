@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = HB_COLOR_BG;
-    self.title = @"网贷";
+    self.title = @"定期";
     
     
     [self buildListView];
@@ -41,30 +41,30 @@
     [self.view addSubview:self.listView];
     
     //header
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,180)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,225)];
     headerView.backgroundColor = [UIColor clearColor];
     self.listView.tableHeaderView = headerView;
     
     
-    
-    UIView *topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+    //top
+    UIView *topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
     topHeaderView.backgroundColor = [UIColor whiteColor];
     [topHeaderView bottomLineX:0 width:1 color:kLineColor];
     
-    UILabel *netLoanLab = [self labelWithFontSize:15 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 40) Text:@"网贷总资产:"];
+    UILabel *netLoanLab = [self labelWithFontSize:14 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 60) Text:@"网贷总资产:"];
     [topHeaderView addSubview:netLoanLab];
-    UILabel *numLab = [self labelWithFontSize:13 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 40) Text:@"1234567元"];
+    UILabel *numLab = [self labelWithFontSize:12 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 60) Text:@"1234567元"];
     [numLab sizeToFit];
     numLab.left = netLoanLab.right + 5;
     numLab.centerY = netLoanLab.centerY;
     [topHeaderView addSubview:numLab];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(numLab.right + 5, 0, 20, 20)];
-    imageView.backgroundColor = [UIColor redColor];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(numLab.right + 5, 0, 16, 10)];
+    imageView.image = [UIImage imageNamed:@"CombinedShape.png"];
     imageView.centerY = topHeaderView.centerY;
     [topHeaderView addSubview:imageView];
     
-    UIImageView *imageRigView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 0, 20, 20)];
-    imageRigView.backgroundColor = [UIColor redColor];
+    UIImageView *imageRigView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 0, 11, 6)];
+    imageRigView.image = [UIImage imageNamed:@"Page_1.png"];
     imageRigView.centerY = topHeaderView.centerY;
     [topHeaderView addSubview:imageRigView];
     
@@ -76,11 +76,37 @@
     [headerView addSubview:topHeaderView];
     //scrollview
  
-    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, topHeaderView.bottom + 7, SCREEN_WIDTH, 70)];
+    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, topHeaderView.bottom + 10, SCREEN_WIDTH, 100)];
     banner.backgroundColor = [UIColor whiteColor];
     [headerView addSubview:banner];
-    //
+    //titleView
     
+    UIView *titleView = [self creatTopTitleView:@"惊喜计划"];
+    titleView.top = banner.bottom + 10;
+    [titleView bottomLineX:0 width:SCREEN_WIDTH color:kLineColor];
+    [headerView addSubview:titleView];
+    
+ }
+
+- (UIView *)creatTopTitleView:(NSString *)title {
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 45)];
+    leftView.backgroundColor = [UIColor whiteColor];
+    
+    [leftView bottomLineX:0 width:SCREEN_WIDTH color:JF_COLOR_D];
+    UILabel *titleLable = [self labelWithFontSize:14 FontColor:JF_COLOR_B frame:CGRectMake(20, 0, SCREEN_WIDTH/2, leftView.height) Text:title];
+    titleLable.textAlignment = NSTextAlignmentLeft;
+    
+    UIButton *bt = [self createButtonTitle:@"更多 >" Frame:CGRectMake(SCREEN_WIDTH - 20 - 70, 0, 70, 45) SEL:@selector(tempPushToNetLoan:)];
+    bt.titleLabel.textAlignment = NSTextAlignmentRight;
+    bt.backgroundColor = [UIColor clearColor];
+    [leftView addSubview:bt];
+    [leftView addSubview:titleLable];
+    
+    return leftView;
+}
+
+- (void)tempPushToNetLoan:(id)sender {
+    NSLog(@"more");
 }
 
 

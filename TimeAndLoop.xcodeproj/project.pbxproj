@@ -52,6 +52,22 @@
 		A667D37A1FC813BF00755382 /* JFRegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3791FC813BF00755382 /* JFRegularViewController.m */; };
 		A667D37D1FC813F200755382 /* JFRegularViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D37C1FC813F200755382 /* JFRegularViewModel.m */; };
 		A667D3811FC9246700755382 /* JFRegularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3801FC9246700755382 /* JFRegularCell.m */; };
+		A667D3931FC951A000755382 /* 图标代替@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3831FC94EAE00755382 /* 图标代替@2x.png */; };
+		A667D3941FC951A000755382 /* 图标代替@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3851FC94EAE00755382 /* 图标代替@3x.png */; };
+		A667D3951FC951A000755382 /* 隐藏@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38B1FC94EAE00755382 /* 隐藏@2x.png */; };
+		A667D3961FC951A000755382 /* 隐藏@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38C1FC94EAE00755382 /* 隐藏@3x.png */; };
+		A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3911FC94EAF00755382 /* CombinedShape@2x.png */; };
+		A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3881FC94EAE00755382 /* CombinedShape@3x.png */; };
+		A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3921FC94EAF00755382 /* Group21Copy@2x.png */; };
+		A667D39A1FC951A000755382 /* Group21Copy@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3891FC94EAE00755382 /* Group21Copy@3x.png */; };
+		A667D39B1FC951A000755382 /* Group22@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3871FC94EAE00755382 /* Group22@2x.png */; };
+		A667D39C1FC951A000755382 /* Group22@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3841FC94EAE00755382 /* Group22@3x.png */; };
+		A667D39D1FC951A000755382 /* Page_Copy2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38F1FC94EAF00755382 /* Page_Copy2@2x.png */; };
+		A667D39E1FC951A000755382 /* Page_Copy 2@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3861FC94EAE00755382 /* Page_Copy 2@3x.png */; };
+		A667D39F1FC951A000755382 /* Page_1@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38D1FC94EAE00755382 /* Page_1@2x.png */; };
+		A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38A1FC94EAE00755382 /* Page_1@3x.png */; };
+		A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38E1FC94EAF00755382 /* Page_2@2x.png */; };
+		A667D3A21FC951A000755382 /* Page_2@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3901FC94EAF00755382 /* Page_2@3x.png */; };
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B781DCB3CCF002BE3F3 /* TTAlertViewController.m */; };
 		A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B7B1DCB3E88002BE3F3 /* TTAction.m */; };
@@ -170,6 +186,22 @@
 		A667D37C1FC813F200755382 /* JFRegularViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFRegularViewModel.m; sourceTree = "<group>"; };
 		A667D37F1FC9246700755382 /* JFRegularCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFRegularCell.h; sourceTree = "<group>"; };
 		A667D3801FC9246700755382 /* JFRegularCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFRegularCell.m; sourceTree = "<group>"; };
+		A667D3831FC94EAE00755382 /* 图标代替@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标代替@2x.png"; sourceTree = "<group>"; };
+		A667D3841FC94EAE00755382 /* Group22@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group22@3x.png"; sourceTree = "<group>"; };
+		A667D3851FC94EAE00755382 /* 图标代替@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图标代替@3x.png"; sourceTree = "<group>"; };
+		A667D3861FC94EAE00755382 /* Page_Copy 2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_Copy 2@3x.png"; sourceTree = "<group>"; };
+		A667D3871FC94EAE00755382 /* Group22@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group22@2x.png"; sourceTree = "<group>"; };
+		A667D3881FC94EAE00755382 /* CombinedShape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedShape@3x.png"; sourceTree = "<group>"; };
+		A667D3891FC94EAE00755382 /* Group21Copy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group21Copy@3x.png"; sourceTree = "<group>"; };
+		A667D38A1FC94EAE00755382 /* Page_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_1@3x.png"; sourceTree = "<group>"; };
+		A667D38B1FC94EAE00755382 /* 隐藏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "隐藏@2x.png"; sourceTree = "<group>"; };
+		A667D38C1FC94EAE00755382 /* 隐藏@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "隐藏@3x.png"; sourceTree = "<group>"; };
+		A667D38D1FC94EAE00755382 /* Page_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_1@2x.png"; sourceTree = "<group>"; };
+		A667D38E1FC94EAF00755382 /* Page_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_2@2x.png"; sourceTree = "<group>"; };
+		A667D38F1FC94EAF00755382 /* Page_Copy2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_Copy2@2x.png"; sourceTree = "<group>"; };
+		A667D3901FC94EAF00755382 /* Page_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_2@3x.png"; sourceTree = "<group>"; };
+		A667D3911FC94EAF00755382 /* CombinedShape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedShape@2x.png"; sourceTree = "<group>"; };
+		A667D3921FC94EAF00755382 /* Group21Copy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group21Copy@2x.png"; sourceTree = "<group>"; };
 		A6805B731DCB2949002BE3F3 /* TBAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAlertViewController.h; sourceTree = "<group>"; };
 		A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAlertViewController.m; sourceTree = "<group>"; };
 		A6805B771DCB3CCF002BE3F3 /* TTAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertViewController.h; sourceTree = "<group>"; };
@@ -470,6 +502,29 @@
 			path = NetLoan;
 			sourceTree = "<group>";
 		};
+		A667D3821FC94E9500755382 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A667D3831FC94EAE00755382 /* 图标代替@2x.png */,
+				A667D3851FC94EAE00755382 /* 图标代替@3x.png */,
+				A667D38B1FC94EAE00755382 /* 隐藏@2x.png */,
+				A667D38C1FC94EAE00755382 /* 隐藏@3x.png */,
+				A667D3911FC94EAF00755382 /* CombinedShape@2x.png */,
+				A667D3881FC94EAE00755382 /* CombinedShape@3x.png */,
+				A667D3921FC94EAF00755382 /* Group21Copy@2x.png */,
+				A667D3891FC94EAE00755382 /* Group21Copy@3x.png */,
+				A667D3871FC94EAE00755382 /* Group22@2x.png */,
+				A667D3841FC94EAE00755382 /* Group22@3x.png */,
+				A667D38F1FC94EAF00755382 /* Page_Copy2@2x.png */,
+				A667D3861FC94EAE00755382 /* Page_Copy 2@3x.png */,
+				A667D38D1FC94EAE00755382 /* Page_1@2x.png */,
+				A667D38A1FC94EAE00755382 /* Page_1@3x.png */,
+				A667D38E1FC94EAF00755382 /* Page_2@2x.png */,
+				A667D3901FC94EAF00755382 /* Page_2@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		A6805B761DCB3C96002BE3F3 /* TTAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +541,7 @@
 		A68DB4D21FC711A8006C36C9 /* JFBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				A667D3821FC94E9500755382 /* Resource */,
 				A667D37E1FC9214300755382 /* NetLoan */,
 				A667D3771FC8137D00755382 /* JFRegular */,
 				A68DB4D31FC711A8006C36C9 /* Invest */,
@@ -688,6 +744,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A667D3931FC951A000755382 /* 图标代替@2x.png in Sources */,
+				A667D3941FC951A000755382 /* 图标代替@3x.png in Sources */,
+				A667D3951FC951A000755382 /* 隐藏@2x.png in Sources */,
+				A667D3961FC951A000755382 /* 隐藏@3x.png in Sources */,
+				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
+				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
+				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,
+				A667D39A1FC951A000755382 /* Group21Copy@3x.png in Sources */,
+				A667D39B1FC951A000755382 /* Group22@2x.png in Sources */,
+				A667D39C1FC951A000755382 /* Group22@3x.png in Sources */,
+				A667D39D1FC951A000755382 /* Page_Copy2@2x.png in Sources */,
+				A667D39E1FC951A000755382 /* Page_Copy 2@3x.png in Sources */,
+				A667D39F1FC951A000755382 /* Page_1@2x.png in Sources */,
+				A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */,
+				A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */,
+				A667D3A21FC951A000755382 /* Page_2@3x.png in Sources */,
 				A6FF46901F6906A100112C22 /* Stu.m in Sources */,
 				A612EF201DBF574A0051DFD4 /* HBStepView.m in Sources */,
 				A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */,
