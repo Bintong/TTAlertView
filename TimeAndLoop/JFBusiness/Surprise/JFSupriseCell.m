@@ -1,22 +1,20 @@
 //
-//  JFRegularCell.m
+//  JFSupriseCell.m
 //  TimeAndLoop
 //
 //  Created by BinTong on 2017/11/25.
 //  Copyright © 2017年 TongBin. All rights reserved.
 //
 
-#import "JFRegularCell.h"
+#import "JFSupriseCell.h"
 
-
-
-@implementation JFRegularCell
+@implementation JFSupriseCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView {
     
-    static NSString *cellID = @"JFRegularCell";
+    static NSString *cellID = @"JFSupriseCell";
     
-    JFRegularCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    JFSupriseCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if(cell == nil)
     {
@@ -34,10 +32,10 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         
-//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH ,117)];
-
+        //        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH ,117)];
+        
         UIView *view = self.contentView;
-        [view bottomLineX:20 width:SCREEN_WIDTH color:kLineColor];
+        [view bottomLineX:0 width:SCREEN_WIDTH color:JF_COLOR_D];
         
         UIView *subTitleView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 50)];
         UILabel *qiquanLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, 120, 50) Text:@"期权ETF50第1期"];
@@ -115,4 +113,5 @@
     lbTitle.text = text;
     return lbTitle;
 }
+
 @end

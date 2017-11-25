@@ -1,21 +1,22 @@
 //
-//  JFRegularViewController.m
+//  JFNetLoanViewController.m
 //  TimeAndLoop
 //
-//  Created by BinTong on 2017/11/24.
+//  Created by BinTong on 2017/11/25.
 //  Copyright © 2017年 TongBin. All rights reserved.
 //
 
-#import "JFRegularViewController.h"
-#import "JFSurpriseViewController.h"
-#import "JFRegularCell.h"
+#import "JFNetLoanViewController.h"
+#import "JFNetLoanCell.h"
 
-@interface JFRegularViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface JFNetLoanViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property(nonatomic, strong) UITableView *listView;
 @property (nonatomic,strong) NSMutableArray *listData;
+
 @end
 
-@implementation JFRegularViewController
+@implementation JFNetLoanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,8 +26,12 @@
     [self buildListView];
     [self refreshData];
     
-    self.listData = @[@"1",@"2"];
+    self.listData = @[@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2"];
     // Do any additional setup after loading the view.
+}
+
+- (void)refreshData {
+    
 }
 
 - (void)buildListView {
@@ -75,18 +80,18 @@
     [topHeaderView addSubview:syLab];
     [headerView addSubview:topHeaderView];
     //scrollview
- 
+    
     UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, topHeaderView.bottom + 10, SCREEN_WIDTH, 100)];
     banner.backgroundColor = [UIColor whiteColor];
     [headerView addSubview:banner];
     //titleView
     
-    UIView *titleView = [self creatTopTitleView:@"惊喜计划"];
+    UIView *titleView = [self creatTopTitleView:@"季度账户"];
     titleView.top = banner.bottom + 10;
     [titleView bottomLineX:0 width:SCREEN_WIDTH color:kLineColor];
     [headerView addSubview:titleView];
     
- }
+}
 
 - (UIView *)creatTopTitleView:(NSString *)title {
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 45)];
@@ -96,44 +101,25 @@
     UILabel *titleLable = [self labelWithFontSize:14 FontColor:JF_COLOR_B frame:CGRectMake(20, 0, SCREEN_WIDTH/2, leftView.height) Text:title];
     titleLable.font = [UIFont boldSystemFontOfSize:14];
     titleLable.textAlignment = NSTextAlignmentLeft;
-    
-    UIButton *bt = [self createButtonTitle:@"更多 >" Frame:CGRectMake(SCREEN_WIDTH - 20 - 70, 0, 70, 45) SEL:@selector(tempPushToNetLoan:)];
-    bt.titleLabel.textAlignment = NSTextAlignmentRight;
-    bt.backgroundColor = [UIColor clearColor];
-    [leftView addSubview:bt];
     [leftView addSubview:titleLable];
     
     return leftView;
 }
 
-- (void)tempPushToNetLoan:(id)sender {
-    JFSurpriseViewController *ctr = [[JFSurpriseViewController alloc] init];
-    [self.navigationController pushViewController:ctr animated:YES];
-}
-
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150;
+    return 125;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.listData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JFRegularCell *cell = [JFRegularCell cellWithTableView:tableView];
+    JFNetLoanCell *cell = [JFNetLoanCell cellWithTableView:tableView];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
 
-
-
-- (void)refreshData {
-    
-}
 - (UIButton *)createButtonTitle:(NSString *)title Frame:(CGRect)frame SEL:(SEL)selector {
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
     bt.frame = frame;
@@ -154,5 +140,4 @@
     lbTitle.text = text;
     return lbTitle;
 }
-
 @end

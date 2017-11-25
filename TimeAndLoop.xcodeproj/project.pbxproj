@@ -68,6 +68,10 @@
 		A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38A1FC94EAE00755382 /* Page_1@3x.png */; };
 		A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38E1FC94EAF00755382 /* Page_2@2x.png */; };
 		A667D3A21FC951A000755382 /* Page_2@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3901FC94EAF00755382 /* Page_2@3x.png */; };
+		A667D3A61FC955D500755382 /* JFSurpriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3A51FC955D500755382 /* JFSurpriseViewController.m */; };
+		A667D3A91FC957CB00755382 /* JFSupriseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3A81FC957CB00755382 /* JFSupriseCell.m */; };
+		A667D3AC1FC960BB00755382 /* JFNetLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3AB1FC960BB00755382 /* JFNetLoanViewController.m */; };
+		A667D3AF1FC9644200755382 /* JFNetLoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3AE1FC9644200755382 /* JFNetLoanCell.m */; };
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B781DCB3CCF002BE3F3 /* TTAlertViewController.m */; };
 		A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B7B1DCB3E88002BE3F3 /* TTAction.m */; };
@@ -202,6 +206,14 @@
 		A667D3901FC94EAF00755382 /* Page_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_2@3x.png"; sourceTree = "<group>"; };
 		A667D3911FC94EAF00755382 /* CombinedShape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedShape@2x.png"; sourceTree = "<group>"; };
 		A667D3921FC94EAF00755382 /* Group21Copy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group21Copy@2x.png"; sourceTree = "<group>"; };
+		A667D3A41FC955D500755382 /* JFSurpriseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFSurpriseViewController.h; sourceTree = "<group>"; };
+		A667D3A51FC955D500755382 /* JFSurpriseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFSurpriseViewController.m; sourceTree = "<group>"; };
+		A667D3A71FC957CB00755382 /* JFSupriseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFSupriseCell.h; sourceTree = "<group>"; };
+		A667D3A81FC957CB00755382 /* JFSupriseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFSupriseCell.m; sourceTree = "<group>"; };
+		A667D3AA1FC960BB00755382 /* JFNetLoanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFNetLoanViewController.h; sourceTree = "<group>"; };
+		A667D3AB1FC960BB00755382 /* JFNetLoanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFNetLoanViewController.m; sourceTree = "<group>"; };
+		A667D3AD1FC9644200755382 /* JFNetLoanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFNetLoanCell.h; sourceTree = "<group>"; };
+		A667D3AE1FC9644200755382 /* JFNetLoanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFNetLoanCell.m; sourceTree = "<group>"; };
 		A6805B731DCB2949002BE3F3 /* TBAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAlertViewController.h; sourceTree = "<group>"; };
 		A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAlertViewController.m; sourceTree = "<group>"; };
 		A6805B771DCB3CCF002BE3F3 /* TTAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertViewController.h; sourceTree = "<group>"; };
@@ -498,6 +510,10 @@
 		A667D37E1FC9214300755382 /* NetLoan */ = {
 			isa = PBXGroup;
 			children = (
+				A667D3AA1FC960BB00755382 /* JFNetLoanViewController.h */,
+				A667D3AB1FC960BB00755382 /* JFNetLoanViewController.m */,
+				A667D3AD1FC9644200755382 /* JFNetLoanCell.h */,
+				A667D3AE1FC9644200755382 /* JFNetLoanCell.m */,
 			);
 			path = NetLoan;
 			sourceTree = "<group>";
@@ -525,6 +541,17 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		A667D3A31FC953DA00755382 /* Surprise */ = {
+			isa = PBXGroup;
+			children = (
+				A667D3A41FC955D500755382 /* JFSurpriseViewController.h */,
+				A667D3A51FC955D500755382 /* JFSurpriseViewController.m */,
+				A667D3A71FC957CB00755382 /* JFSupriseCell.h */,
+				A667D3A81FC957CB00755382 /* JFSupriseCell.m */,
+			);
+			path = Surprise;
+			sourceTree = "<group>";
+		};
 		A6805B761DCB3C96002BE3F3 /* TTAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +568,7 @@
 		A68DB4D21FC711A8006C36C9 /* JFBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				A667D3A31FC953DA00755382 /* Surprise */,
 				A667D3821FC94E9500755382 /* Resource */,
 				A667D37E1FC9214300755382 /* NetLoan */,
 				A667D3771FC8137D00755382 /* JFRegular */,
@@ -761,6 +789,7 @@
 				A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */,
 				A667D3A21FC951A000755382 /* Page_2@3x.png in Sources */,
 				A6FF46901F6906A100112C22 /* Stu.m in Sources */,
+				A667D3AF1FC9644200755382 /* JFNetLoanCell.m in Sources */,
 				A612EF201DBF574A0051DFD4 /* HBStepView.m in Sources */,
 				A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */,
 				A64AFB9B1E77F1DC00558869 /* NSString+Resolve.m in Sources */,
@@ -769,6 +798,7 @@
 				A64AFB9C1E77F1DC00558869 /* NSValue+Resolve.m in Sources */,
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
 				A612EF341DC1F74C0051DFD4 /* PersonInfoCell.m in Sources */,
+				A667D3A61FC955D500755382 /* JFSurpriseViewController.m in Sources */,
 				A64AFB9F1E77F4AE00558869 /* FileManager.m in Sources */,
 				A64AFB8A1E77F19400558869 /* HBCheckValid.m in Sources */,
 				A64AFB841E77EE6B00558869 /* PlaceProvinceInfo.m in Sources */,
@@ -784,6 +814,7 @@
 				A68DB4EC1FC711A8006C36C9 /* JFInvestViewController.m in Sources */,
 				A64AFB821E77EE6B00558869 /* PlaceAreaInfo.m in Sources */,
 				A642FB8D1FC2CD6300B6A4DC /* RouterController.m in Sources */,
+				A667D3A91FC957CB00755382 /* JFSupriseCell.m in Sources */,
 				A64C42D41DC7304100DDFE84 /* OnRoadViewController.m in Sources */,
 				A64AFB971E77F1DC00558869 /* NSObject+Archive.m in Sources */,
 				A6805B7F1DCC2BEF002BE3F3 /* TTAlertView.m in Sources */,
@@ -811,6 +842,7 @@
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A659DADF1F57FDC000320FF3 /* SMSViewController.m in Sources */,
 				A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */,
+				A667D3AC1FC960BB00755382 /* JFNetLoanViewController.m in Sources */,
 				A6FF46931F6906A700112C22 /* Tec.m in Sources */,
 				A68DB4EA1FC711A8006C36C9 /* JFInvestCell.m in Sources */,
 				A642FB901FC3B9AB00B6A4DC /* RouterTwoViewController.m in Sources */,

@@ -21,6 +21,8 @@
 #import "JLRoutes.h"
 #import "JFInvestViewController.h"
 #import "JFRegularViewController.h"
+
+#import "JFNetLoanViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
@@ -34,7 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg"];
+    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷"];
+    
     
     
     _arr = ar;
@@ -122,6 +125,9 @@
     }
     if (indexPath.row == 13) {
         ctr = [[JFRegularViewController alloc] init];
+    }
+    if (indexPath.row == 14) {
+        ctr = [[JFNetLoanViewController alloc] init];
     }
     
     [self.navigationController pushViewController:ctr animated:YES];

@@ -1,22 +1,20 @@
 //
-//  JFRegularCell.m
+//  JFNetLoanCell.m
 //  TimeAndLoop
 //
 //  Created by BinTong on 2017/11/25.
 //  Copyright © 2017年 TongBin. All rights reserved.
 //
 
-#import "JFRegularCell.h"
+#import "JFNetLoanCell.h"
 
-
-
-@implementation JFRegularCell
+@implementation JFNetLoanCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView {
     
-    static NSString *cellID = @"JFRegularCell";
+    static NSString *cellID = @"JFNetLoanCell";
     
-    JFRegularCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    JFNetLoanCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if(cell == nil)
     {
@@ -33,9 +31,6 @@
         self.accessoryType = UITableViewCellAccessoryNone;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        
-//        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH ,117)];
-
         UIView *view = self.contentView;
         [view bottomLineX:20 width:SCREEN_WIDTH color:kLineColor];
         
