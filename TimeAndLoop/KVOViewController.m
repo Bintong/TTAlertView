@@ -17,6 +17,10 @@
 
 @implementation KVOViewController
 
+- (void)tempHel {
+    NSLog(@"helo");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -26,6 +30,16 @@
     [button addTarget:self action:@selector(changeMessage) forControlEvents:UIControlEventTouchUpInside];
     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    view.center = self.view.center;
+    [self.view addSubview:view];
+    UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt.frame = CGRectMake(0, 0, 50, 50);
+    [view addSubview:bt];
+    bt.backgroundColor = [UIColor greenColor];
+    [bt addTarget:self action:@selector(tempHel) forControlEvents:UIControlEventTouchUpInside];
+    
     
     self.message = [[Message alloc] init];
     [self.message tb_addObserver:self

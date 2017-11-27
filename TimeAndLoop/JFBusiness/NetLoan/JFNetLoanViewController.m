@@ -8,6 +8,8 @@
 
 #import "JFNetLoanViewController.h"
 #import "JFNetLoanCell.h"
+#import "JFNetOtherCell.h"
+#import "JFNetLoanViewMananger.h"
 
 @interface JFNetLoanViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,13 +28,36 @@
     [self buildListView];
     [self refreshData];
     
-    self.listData = @[@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2"];
-    // Do any additional setup after loading the view.
+    self.listData = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2"]];
+    
+    [self insertCustomView];
 }
 
 - (void)refreshData {
     
 }
+- (void)insertCustomView {
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 590+370/2 + 30)];
+    footerView.backgroundColor = JF_COLOR_BG;
+    UIView *zqView = [[JFNetLoanViewMananger sharedManager] buildZqView];
+    zqView.top = 10;
+    [footerView addSubview:zqView];
+    
+    UIView *jxView = [[JFNetLoanViewMananger sharedManager] buildJxItemView];
+    jxView.top = zqView.bottom + 10;
+    [footerView addSubview:jxView];
+    
+    UIView *zrView = [[JFNetLoanViewMananger sharedManager] buildZrView];
+    zrView.top = jxView.bottom + 10;
+    [footerView addSubview:zrView];
+ 
+    
+
+
+    self.listView.tableFooterView = footerView;
+    
+}
+
 
 - (void)buildListView {
     self.listView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS style:UITableViewStylePlain];
@@ -116,7 +141,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JFNetLoanCell *cell = [JFNetLoanCell cellWithTableView:tableView];
+ 
+ 
     return cell;
+    
 }
 
 
