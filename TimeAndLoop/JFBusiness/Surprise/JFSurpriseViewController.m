@@ -39,7 +39,6 @@
     UIView *lineview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
     lineview.backgroundColor = JF_COLOR_BG;
     self.listView.tableHeaderView = lineview;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

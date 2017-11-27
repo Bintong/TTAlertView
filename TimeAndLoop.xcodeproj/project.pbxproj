@@ -74,6 +74,8 @@
 		A667D3AF1FC9644200755382 /* JFNetLoanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3AE1FC9644200755382 /* JFNetLoanCell.m */; };
 		A667D3B21FC9737500755382 /* JFNetOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3B11FC9737500755382 /* JFNetOtherCell.m */; };
 		A667D3B51FC97B4400755382 /* JFNetLoanViewMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3B41FC97B4400755382 /* JFNetLoanViewMananger.m */; };
+		A667D3B91FCBBE9A00755382 /* JFTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3B81FCBBE9A00755382 /* JFTransferViewController.m */; };
+		A667D3BD1FCBBFCE00755382 /* JFTransferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3BC1FCBBFCE00755382 /* JFTransferCell.m */; };
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B781DCB3CCF002BE3F3 /* TTAlertViewController.m */; };
 		A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B7B1DCB3E88002BE3F3 /* TTAction.m */; };
@@ -220,6 +222,11 @@
 		A667D3B11FC9737500755382 /* JFNetOtherCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFNetOtherCell.m; sourceTree = "<group>"; };
 		A667D3B31FC97B4400755382 /* JFNetLoanViewMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFNetLoanViewMananger.h; sourceTree = "<group>"; };
 		A667D3B41FC97B4400755382 /* JFNetLoanViewMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFNetLoanViewMananger.m; sourceTree = "<group>"; };
+		A667D3B61FCBBCAE00755382 /* JFTypeCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTypeCommon.h; sourceTree = "<group>"; };
+		A667D3B71FCBBE9A00755382 /* JFTransferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTransferViewController.h; sourceTree = "<group>"; };
+		A667D3B81FCBBE9A00755382 /* JFTransferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTransferViewController.m; sourceTree = "<group>"; };
+		A667D3BB1FCBBFCE00755382 /* JFTransferCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTransferCell.h; sourceTree = "<group>"; };
+		A667D3BC1FCBBFCE00755382 /* JFTransferCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTransferCell.m; sourceTree = "<group>"; };
 		A6805B731DCB2949002BE3F3 /* TBAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAlertViewController.h; sourceTree = "<group>"; };
 		A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAlertViewController.m; sourceTree = "<group>"; };
 		A6805B771DCB3CCF002BE3F3 /* TTAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertViewController.h; sourceTree = "<group>"; };
@@ -562,6 +569,17 @@
 			path = Surprise;
 			sourceTree = "<group>";
 		};
+		A667D3BA1FCBBEA300755382 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				A667D3B71FCBBE9A00755382 /* JFTransferViewController.h */,
+				A667D3B81FCBBE9A00755382 /* JFTransferViewController.m */,
+				A667D3BB1FCBBFCE00755382 /* JFTransferCell.h */,
+				A667D3BC1FCBBFCE00755382 /* JFTransferCell.m */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
 		A6805B761DCB3C96002BE3F3 /* TTAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,8 +596,9 @@
 		A68DB4D21FC711A8006C36C9 /* JFBusiness */ = {
 			isa = PBXGroup;
 			children = (
-				A667D3A31FC953DA00755382 /* Surprise */,
 				A667D3821FC94E9500755382 /* Resource */,
+				A667D3BA1FCBBEA300755382 /* Transfer */,
+				A667D3A31FC953DA00755382 /* Surprise */,
 				A667D37E1FC9214300755382 /* NetLoan */,
 				A667D3771FC8137D00755382 /* JFRegular */,
 				A68DB4D31FC711A8006C36C9 /* Invest */,
@@ -590,6 +609,7 @@
 				A68DB4E71FC711A8006C36C9 /* UIView+Coordinate.m */,
 				A68DB4E81FC711A8006C36C9 /* UIView+DrawLine.h */,
 				A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */,
+				A667D3B61FCBBCAE00755382 /* JFTypeCommon.h */,
 			);
 			path = JFBusiness;
 			sourceTree = "<group>";
@@ -806,6 +826,7 @@
 				A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */,
 				A64AFB9B1E77F1DC00558869 /* NSString+Resolve.m in Sources */,
 				A64AFB991E77F1DC00558869 /* NSArray+Resolve.m in Sources */,
+				A667D3B91FCBBE9A00755382 /* JFTransferViewController.m in Sources */,
 				A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */,
 				A64AFB9C1E77F1DC00558869 /* NSValue+Resolve.m in Sources */,
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
@@ -851,6 +872,7 @@
 				A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */,
 				A6351B1F1DB9FFCE00221579 /* ObservationInfo.m in Sources */,
 				A68DB4EB1FC711A8006C36C9 /* JFInvestCellViewModel.m in Sources */,
+				A667D3BD1FCBBFCE00755382 /* JFTransferCell.m in Sources */,
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A659DADF1F57FDC000320FF3 /* SMSViewController.m in Sources */,
 				A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */,

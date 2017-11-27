@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^CallBack)();
+
+//typedef NS_ENUM(NSInteger, InvestType) {
+//    InvestNetLoan,//网贷
+//    InvestRegular,//定期
+//    InvestCurrent,//活期
+//    InvestTransfer, //转让
+//    InvestFeatured //精选
+//
+//};
+typedef void(^CallBack)(InvestType type);
+
 
 @interface JFNetLoanViewMananger : NSObject
-//@property(nonatomic, copy) CallBack *block;
+@property(nonatomic, copy) CallBack block;
 
 + (JFNetLoanViewMananger *)sharedManager;
 

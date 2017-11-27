@@ -23,10 +23,7 @@
     
     UIView *zhuanquView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 370/2)];
     zhuanquView.backgroundColor = [UIColor whiteColor];
-    UIView *topV = [self creatTopTitleView:@"特色专区" hasMore:NO];
-    
-    
-    
+    UIView *topV = [self creatTopTitleView:@"特色专区" hasMore:NO investType:0];
     [zhuanquView addSubview:topV];
     return zhuanquView;
 }
@@ -34,7 +31,7 @@
 - (UIView *)buildJxItemView {
     UIView *jingxuanView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 590/2)];
     jingxuanView.backgroundColor = [UIColor whiteColor];
-    UIView *topV = [self creatTopTitleView:@"精选标" hasMore:YES];
+    UIView *topV = [self creatTopTitleView:@"精选标" hasMore:YES investType:InvestFeatured];
     [jingxuanView addSubview:topV];
 
     UIView *cell_1 = [self createJxItemCellView];
@@ -51,7 +48,7 @@
 - (UIView *)buildZrView {
     UIView *zhuanrangView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 590/2)];
     zhuanrangView.backgroundColor = [UIColor whiteColor];
-    UIView *topV = [self creatTopTitleView:@"转让标" hasMore:YES];
+    UIView *topV = [self creatTopTitleView:@"转让标" hasMore:YES investType:InvestTransfer];
     
     [zhuanrangView addSubview:topV];
     
@@ -66,7 +63,7 @@
     return zhuanrangView;
 }
 
-- (UIView *)creatTopTitleView:(NSString *)title hasMore:(BOOL)more{
+- (UIView *)creatTopTitleView:(NSString *)title hasMore:(BOOL)more investType:(InvestType)type{
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 45)];
     leftView.backgroundColor = [UIColor whiteColor];
     [leftView bottomLineX:0 width:SCREEN_WIDTH color:JF_COLOR_D];
@@ -80,6 +77,7 @@
         UIButton *bt = [self createButtonTitle:@"更多 >" Frame:CGRectMake(SCREEN_WIDTH - 20 - 70, 0, 70, 45) SEL:@selector(tempPushToNetLoan:)];
         bt.titleLabel.textAlignment = NSTextAlignmentRight;
         bt.backgroundColor = [UIColor clearColor];
+        bt.tag = type;
         [leftView addSubview:bt];
     }
     return leftView;
@@ -126,7 +124,12 @@
 }
 
 - (void)tempPushToNetLoan:(id)sender {
-    NSLog(@"more");
+    UIButton *bt = (UIButton *)sender;
+    
+    if (self.block) {
+        InvestType type = bt.tag;
+        self.block(type);
+    }
 }
 
 
