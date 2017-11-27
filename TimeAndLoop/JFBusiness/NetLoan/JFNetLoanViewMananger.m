@@ -92,7 +92,7 @@
 
 - (UIView *)createJxItemCellView {
     UIView *cellView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 250/2)];
-    UILabel *itemTitleLab = [self labelWithFontSize:14 FontColor:JF_COLOR_D frame:CGRectMake(20, 0, SCREEN_WIDTH - 40, 55) Text:@"三农消费标LSBD2017082900009"];
+    UILabel *itemTitleLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, SCREEN_WIDTH - 40, 55) Text:@"三农消费标LSBD2017082900009"];
     [cellView addSubview:itemTitleLab];
     
     UILabel *leftMidLab = [self labelWithFontSize:20 FontColor:JF_COLOR_A frame:CGRectMake(20, 20, 70, 0) Text:@"8.5%"];
