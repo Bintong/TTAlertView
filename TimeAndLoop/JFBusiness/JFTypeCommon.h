@@ -14,7 +14,8 @@ typedef NS_ENUM(NSInteger, InvestType) {
     InvestRegular,//定期
     InvestCurrent,//活期
     InvestTransfer, //转让
-    InvestFeatured //精选
+    InvestFeatured, //精选
+    InvestJFB
     
 };
 #endif /* JFTypeCommon_h */

@@ -8,10 +8,10 @@
 
 #import "JFNetLoanViewController.h"
 #import "JFNetLoanCell.h"
-#import "JFNetOtherCell.h"
+ 
 #import "JFNetLoanViewMananger.h"
 #import "JFTransferViewController.h"
-
+#import "JFFeaturedViewController.h"
 
 @interface JFNetLoanViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -38,6 +38,7 @@
 - (void)refreshData {
     
 }
+
 - (void)insertCustomView {
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 590+370/2 + 30)];
     footerView.backgroundColor = JF_COLOR_BG;
@@ -57,8 +58,21 @@
     
     vm.block =  ^(InvestType type){
         //NSLog(@"type is ------> %lld",type);
-        JFTransferViewController *ctr = [[JFTransferViewController alloc] init];
-        [self.navigationController pushViewController:ctr animated:YES];
+        UIViewController *ctr = nil;
+        switch (type) {
+            case InvestTransfer:
+                ctr = [[JFTransferViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+            case InvestFeatured:
+                ctr = [[JFFeaturedViewController alloc] init];
+                [self.navigationController pushViewController:ctr animated:YES];
+                break;
+             
+            default:
+                break;
+        }
+     
     };
     
     

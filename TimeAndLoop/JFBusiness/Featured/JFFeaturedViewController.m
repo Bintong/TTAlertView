@@ -1,28 +1,26 @@
 //
-//  JFTransferViewController.m
+//  JFFeaturedViewController.m
 //  TimeAndLoop
 //
 //  Created by BinTong on 2017/11/27.
 //  Copyright © 2017年 TongBin. All rights reserved.
 //
 
-#import "JFTransferViewController.h"
-#import "JFTransferCell.h"
-@interface JFTransferViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "JFFeaturedViewController.h"
+#import "JFTransferCell.h"//复用转让
+@interface JFFeaturedViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *listView;
 @property (nonatomic,strong) NSMutableArray *listData;
 @end
 
-@implementation JFTransferViewController
+@implementation JFFeaturedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"转让标";
+    self.title = @"精选标";
     self.view.backgroundColor = JF_COLOR_BG;
     [self buildListView];
 }
-
-
 - (void)buildListView {
     self.listView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS style:UITableViewStyleGrouped];
     self.listView.showsVerticalScrollIndicator = NO;
@@ -41,6 +39,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
     return 125;
 }
 
@@ -70,11 +69,11 @@
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *sectionHeaderView;
     if (section == 0) {
-        sectionHeaderView = [self creatTopTitleView:@"正在转让"];
+        sectionHeaderView = [self creatTopTitleView:@"正在投标"];
     }else {
         sectionHeaderView = [self creatTopTitleView:@"已完成标"];
     }
-
+    
     sectionHeaderView.backgroundColor = JF_COLOR_BG;
     return sectionHeaderView;
 }
@@ -87,9 +86,7 @@
     return sectionFooterView;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
 }
 
@@ -113,10 +110,8 @@
     lbTitle.textAlignment = NSTextAlignmentLeft;
     [leftView addSubview:lbTitle];
     
- 
+    
     return faView;
 }
-
-
 
 @end
