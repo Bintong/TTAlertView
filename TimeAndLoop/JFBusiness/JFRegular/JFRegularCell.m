@@ -12,7 +12,7 @@
 
 @implementation JFRegularCell
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView {
++ (instancetype)cellWithTableView:(UITableView *)tableView hasProgress:(BOOL)progress {
     
     static NSString *cellID = @"JFRegularCell";
     
@@ -20,13 +20,13 @@
     
     if(cell == nil)
     {
-        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseId:cellID];
+        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseId:cellID hasProgress:progress];
     }
     
     return cell;
 }
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseId:(NSString *)cellID {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseId:(NSString *)cellID hasProgress:(BOOL)progress{
     
     if (self = [super initWithStyle:style reuseIdentifier:cellID])
     {
@@ -36,21 +36,24 @@
 
         UIView *view = self.contentView;
         [view bottomLineX:20 width:SCREEN_WIDTH color:kLineColor];
+        UIView *subTitleView;
+        if (progress) {
+            subTitleView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 50)];
+            UILabel *qiquanLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, 120, 50) Text:@"期权ETF50第1期"];
+            UILabel *trendLab = [self labelWithFontSize:9 FontColor:JF_COLOR_C frame:CGRectMake(qiquanLab.right, 0, 100, 50) Text:@"期权看涨"];
+            [subTitleView addSubview:trendLab];
+            [subTitleView addSubview:qiquanLab];
+            
+            [view addSubview:subTitleView];
+        }
+       
         
-        UIView *subTitleView = [[UIView alloc] initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 50)];
-        UILabel *qiquanLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(20, 0, 120, 50) Text:@"期权ETF50第1期"];
-        UILabel *trendLab = [self labelWithFontSize:9 FontColor:JF_COLOR_C frame:CGRectMake(qiquanLab.right, 0, 100, 50) Text:@"期权看涨"];
-        [subTitleView addSubview:trendLab];
-        [subTitleView addSubview:qiquanLab];
-        
-        [view addSubview:subTitleView];
-        
-        UILabel *leftMidLab = [self labelWithFontSize:32 FontColor:JF_COLOR_A frame:CGRectMake(20, 20, 60, 0) Text:@"8%"];
+        UILabel *leftMidLab = [self labelWithFontSize:22 FontColor:JF_COLOR_A frame:CGRectMake(20, 20, 60, 0) Text:@"8%"];
         [leftMidLab sizeToFit];
-        leftMidLab.top = subTitleView.bottom + 10;
+        leftMidLab.centerY = (progress? subTitleView.bottom + 10 : 100/2);
         [view addSubview:leftMidLab];
         
-        UILabel *subNumLab = [self labelWithFontSize:18 FontColor:JF_COLOR_B frame:CGRectMake(0, 0,50, 14) Text:@"+18%"];
+        UILabel *subNumLab = [self labelWithFontSize:16 FontColor:JF_COLOR_A frame:CGRectMake(0, 0,50, 14) Text:@"+18%"];
         UILabel *subNumTextLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(0, subNumLab.bottom + 10, 50, 14) Text:@"浮动最高"];
         UIView *subNumView = [[UIView alloc] initWithFrame:CGRectMake(leftMidLab.right + 5, 0, 50, 40)];
         [subNumView addSubview:subNumLab];
@@ -76,16 +79,18 @@
         
         UILabel *beginMoneyLab = [self labelWithFontSize:14 FontColor:JF_COLOR_C frame:CGRectMake(vline_2.right + 5, statueLab.top, 150, 14) Text:@"100000元起投"];
         [view addSubview:beginMoneyLab];
-        
-        //进度条
-        UIView *progressLine = [[UIView alloc] initWithFrame:CGRectMake(20, vline.bottom + 30, SCREEN_WIDTH - 40 - 35, 3)];
-        progressLine.backgroundColor = JF_COLOR_A;
-        [view addSubview:progressLine];
-        
-        //进度
-        UILabel *proLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(progressLine.right + 5, 0, 35, 12) Text:@"100%"];
-        proLab.centerY = progressLine.centerY;
-        [view addSubview:proLab];
+        if (progress) {
+            //进度条
+            UIView *progressLine = [[UIView alloc] initWithFrame:CGRectMake(20, vline.bottom + 30, SCREEN_WIDTH - 40 - 35, 3)];
+            progressLine.backgroundColor = JF_COLOR_A;
+            [view addSubview:progressLine];
+            
+            //进度
+            UILabel *proLab = [self labelWithFontSize:12 FontColor:JF_COLOR_C frame:CGRectMake(progressLine.right + 5, 0, 35, 12) Text:@"100%"];
+            proLab.centerY = progressLine.centerY;
+            [view addSubview:proLab];
+        }
+
         
     }
     

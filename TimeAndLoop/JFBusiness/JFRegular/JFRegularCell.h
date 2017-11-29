@@ -10,6 +10,6 @@
 
 @interface JFRegularCell : UITableViewCell
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
++ (instancetype)cellWithTableView:(UITableView *)tableView hasProgress:(BOOL)progress ;
 
 @end

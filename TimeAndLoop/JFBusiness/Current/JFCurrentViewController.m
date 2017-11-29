@@ -11,6 +11,8 @@
 @interface JFCurrentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *listView;
 @property (nonatomic,strong) NSMutableArray *listData;
+@property (nonatomic,strong) UILabel *numLab;
+
 @end
 
 @implementation JFCurrentViewController
@@ -44,17 +46,22 @@
     topHeaderView.backgroundColor = [UIColor whiteColor];
     [topHeaderView bottomLineX:0 width:1 color:kLineColor];
     
-    UILabel *netLoanLab = [self labelWithFontSize:14 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 60) Text:@"网贷总资产:"];
+    UILabel *netLoanLab = [self labelWithFontSize:14 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 60) Text:@"活期中资产: "];
     [topHeaderView addSubview:netLoanLab];
-    UILabel *numLab = [self labelWithFontSize:12 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 60) Text:@"1234567元"];
-    [numLab sizeToFit];
-    numLab.left = netLoanLab.right + 5;
-    numLab.centerY = netLoanLab.centerY;
-    [topHeaderView addSubview:numLab];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(numLab.right + 5, 0, 16, 10)];
-    imageView.image = [UIImage imageNamed:@"CombinedShape.png"];
-    imageView.centerY = topHeaderView.centerY;
-    [topHeaderView addSubview:imageView];
+    self.numLab = [self labelWithFontSize:12 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 60) Text:@"12343456567元"];
+    [self.numLab sizeToFit];
+    self.numLab.left = netLoanLab.right + 5;
+    self.numLab.centerY = netLoanLab.centerY;
+    [topHeaderView addSubview:self.numLab];
+    
+    UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt.frame = CGRectMake(self.numLab.right + 5, 0, 50, 60);
+    [bt setImage:[UIImage imageNamed:@"CombinedShape.png"] forState:UIControlStateNormal];
+    [bt setImage:[UIImage imageNamed:@"CombinedHidden.png"] forState:UIControlStateSelected];
+
+    bt.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0,  10);
+    [bt addTarget:self action:@selector(touchEye:) forControlEvents:UIControlEventTouchUpInside];
+    [topHeaderView addSubview:bt];
     
     UIImageView *imageRigView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 0, 11, 6)];
     imageRigView.image = [UIImage imageNamed:@"Page_1.png"];
@@ -121,6 +128,19 @@
     [leftView addSubview:titleLable];
     
     return leftView;
+}
+
+- (void)touchEye:(id)sender {
+    UIButton *eye = (UIButton *)sender;
+    eye.selected = !eye.selected;
+    if (eye.selected) {
+        self.numLab .text = @"***********";
+    }else {
+        self.numLab .text = @"12343456567元";
+    }
+    
+    
+    
 }
 
 /*

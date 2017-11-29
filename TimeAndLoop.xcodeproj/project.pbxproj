@@ -56,8 +56,8 @@
 		A667D3811FC9246700755382 /* JFRegularCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3801FC9246700755382 /* JFRegularCell.m */; };
 		A667D3931FC951A000755382 /* jfbIcon@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3831FC94EAE00755382 /* jfbIcon@2x.png */; };
 		A667D3941FC951A000755382 /* jfbIcon@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3851FC94EAE00755382 /* jfbIcon@3x.png */; };
-		A667D3951FC951A000755382 /* 隐藏@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38B1FC94EAE00755382 /* 隐藏@2x.png */; };
-		A667D3961FC951A000755382 /* 隐藏@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38C1FC94EAE00755382 /* 隐藏@3x.png */; };
+		A667D3951FC951A000755382 /* CombinedHidden@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38B1FC94EAE00755382 /* CombinedHidden@2x.png */; };
+		A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D38C1FC94EAE00755382 /* CombinedHidden@3x.png */; };
 		A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3911FC94EAF00755382 /* CombinedShape@2x.png */; };
 		A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3881FC94EAE00755382 /* CombinedShape@3x.png */; };
 		A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A667D3921FC94EAF00755382 /* Group21Copy@2x.png */; };
@@ -209,8 +209,8 @@
 		A667D3881FC94EAE00755382 /* CombinedShape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedShape@3x.png"; sourceTree = "<group>"; };
 		A667D3891FC94EAE00755382 /* Group21Copy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group21Copy@3x.png"; sourceTree = "<group>"; };
 		A667D38A1FC94EAE00755382 /* Page_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_1@3x.png"; sourceTree = "<group>"; };
-		A667D38B1FC94EAE00755382 /* 隐藏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "隐藏@2x.png"; sourceTree = "<group>"; };
-		A667D38C1FC94EAE00755382 /* 隐藏@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "隐藏@3x.png"; sourceTree = "<group>"; };
+		A667D38B1FC94EAE00755382 /* CombinedHidden@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedHidden@2x.png"; sourceTree = "<group>"; };
+		A667D38C1FC94EAE00755382 /* CombinedHidden@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CombinedHidden@3x.png"; sourceTree = "<group>"; };
 		A667D38D1FC94EAE00755382 /* Page_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_1@2x.png"; sourceTree = "<group>"; };
 		A667D38E1FC94EAF00755382 /* Page_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_2@2x.png"; sourceTree = "<group>"; };
 		A667D38F1FC94EAF00755382 /* Page_Copy2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Page_Copy2@2x.png"; sourceTree = "<group>"; };
@@ -558,8 +558,8 @@
 			children = (
 				A667D3831FC94EAE00755382 /* jfbIcon@2x.png */,
 				A667D3851FC94EAE00755382 /* jfbIcon@3x.png */,
-				A667D38B1FC94EAE00755382 /* 隐藏@2x.png */,
-				A667D38C1FC94EAE00755382 /* 隐藏@3x.png */,
+				A667D38B1FC94EAE00755382 /* CombinedHidden@2x.png */,
+				A667D38C1FC94EAE00755382 /* CombinedHidden@3x.png */,
 				A667D3911FC94EAF00755382 /* CombinedShape@2x.png */,
 				A667D3881FC94EAE00755382 /* CombinedShape@3x.png */,
 				A667D3921FC94EAF00755382 /* Group21Copy@2x.png */,
@@ -835,8 +835,8 @@
 			files = (
 				A667D3931FC951A000755382 /* jfbIcon@2x.png in Sources */,
 				A667D3941FC951A000755382 /* jfbIcon@3x.png in Sources */,
-				A667D3951FC951A000755382 /* 隐藏@2x.png in Sources */,
-				A667D3961FC951A000755382 /* 隐藏@3x.png in Sources */,
+				A667D3951FC951A000755382 /* CombinedHidden@2x.png in Sources */,
+				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
 				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
 				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
 				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,

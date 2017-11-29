@@ -121,7 +121,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JFRegularCell *cell = [JFRegularCell cellWithTableView:tableView];
+    JFRegularCell *cell = [JFRegularCell cellWithTableView:tableView hasProgress:YES];
     return cell;
 }
 
