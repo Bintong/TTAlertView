@@ -13,6 +13,12 @@
 @property (nonatomic,strong) NSMutableArray *listData;
 @property (nonatomic,strong) UILabel *numLab;
 
+@property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, strong) UIView *topHeaderView;
+@property (nonatomic, strong) UIView *banner;
+@property (nonatomic, strong) UIView *titleView;
+@property (nonatomic, strong) UIView *detailView;
+
 @end
 
 @implementation JFCurrentViewController
@@ -21,11 +27,8 @@
     [super viewDidLoad];
     self.title = @"活期";
     self.view.backgroundColor = JF_COLOR_BG;
-    
-    
     [self buildListView];
 }
-
 
 - (void)buildListView {
     self.listView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS style:UITableViewStyleGrouped];
@@ -38,21 +41,21 @@
     self.listView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.listView];
     //header
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,225)];
-    headerView.backgroundColor = [UIColor clearColor];
-    self.listView.tableHeaderView = headerView;
+    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH,225)];
+    self.headerView.backgroundColor = [UIColor clearColor];
+    self.listView.tableHeaderView = self.headerView;
     //top
-    UIView *topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    topHeaderView.backgroundColor = [UIColor whiteColor];
-    [topHeaderView bottomLineX:0 width:1 color:kLineColor];
+    self.topHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+    self.topHeaderView.backgroundColor = [UIColor whiteColor];
+    [self.topHeaderView bottomLineX:0 width:1 color:kLineColor];
     
     UILabel *netLoanLab = [self labelWithFontSize:14 FontColor:HB_COLOR_B frame:CGRectMake(20, 0, 78, 60) Text:@"活期中资产: "];
-    [topHeaderView addSubview:netLoanLab];
+    [self.topHeaderView addSubview:netLoanLab];
     self.numLab = [self labelWithFontSize:12 FontColor:HB_COLOR_B frame:CGRectMake(netLoanLab.right , 0, 20, 60) Text:@"12343456567元"];
     [self.numLab sizeToFit];
     self.numLab.left = netLoanLab.right + 5;
     self.numLab.centerY = netLoanLab.centerY;
-    [topHeaderView addSubview:self.numLab];
+    [self.topHeaderView addSubview:self.numLab];
     
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
     bt.frame = CGRectMake(self.numLab.right + 5, 0, 50, 60);
@@ -61,29 +64,31 @@
 
     bt.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0,  10);
     [bt addTarget:self action:@selector(touchEye:) forControlEvents:UIControlEventTouchUpInside];
-    [topHeaderView addSubview:bt];
+    [self.topHeaderView addSubview:bt];
     
     UIImageView *imageRigView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 40, 0, 11, 6)];
     imageRigView.image = [UIImage imageNamed:@"Page_1.png"];
-    imageRigView.centerY = topHeaderView.centerY;
-    [topHeaderView addSubview:imageRigView];
+    imageRigView.centerY = self.topHeaderView.centerY;
+    [self.topHeaderView addSubview:imageRigView];
     
     UILabel *syLab = [self labelWithFontSize:12 FontColor:HB_COLOR_C frame:CGRectMake(0, 0, SCREEN_WIDTH/3, 12) Text:@"昨天 +6.40"];
-    syLab.centerY = topHeaderView.centerY;
+    syLab.centerY = self.topHeaderView.centerY;
     syLab.right = imageRigView.left - 5;
     syLab.textAlignment = NSTextAlignmentRight;
-    [topHeaderView addSubview:syLab];
-    [headerView addSubview:topHeaderView];
+    [self.topHeaderView addSubview:syLab];
+    [self.topHeaderView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapHeaderView:)]];
+    
+    [self.headerView addSubview:self.topHeaderView];
     //scrollview
     
-    UIView *banner = [[UIView alloc] initWithFrame:CGRectMake(0, topHeaderView.bottom + 10, SCREEN_WIDTH, 100)];
-    banner.backgroundColor = [UIColor whiteColor];
-    [headerView addSubview:banner];
+    self.banner = [[UIView alloc] initWithFrame:CGRectMake(0, self.topHeaderView.bottom + 10, SCREEN_WIDTH, 100)];
+    self.banner.backgroundColor = [UIColor whiteColor];
+    [self.headerView addSubview:self.banner];
     
-    UIView *titleView = [self creatTopTitleView:@"日账户"];
-    titleView.top = banner.bottom + 10;
-    [titleView bottomLineX:0 width:SCREEN_WIDTH color:kLineColor];
-    [headerView addSubview:titleView];
+    self.titleView = [self creatTopTitleView:@"日账户"];
+    self.titleView.top = self.banner.bottom + 10;
+    [self.titleView bottomLineX:0 width:SCREEN_WIDTH color:kLineColor];
+    [self.headerView addSubview:self.titleView];
 }
 
 
@@ -138,11 +143,36 @@
     }else {
         self.numLab .text = @"12343456567元";
     }
-    
-    
-    
 }
 
+- (void)tapHeaderView:(id)sender {
+//    NSLog(@"nap");
+    if (self.headerView.height == 225) {
+        self.listView.tableHeaderView.height += 60;
+        self.listView.tableHeaderView = self.headerView;
+        self.topHeaderView.top = 0;
+        self.detailView = [self makeDetailView];
+        self.detailView.top = self.topHeaderView.bottom;
+        [_headerView addSubview:self.detailView];
+        self.banner.top = self.detailView.bottom + 10;
+        self.titleView.top = self.banner.bottom + 10;
+        
+    }else{
+        self.headerView.height -= 60;
+        self.listView.tableHeaderView = self.headerView;
+        [self.detailView removeFromSuperview];
+        self.topHeaderView.top = 0;
+        self.banner.top = self.topHeaderView.bottom + 10;
+        self.titleView.top = self.banner.bottom + 10;
+    }
+}
+
+
+- (UIView *)makeDetailView {
+    UIView *detail = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 73)];
+    detail.backgroundColor = [UIColor blueColor];
+    return detail;
+}
 /*
 #pragma mark - Navigation
 
