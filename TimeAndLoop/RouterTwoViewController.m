@@ -10,18 +10,26 @@
 #import "DCURLRouter.h"
 #import "UIViewController+DCURLRouter.h"
 
-
 @interface RouterTwoViewController ()
 
 @end
 
 @implementation RouterTwoViewController
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        NSLog(@"title_jf %@ ",self.params[@"title_jf"]);
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     UILabel *label = [UILabel new];
     label.bounds = CGRectMake(0, 0, 200, 40);
-    
+    NSLog(@"title_jf %@ ",self.params[@"title_jf"]);
     self.name = self.params[@"name"];
     self.age = self.params[@"age"];
     label.text = self.name !=nil ? [NSString stringWithFormat:@"id-%@,age-%@",self.name,self.age] : @"";

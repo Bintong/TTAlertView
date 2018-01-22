@@ -15,4 +15,6 @@
 @property (nonatomic,copy) NSString *height;
 @property (nonatomic,copy) NSString *high;
 
+@property (nonatomic,copy) NSString *title_jf;
+
 @end

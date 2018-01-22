@@ -33,6 +33,37 @@
     self.listData = [NSMutableArray arrayWithArray:@[@"1",@"2",@"1",@"2",@"1",@"2",@"1",@"2"]];
     
     [self insertCustomView];
+    
+    
+    
+    float int1 = 15.3231220;
+    float int2 = 5.21;
+    float int3 = 5.00;
+    
+    
+    
+    NSLog(@"int 1 %@",[self exchangeRage:int1]);
+    NSLog(@"int 2 %@",[self exchangeRage:int2]);
+    NSLog(@"int 3 %@",[self exchangeRage:int3]);
+    
+}
+
+
+- (NSString *)exchangeRage:(double)rage {
+    float i=roundf(rage);//对num取整
+    if (i==rage) {
+        return [NSString stringWithFormat:@"%.0f",i];
+    }else{
+        //小数
+        float rage_onePoint = floor(rage*10)/10;
+        
+        if (rage_onePoint == rage) {
+            return [NSString stringWithFormat:@"%0.1f",rage];
+        }else {
+            return [NSString stringWithFormat:@"%0.2f",rage];
+        }
+        
+    }
 }
 
 - (void)refreshData {
