@@ -10,4 +10,6 @@
 
 @interface FeaturedCell : UITableViewCell
 
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+
 @end

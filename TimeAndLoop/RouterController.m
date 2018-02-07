@@ -67,7 +67,6 @@
         [DCURLRouter pushURLString:@"dariel://item2?name=nsdn&age= 18" animated:YES];
 
     }else if(sender.tag == 1){
- 
         UIViewController *v = [[JFRouter shared] matchController:@"hello"];
         [self.navigationController pushViewController:v animated:YES];
     }else if(sender.tag == 2){
@@ -75,12 +74,10 @@
         UIViewController *v = block(@{@"title_jf":@"blocktitle",@"subTitle":@"hello world"},nil);
         [self.navigationController pushViewController:v animated:YES];
     }
-    
 }
 
 - (void)insertViewControllerJFController {
     Class c = NSClassFromString(@"RouterTwoViewController");
-
     [[JFRouter shared] map:@"hello" toControllerClass:c];
     
 }

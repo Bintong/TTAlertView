@@ -96,6 +96,9 @@
 		A68DB4F21FC711A8006C36C9 /* UIView+DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */; };
 		A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */; };
 		A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */; };
+		A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF988202B08F700DBBB8F /* TableListViewController.m */; };
+		A6EEF98C202B0C8000DBBB8F /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF98B202B0C8000DBBB8F /* TestTableViewController.m */; };
+		A6EEF98F202B0DB500DBBB8F /* JFSeletSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */; };
 		A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
 		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
@@ -275,6 +278,12 @@
 		A6EA81BE1E49DE70000669C1 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
 		A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
+		A6EEF987202B08F700DBBB8F /* TableListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableListViewController.h; sourceTree = "<group>"; };
+		A6EEF988202B08F700DBBB8F /* TableListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableListViewController.m; sourceTree = "<group>"; };
+		A6EEF98A202B0C8000DBBB8F /* TestTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		A6EEF98B202B0C8000DBBB8F /* TestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
+		A6EEF98D202B0DB500DBBB8F /* JFSeletSelfCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFSeletSelfCell.h; sourceTree = "<group>"; };
+		A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFSeletSelfCell.m; sourceTree = "<group>"; };
 		A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCURLRouter.plist; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
@@ -637,6 +646,7 @@
 		A68DB4D21FC711A8006C36C9 /* JFBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				A6EEF986202B086200DBBB8F /* TableView_1 */,
 				A667D3821FC94E9500755382 /* Resource */,
 				A64DBE291FCE503F00AE0A72 /* Current */,
 				A67068971FCBEF9500D6E4AD /* Featured */,
@@ -701,6 +711,19 @@
 				A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */,
 			);
 			name = TextFieldDelegate;
+			sourceTree = "<group>";
+		};
+		A6EEF986202B086200DBBB8F /* TableView_1 */ = {
+			isa = PBXGroup;
+			children = (
+				A6EEF987202B08F700DBBB8F /* TableListViewController.h */,
+				A6EEF988202B08F700DBBB8F /* TableListViewController.m */,
+				A6EEF98A202B0C8000DBBB8F /* TestTableViewController.h */,
+				A6EEF98B202B0C8000DBBB8F /* TestTableViewController.m */,
+				A6EEF98D202B0DB500DBBB8F /* JFSeletSelfCell.h */,
+				A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */,
+			);
+			path = TableView_1;
 			sourceTree = "<group>";
 		};
 		A6FF46841F68E01300112C22 /* Instrument */ = {
@@ -900,6 +923,7 @@
 				A64AFB971E77F1DC00558869 /* NSObject+Archive.m in Sources */,
 				A6805B7F1DCC2BEF002BE3F3 /* TTAlertView.m in Sources */,
 				A64AFB981E77F1DC00558869 /* NSDictionary+Resolve.m in Sources */,
+				A6EEF98F202B0DB500DBBB8F /* JFSeletSelfCell.m in Sources */,
 				A612EF1A1DBF56340051DFD4 /* CompleteDataViewController.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A64AFB811E77EE6B00558869 /* InfoPutViewManager.m in Sources */,
@@ -918,12 +942,14 @@
 				A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */,
 				A64C42D71DC73E1C00DDFE84 /* TaobaoVerificationController.m in Sources */,
 				A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */,
+				A6EEF98C202B0C8000DBBB8F /* TestTableViewController.m in Sources */,
 				A6351B1F1DB9FFCE00221579 /* ObservationInfo.m in Sources */,
 				A68DB4EB1FC711A8006C36C9 /* JFInvestCellViewModel.m in Sources */,
 				A667D3BD1FCBBFCE00755382 /* JFTransferCell.m in Sources */,
 				A612EF091DBF53F40051DFD4 /* UIView+DrawLine.m in Sources */,
 				A659DADF1F57FDC000320FF3 /* SMSViewController.m in Sources */,
 				A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */,
+				A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */,
 				A667D3AC1FC960BB00755382 /* JFNetLoanViewController.m in Sources */,
 				A6FF46931F6906A700112C22 /* Tec.m in Sources */,
 				A68DB4EA1FC711A8006C36C9 /* JFInvestCell.m in Sources */,

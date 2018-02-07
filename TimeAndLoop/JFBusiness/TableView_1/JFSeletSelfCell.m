@@ -1,20 +1,20 @@
 //
-//  FeaturedCell.m
+//  JFSeletSelfCell.m
 //  TimeAndLoop
 //
-//  Created by BinTong on 2017/11/27.
-//  Copyright © 2017年 TongBin. All rights reserved.
+//  Created by BinTong on 2018/2/7.
+//  Copyright © 2018年 TongBin. All rights reserved.
 //
 
-#import "FeaturedCell.h"
+#import "JFSeletSelfCell.h"
 
-@implementation FeaturedCell
+@implementation JFSeletSelfCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView {
     
-    static NSString *cellID = @"FeaturedCell";
+    static NSString *cellID = @"JFSeletSelfCell";
     
-    FeaturedCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    JFSeletSelfCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if(cell == nil)
     {
@@ -31,7 +31,7 @@
         self.accessoryType = UITableViewCellAccessoryNone;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-//         UIView *view = self.contentView;
+        //         UIView *view = self.contentView;
         
     }
     
@@ -59,4 +59,5 @@
     lbTitle.text = text;
     return lbTitle;
 }
+
 @end

@@ -32,7 +32,7 @@
     NSLog(@"title_jf %@ ",self.params[@"title_jf"]);
     self.name = self.params[@"name"];
     self.age = self.params[@"age"];
-    label.text = self.name !=nil ? [NSString stringWithFormat:@"id-%@,age-%@",self.name,self.age] : @"";
+    label.text = self.params[@"title_jf"];//self.name !=nil ? [NSString stringWithFormat:@"id-%@,age-%@",self.name,self.age] : @"";
     label.center = self.view.center;
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor orangeColor];
