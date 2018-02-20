@@ -7,7 +7,7 @@
 //
 
 #import "TableListViewController.h"
-
+#import "JFSeletSelfCell.h"
 @interface TableListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -32,7 +32,7 @@
 
 - (void)buildListView {
     self.listView = [[UITableView alloc] initWithFrame:SCREEN_BOUNDS style:UITableViewStyleGrouped];
-//    self.listView.top =  64;
+    self.listView.top =  64;
 //    self.listView.height = SCREEN_HEIGHT - 64 ;
 //    self.listView.backgroundColor = [self.resourceService colorForKey:COLOR_TABLEVIEW_BACKGROUND_COLOR];
     
@@ -51,6 +51,14 @@
 //    self.listView.mj_header = [JFRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNet)];
 //    [self.listView.mj_header beginRefreshing];
     [self.view addSubview:self.listView];
+    
+    
+    [self addHeaderView];
+    
+}
+
+- (void)addHeaderView {
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,18 +66,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
      return 5;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    JFSeletSelfCell *cell = [JFSeletSelfCell cellWithTableView:tableView indexPath:indexPath];
     return cell;
 }
 /*

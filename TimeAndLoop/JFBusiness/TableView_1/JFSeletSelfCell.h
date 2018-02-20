@@ -10,6 +10,8 @@
 
 @interface JFSeletSelfCell : UITableViewCell
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
+@property(nonatomic,strong)id itemModel;
+
++ (instancetype)cellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @end
