@@ -94,6 +94,10 @@
 		A68DB4F01FC711A8006C36C9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E51FC711A8006C36C9 /* UIColor+Hex.m */; };
 		A68DB4F11FC711A8006C36C9 /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E71FC711A8006C36C9 /* UIView+Coordinate.m */; };
 		A68DB4F21FC711A8006C36C9 /* UIView+DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */; };
+		A6D11F3A2211BFBF0077EB7F /* TextureDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D11F392211BFBF0077EB7F /* TextureDemoController.m */; };
+		A6D11F3F221542E10077EB7F /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D11F3D221542E10077EB7F /* CCViewController.m */; };
+		A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D11F3E221542E10077EB7F /* CCViewController.xib */; };
+		A6D11F43221545F70077EB7F /* Model_CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D11F42221545F70077EB7F /* Model_CC.m */; };
 		A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */; };
 		A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */; };
 		A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF988202B08F700DBBB8F /* TableListViewController.m */; };
@@ -275,6 +279,13 @@
 		A68DB4E71FC711A8006C36C9 /* UIView+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Coordinate.m"; sourceTree = "<group>"; };
 		A68DB4E81FC711A8006C36C9 /* UIView+DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawLine.h"; sourceTree = "<group>"; };
 		A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawLine.m"; sourceTree = "<group>"; };
+		A6D11F382211BFBF0077EB7F /* TextureDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureDemoController.h; sourceTree = "<group>"; };
+		A6D11F392211BFBF0077EB7F /* TextureDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureDemoController.m; sourceTree = "<group>"; };
+		A6D11F3C221542E10077EB7F /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		A6D11F3D221542E10077EB7F /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		A6D11F3E221542E10077EB7F /* CCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCViewController.xib; sourceTree = "<group>"; };
+		A6D11F41221545F70077EB7F /* Model_CC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model_CC.h; sourceTree = "<group>"; };
+		A6D11F42221545F70077EB7F /* Model_CC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model_CC.m; sourceTree = "<group>"; };
 		A6EA81BE1E49DE70000669C1 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
 		A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
@@ -439,6 +450,8 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A6D11F3B221542B10077EB7F /* 深拷贝&前拷贝 */,
+				A6D11F342211BF610077EB7F /* Texture */,
 				A68DB4D21FC711A8006C36C9 /* JFBusiness */,
 				A642FB8A1FC2B63900B6A4DC /* Router */,
 				A68FABD51EDEC22700207635 /* NSNotify */,
@@ -703,6 +716,27 @@
 			name = NSNotify;
 			sourceTree = "<group>";
 		};
+		A6D11F342211BF610077EB7F /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				A6D11F382211BFBF0077EB7F /* TextureDemoController.h */,
+				A6D11F392211BFBF0077EB7F /* TextureDemoController.m */,
+			);
+			name = Texture;
+			sourceTree = "<group>";
+		};
+		A6D11F3B221542B10077EB7F /* 深拷贝&前拷贝 */ = {
+			isa = PBXGroup;
+			children = (
+				A6D11F3C221542E10077EB7F /* CCViewController.h */,
+				A6D11F3D221542E10077EB7F /* CCViewController.m */,
+				A6D11F3E221542E10077EB7F /* CCViewController.xib */,
+				A6D11F41221545F70077EB7F /* Model_CC.h */,
+				A6D11F42221545F70077EB7F /* Model_CC.m */,
+			);
+			name = "深拷贝&前拷贝";
+			sourceTree = "<group>";
+		};
 		A6EA81BD1E49DE53000669C1 /* TextFieldDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -774,6 +808,7 @@
 					A6351ADF1DB9F0A800221579 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8DSRT929UQ;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -805,6 +840,7 @@
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
+				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
 				A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */,
 			);
@@ -878,6 +914,7 @@
 				A667D3B51FC97B4400755382 /* JFNetLoanViewMananger.m in Sources */,
 				A6573A152015C37500F99F7B /* JFRouter.m in Sources */,
 				A64DBE2F1FCE572100AE0A72 /* JFCurrentCell.m in Sources */,
+				A6D11F3F221542E10077EB7F /* CCViewController.m in Sources */,
 				A667D39A1FC951A000755382 /* Group21Copy@3x.png in Sources */,
 				A667D39B1FC951A000755382 /* Group22@2x.png in Sources */,
 				A667D39C1FC951A000755382 /* Group22@3x.png in Sources */,
@@ -906,10 +943,12 @@
 				A64AFB8A1E77F19400558869 /* HBCheckValid.m in Sources */,
 				A64AFB841E77EE6B00558869 /* PlaceProvinceInfo.m in Sources */,
 				A60592B41E5AC2A000C0E2FB /* NetController.m in Sources */,
+				A6D11F43221545F70077EB7F /* Model_CC.m in Sources */,
 				A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */,
 				A64AFB9A1E77F1DC00558869 /* NSNull+Resolve.m in Sources */,
 				A64AFB831E77EE6B00558869 /* PlaceCityInfo.m in Sources */,
 				A667D37D1FC813F200755382 /* JFRegularViewModel.m in Sources */,
+				A6D11F3A2211BFBF0077EB7F /* TextureDemoController.m in Sources */,
 				A68DB4EF1FC711A8006C36C9 /* JFInvestTitleView.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A68DB4EE1FC711A8006C36C9 /* JFBaoItemView.m in Sources */,
@@ -1070,6 +1109,7 @@
 			baseConfigurationReference = 5EE05C5C08118F6505875539 /* Pods-TimeAndLoop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DSRT929UQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeAndLoop/text.pch";
 				INFOPLIST_FILE = TimeAndLoop/Info.plist;
@@ -1077,6 +1117,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeAndLoop.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeAndLoop/TimeAndLoop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1085,6 +1128,7 @@
 			baseConfigurationReference = 65D9B891AB5DA6326071D6B5 /* Pods-TimeAndLoop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8DSRT929UQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TimeAndLoop/text.pch";
 				INFOPLIST_FILE = TimeAndLoop/Info.plist;
@@ -1092,6 +1136,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TimeAndLoop.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeAndLoop/TimeAndLoop-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

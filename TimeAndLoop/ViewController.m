@@ -23,6 +23,9 @@
 #import "JFRegularViewController.h"
 #import "TableListViewController.h"
 #import "JFNetLoanViewController.h"
+#import "TextureDemoController.h"
+#import "CCViewController.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
@@ -36,7 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷",@"list-1"];
+    NSArray *ar = @[@"Texure",@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷",@"list-1"];
     
     
     
@@ -88,48 +91,53 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *ctr ;
+    
     if (indexPath.row == 0) {
-        ctr = [[KVOViewController alloc] init];
+//        ctr = [[TextureDemoController alloc] init];
+        ctr = [[CCViewController alloc] init];
     }
     if (indexPath.row == 1) {
+        ctr = [[KVOViewController alloc] init];
+    }
+    if (indexPath.row == 2) {
         ctr = [[CreditController alloc] init];
         
     }
-    if (indexPath.row == 2) {
+    if (indexPath.row == 3) {
         ctr = [[TBAlertViewController alloc] init];
     }
     
-    if (indexPath.row == 3) {
+    if (indexPath.row == 4) {
         ctr = [[TextFieldViewController alloc] init];
     }
     
-    if (indexPath.row == 6) {
+    if (indexPath.row == 7) {
         ctr = [[ResultViewController alloc] init];
     }
-    if (indexPath.row == 7) {
+    if (indexPath.row == 8) {
         ctr = [[InfoPutController alloc] init];
     }
-    if (indexPath.row == 9){
+    if (indexPath.row == 10){
         ctr = [[ SMSViewController alloc]init];
     }
     
-    if (indexPath.row == 10) {
+    if (indexPath.row == 11) {
         ctr = [[LeakViewController alloc] init];
     }
     
-    if (indexPath.row == 11) {
+    if (indexPath.row == 12) {
         ctr = [[RouterController alloc] init];
     }
-    if (indexPath.row == 12) {
+    if (indexPath.row == 13) {
         ctr = [[JFInvestViewController alloc] init];
     }
-    if (indexPath.row == 13) {
+    if (indexPath.row == 14) {
         ctr = [[JFRegularViewController alloc] init];
     }
-    if (indexPath.row == 14) {
+    if (indexPath.row == 15) {
         ctr = [[JFNetLoanViewController alloc] init];
     }
-    if (indexPath.row == 15) {
+    if (indexPath.row == 16) {
         ctr = [[TableListViewController alloc] init];
     }
     
