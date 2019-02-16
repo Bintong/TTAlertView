@@ -94,7 +94,7 @@
     
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
-        ctr = [[CCViewController alloc] init];
+        ctr = [[TextureDemoController alloc] init];
     }
     if (indexPath.row == 1) {
         ctr = [[KVOViewController alloc] init];

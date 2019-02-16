@@ -108,7 +108,6 @@
     NSLog(@"%p", cc);
     NSLog(@"%p", cc_copy);
     
-    
 }
 
 /*
