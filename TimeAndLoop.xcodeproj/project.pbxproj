@@ -103,6 +103,8 @@
 		A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF988202B08F700DBBB8F /* TableListViewController.m */; };
 		A6EEF98C202B0C8000DBBB8F /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF98B202B0C8000DBBB8F /* TestTableViewController.m */; };
 		A6EEF98F202B0DB500DBBB8F /* JFSeletSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */; };
+		A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D35A221930A5002836BC /* TexureCellNode.m */; };
+		A6F2D35E221A4672002836BC /* TeureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D35D221A4672002836BC /* TeureModel.m */; };
 		A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
 		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
@@ -295,6 +297,10 @@
 		A6EEF98B202B0C8000DBBB8F /* TestTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		A6EEF98D202B0DB500DBBB8F /* JFSeletSelfCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFSeletSelfCell.h; sourceTree = "<group>"; };
 		A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFSeletSelfCell.m; sourceTree = "<group>"; };
+		A6F2D359221930A5002836BC /* TexureCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TexureCellNode.h; sourceTree = "<group>"; };
+		A6F2D35A221930A5002836BC /* TexureCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TexureCellNode.m; sourceTree = "<group>"; };
+		A6F2D35C221A4672002836BC /* TeureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeureModel.h; sourceTree = "<group>"; };
+		A6F2D35D221A4672002836BC /* TeureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeureModel.m; sourceTree = "<group>"; };
 		A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCURLRouter.plist; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
@@ -721,6 +727,10 @@
 			children = (
 				A6D11F382211BFBF0077EB7F /* TextureDemoController.h */,
 				A6D11F392211BFBF0077EB7F /* TextureDemoController.m */,
+				A6F2D359221930A5002836BC /* TexureCellNode.h */,
+				A6F2D35A221930A5002836BC /* TexureCellNode.m */,
+				A6F2D35C221A4672002836BC /* TeureModel.h */,
+				A6F2D35D221A4672002836BC /* TeureModel.m */,
 			);
 			name = Texture;
 			sourceTree = "<group>";
@@ -876,6 +886,7 @@
 				A667D3941FC951A000755382 /* jfbIcon@3x.png in Sources */,
 				A667D3951FC951A000755382 /* CombinedHidden@2x.png in Sources */,
 				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
+				A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */,
 				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
 				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
 				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,
@@ -912,6 +923,7 @@
 				A64AFB841E77EE6B00558869 /* PlaceProvinceInfo.m in Sources */,
 				A60592B41E5AC2A000C0E2FB /* NetController.m in Sources */,
 				A6D11F43221545F70077EB7F /* Model_CC.m in Sources */,
+				A6F2D35E221A4672002836BC /* TeureModel.m in Sources */,
 				A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */,
 				A64AFB9A1E77F1DC00558869 /* NSNull+Resolve.m in Sources */,
 				A64AFB831E77EE6B00558869 /* PlaceCityInfo.m in Sources */,

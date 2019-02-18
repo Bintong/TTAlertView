@@ -7,8 +7,13 @@
 //
 
 #import "TextureDemoController.h"
+#import <AsyncDisplayKit/AsyncDisplayKit.h>
+#import "TeureModel.h"
+#import "TexureCellNode.h"
+@interface TextureDemoController ()<ASTableDelegate, ASTableDataSource>
 
-@interface TextureDemoController ()
+@property (nonatomic, strong) ASTableNode *tableNode;
+@property (nonatomic, strong) NSMutableArray *modalArray;
 
 @end
 
@@ -16,19 +21,88 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    [self loadData];
+    [self addTableNode];
+
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillLayoutSubviews {
+    self.tableNode.frame = self.view.bounds;
 }
-*/
+
+- (void)loadData {
+    _modalArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
+
+}
+
+- (void)addTableNode {
+    self.tableNode = [[ASTableNode alloc] initWithStyle:UITableViewStylePlain];
+    self.tableNode.backgroundColor = [UIColor whiteColor];
+    self.tableNode.view.separatorStyle = UITableViewCellSelectionStyleNone;
+    [self.view addSubnode:self.tableNode];
+    self.tableNode.delegate = self;
+    self.tableNode.dataSource = self;
+}
+
+- (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
+    return self.modalArray.count;
+}
+
+- (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath{
+ 
+    TeureModel *m = [[TeureModel alloc] init];
+    m.title = self.modalArray[indexPath.row];
+
+ 
+    ASCellNode *(^cellNodeBlock)() = ^ASCellNode *() {
+        TexureCellNode *cellNode = [[TexureCellNode alloc] initWithModel:m];
+        return cellNode;
+    };
+    
+    return cellNodeBlock;
+}
+
+- (ASSizeRange)tableView:(ASTableView *)tableView constrainedSizeForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return  ASSizeRangeMake(CGSizeMake([UIScreen mainScreen].bounds.size.width, 66));
+}
+
+- (BOOL)shouldBatchFetchForTableNode:(ASTableNode *)tableNode {
+    return YES;
+}
+
+- (void)tableView:(ASTableView *)tableView willBeginBatchFetchWithContext:(ASBatchContext *)context {
+    [self retrieveNextPageWithCompletion:^(NSArray *animals) {
+        [self insertNewRowsInTableView:animals];
+        [context completeBatchFetching:YES];
+    } ];
+//    [self requestPageWithCompletionBlock:^(NSArray *newPhotos){
+//
+//        [self insertNewRows:newPhotos];
+//        if (context) {
+//            [context completeBatchFetching:YES];
+//        }
+//    } numResultsToReturn:20];
+}
+
+
+- (void)retrieveNextPageWithCompletion:(void (^)(NSArray *))block {
+//    NSArray *moreAnimals = [[NSArray alloc] initWithArray:[self.modalArray subarrayWithRange:NSMakeRange(0, 10)] copyItems:NO];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        block(moreAnimals);
+//
+//    });
+}
+
+- (void)insertNewRowsInTableView:(NSArray *)newAnimals {
+//    NSInteger oldCount = self.modalArray.count;
+    [self.modalArray addObjectsFromArray:newAnimals];
+//    [self.tableNode insertRowWithStart:oldCount NewCount:self.modalArray.count];
+    [self.tableNode insertRowsAtIndexPaths:newAnimals withRowAnimation:0];
+    
+}
 
 @end
