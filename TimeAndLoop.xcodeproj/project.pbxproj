@@ -105,6 +105,15 @@
 		A6EEF98F202B0DB500DBBB8F /* JFSeletSelfCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */; };
 		A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D35A221930A5002836BC /* TexureCellNode.m */; };
 		A6F2D35E221A4672002836BC /* TeureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D35D221A4672002836BC /* TeureModel.m */; };
+		A6F2D369221A732F002836BC /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D360221A732F002836BC /* 8.jpg */; };
+		A6F2D36A221A732F002836BC /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D361221A732F002836BC /* 4.jpg */; };
+		A6F2D36B221A732F002836BC /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D362221A732F002836BC /* 5.jpg */; };
+		A6F2D36C221A732F002836BC /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D363221A732F002836BC /* 7.jpg */; };
+		A6F2D36D221A732F002836BC /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D364221A732F002836BC /* 6.jpg */; };
+		A6F2D36E221A732F002836BC /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D365221A732F002836BC /* 2.jpg */; };
+		A6F2D36F221A732F002836BC /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D366221A732F002836BC /* 3.jpg */; };
+		A6F2D370221A732F002836BC /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D367221A732F002836BC /* 1.jpg */; };
+		A6F2D371221A732F002836BC /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D368221A732F002836BC /* 0.jpg */; };
 		A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
 		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
@@ -301,6 +310,15 @@
 		A6F2D35A221930A5002836BC /* TexureCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TexureCellNode.m; sourceTree = "<group>"; };
 		A6F2D35C221A4672002836BC /* TeureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeureModel.h; sourceTree = "<group>"; };
 		A6F2D35D221A4672002836BC /* TeureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeureModel.m; sourceTree = "<group>"; };
+		A6F2D360221A732F002836BC /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		A6F2D361221A732F002836BC /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		A6F2D362221A732F002836BC /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		A6F2D363221A732F002836BC /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		A6F2D364221A732F002836BC /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		A6F2D365221A732F002836BC /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		A6F2D366221A732F002836BC /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		A6F2D367221A732F002836BC /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		A6F2D368221A732F002836BC /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCURLRouter.plist; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
@@ -725,6 +743,7 @@
 		A6D11F342211BF610077EB7F /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				A6F2D35F221A732F002836BC /* testImg */,
 				A6D11F382211BFBF0077EB7F /* TextureDemoController.h */,
 				A6D11F392211BFBF0077EB7F /* TextureDemoController.m */,
 				A6F2D359221930A5002836BC /* TexureCellNode.h */,
@@ -768,6 +787,22 @@
 				A6EEF98E202B0DB500DBBB8F /* JFSeletSelfCell.m */,
 			);
 			path = TableView_1;
+			sourceTree = "<group>";
+		};
+		A6F2D35F221A732F002836BC /* testImg */ = {
+			isa = PBXGroup;
+			children = (
+				A6F2D360221A732F002836BC /* 8.jpg */,
+				A6F2D361221A732F002836BC /* 4.jpg */,
+				A6F2D362221A732F002836BC /* 5.jpg */,
+				A6F2D363221A732F002836BC /* 7.jpg */,
+				A6F2D364221A732F002836BC /* 6.jpg */,
+				A6F2D365221A732F002836BC /* 2.jpg */,
+				A6F2D366221A732F002836BC /* 3.jpg */,
+				A6F2D367221A732F002836BC /* 1.jpg */,
+				A6F2D368221A732F002836BC /* 0.jpg */,
+			);
+			path = testImg;
 			sourceTree = "<group>";
 		};
 		A6FF46841F68E01300112C22 /* Instrument */ = {
@@ -844,11 +879,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F2D36C221A732F002836BC /* 7.jpg in Resources */,
 				A6351AF31DB9F0A800221579 /* LaunchScreen.storyboard in Resources */,
+				A6F2D36B221A732F002836BC /* 5.jpg in Resources */,
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
+				A6F2D371221A732F002836BC /* 0.jpg in Resources */,
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
+				A6F2D36F221A732F002836BC /* 3.jpg in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
+				A6F2D36D221A732F002836BC /* 6.jpg in Resources */,
+				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
+				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
 				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
+				A6F2D36E221A732F002836BC /* 2.jpg in Resources */,
+				A6F2D36A221A732F002836BC /* 4.jpg in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
 				A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */,
 			);

@@ -34,7 +34,7 @@
 }
 
 - (void)loadData {
-    _modalArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
+    _modalArray = [NSMutableArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8", nil];
 
 }
 
@@ -56,7 +56,7 @@
     TeureModel *m = [[TeureModel alloc] init];
     m.title = self.modalArray[indexPath.row];
 
- 
+    m.imgUrlName = self.modalArray[indexPath.row];
     ASCellNode *(^cellNodeBlock)() = ^ASCellNode *() {
         TexureCellNode *cellNode = [[TexureCellNode alloc] initWithModel:m];
         return cellNode;
@@ -67,7 +67,7 @@
 
 - (ASSizeRange)tableView:(ASTableView *)tableView constrainedSizeForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return  ASSizeRangeMake(CGSizeMake([UIScreen mainScreen].bounds.size.width, 66));
+    return  ASSizeRangeMake(CGSizeMake([UIScreen mainScreen].bounds.size.width, 300));
 }
 
 - (BOOL)shouldBatchFetchForTableNode:(ASTableNode *)tableNode {
@@ -79,13 +79,6 @@
         [self insertNewRowsInTableView:animals];
         [context completeBatchFetching:YES];
     } ];
-//    [self requestPageWithCompletionBlock:^(NSArray *newPhotos){
-//
-//        [self insertNewRows:newPhotos];
-//        if (context) {
-//            [context completeBatchFetching:YES];
-//        }
-//    } numResultsToReturn:20];
 }
 
 

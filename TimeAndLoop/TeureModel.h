@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
- 
+
 
 @interface TeureModel : NSObject
 @property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *imgUrlName;
+
 @end
 

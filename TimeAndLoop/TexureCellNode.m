@@ -11,6 +11,8 @@
 
 @property (strong, nonatomic) ASTextNode *titleTextNode;
 
+@property (strong, nonatomic) ASImageNode *imageNode;
+
 @end
 
 @implementation TexureCellNode
@@ -19,19 +21,33 @@
     if (self = [super init]) {
         _titleTextNode = [[ASTextNode alloc] init];
         _titleTextNode.attributedText = [[NSAttributedString alloc] initWithString:video.title attributes:nil];
+    
+        _titleTextNode.backgroundColor = [UIColor redColor];
+        _imageNode = [[ASImageNode alloc] init];
+        _imageNode.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",video.imgUrlName]];
         [self addSubnode:_titleTextNode];
+        [self addSubnode:_imageNode];
     }
     return self;
 }
 
 -(ASLayoutSpec *)layoutSpecThatFits:(ASSizeRange)constrainedSize{
     
-
-    self.titleTextNode.style.layoutPosition = CGPointMake(16, 8);
-    self.titleTextNode.style.preferredLayoutSize = ASLayoutSizeMake(ASDimensionMake(100), ASDimensionMake(100));
     
-    ASAbsoluteLayoutSpec *absoluteLayout = [ASAbsoluteLayoutSpec absoluteLayoutSpecWithChildren:@[self.titleTextNode]];
-    return absoluteLayout;
+    self.titleTextNode.style.spacingBefore = 12.0f;
+
+    
+    ASRatioLayoutSpec *rationLayout = [ASRatioLayoutSpec ratioLayoutSpecWithRatio:0.5 child:self.imageNode];
+    
+    ASStackLayoutSpec *contentLayout = [ASStackLayoutSpec verticalStackLayoutSpec];
+    contentLayout.justifyContent = ASStackLayoutJustifyContentStart;
+    contentLayout.alignItems = ASStackLayoutAlignItemsStretch;
+    contentLayout.children = @[
+                               rationLayout,
+                               self.titleTextNode
+                               ];
+    ASInsetLayoutSpec *insetLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(16, 16, 16, 16) child:contentLayout];
+    return insetLayout;
 }
 
 @end
