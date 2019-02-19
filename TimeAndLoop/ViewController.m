@@ -25,7 +25,7 @@
 #import "JFNetLoanViewController.h"
 #import "TextureDemoController.h"
 #import "CCViewController.h"
-
+#import "TBPerformanceViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
@@ -94,7 +94,7 @@
     
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
-        ctr = [[TextureDemoController alloc] init];
+        ctr = [[TBPerformanceViewController alloc] init];
     }
     if (indexPath.row == 1) {
         ctr = [[KVOViewController alloc] init];

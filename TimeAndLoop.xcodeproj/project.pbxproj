@@ -114,6 +114,11 @@
 		A6F2D36F221A732F002836BC /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D366221A732F002836BC /* 3.jpg */; };
 		A6F2D370221A732F002836BC /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D367221A732F002836BC /* 1.jpg */; };
 		A6F2D371221A732F002836BC /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D368221A732F002836BC /* 0.jpg */; };
+		A6F2D376221BAED2002836BC /* TBPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D374221BAED2002836BC /* TBPerformanceViewController.m */; };
+		A6F2D377221BAED2002836BC /* TBPerformanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */; };
+		A6F2D37A221BB0B1002836BC /* TBPerforFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D379221BB0B1002836BC /* TBPerforFPS.m */; };
+		A6F2D37E221BBF8C002836BC /* FPSDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D37C221BBF8C002836BC /* FPSDemoController.m */; };
+		A6F2D37F221BBF8C002836BC /* FPSDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */; };
 		A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
 		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
@@ -319,6 +324,14 @@
 		A6F2D366221A732F002836BC /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		A6F2D367221A732F002836BC /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		A6F2D368221A732F002836BC /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		A6F2D373221BAED2002836BC /* TBPerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBPerformanceViewController.h; sourceTree = "<group>"; };
+		A6F2D374221BAED2002836BC /* TBPerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBPerformanceViewController.m; sourceTree = "<group>"; };
+		A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TBPerformanceViewController.xib; sourceTree = "<group>"; };
+		A6F2D378221BB0B1002836BC /* TBPerforFPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBPerforFPS.h; sourceTree = "<group>"; };
+		A6F2D379221BB0B1002836BC /* TBPerforFPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBPerforFPS.m; sourceTree = "<group>"; };
+		A6F2D37B221BBF8C002836BC /* FPSDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSDemoController.h; sourceTree = "<group>"; };
+		A6F2D37C221BBF8C002836BC /* FPSDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSDemoController.m; sourceTree = "<group>"; };
+		A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSDemoController.xib; sourceTree = "<group>"; };
 		A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCURLRouter.plist; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
@@ -474,6 +487,7 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A6F2D372221BAE78002836BC /* 效率性能模块 */,
 				A6D11F3B221542B10077EB7F /* 深拷贝&前拷贝 */,
 				A6D11F342211BF610077EB7F /* Texture */,
 				A68DB4D21FC711A8006C36C9 /* JFBusiness */,
@@ -805,6 +819,21 @@
 			path = testImg;
 			sourceTree = "<group>";
 		};
+		A6F2D372221BAE78002836BC /* 效率性能模块 */ = {
+			isa = PBXGroup;
+			children = (
+				A6F2D373221BAED2002836BC /* TBPerformanceViewController.h */,
+				A6F2D374221BAED2002836BC /* TBPerformanceViewController.m */,
+				A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */,
+				A6F2D378221BB0B1002836BC /* TBPerforFPS.h */,
+				A6F2D379221BB0B1002836BC /* TBPerforFPS.m */,
+				A6F2D37B221BBF8C002836BC /* FPSDemoController.h */,
+				A6F2D37C221BBF8C002836BC /* FPSDemoController.m */,
+				A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */,
+			);
+			name = "效率性能模块";
+			sourceTree = "<group>";
+		};
 		A6FF46841F68E01300112C22 /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +916,7 @@
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
 				A6F2D36F221A732F002836BC /* 3.jpg in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
+				A6F2D37F221BBF8C002836BC /* FPSDemoController.xib in Resources */,
 				A6F2D36D221A732F002836BC /* 6.jpg in Resources */,
 				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
 				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
@@ -895,6 +925,7 @@
 				A6F2D36A221A732F002836BC /* 4.jpg in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
 				A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */,
+				A6F2D377221BAED2002836BC /* TBPerformanceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,7 +987,9 @@
 				A64AFB9B1E77F1DC00558869 /* NSString+Resolve.m in Sources */,
 				A64AFB991E77F1DC00558869 /* NSArray+Resolve.m in Sources */,
 				A667D3B91FCBBE9A00755382 /* JFTransferViewController.m in Sources */,
+				A6F2D37A221BB0B1002836BC /* TBPerforFPS.m in Sources */,
 				A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */,
+				A6F2D376221BAED2002836BC /* TBPerformanceViewController.m in Sources */,
 				A64DBE2C1FCE505D00AE0A72 /* JFCurrentViewController.m in Sources */,
 				A64AFB9C1E77F1DC00558869 /* NSValue+Resolve.m in Sources */,
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
@@ -996,6 +1029,7 @@
 				A612EF271DBF66BC0051DFD4 /* PersonInfoController.m in Sources */,
 				A612EF0A1DBF53F40051DFD4 /* UIView+Frame.m in Sources */,
 				A6351B221DBC7F0100221579 /* Message.m in Sources */,
+				A6F2D37E221BBF8C002836BC /* FPSDemoController.m in Sources */,
 				A612EF161DBF544C0051DFD4 /* CreditController.m in Sources */,
 				A667D37A1FC813BF00755382 /* JFRegularViewController.m in Sources */,
 				A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */,
