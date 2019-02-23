@@ -8,6 +8,8 @@
 
 #import "TBPerformanceViewController.h"
 #import "TBPerforFPS.h"
+#import "TBCupUse.h"
+#import "TBMemeryUse.h"
 @interface TBPerformanceViewController ()
 
 @end
@@ -20,10 +22,13 @@
 }
 
 - (IBAction)cpuAction:(id)sender {
+    
+    TBCupUse *cpu = [[TBCupUse alloc] init];
+    [cpu cpuUse];
     //debug
 //    [[TBPerforFPS sharedInstance] close];
     
-//    
+//
 //    kern_return_t kr;
 //    task_info_data_t tinfo;
 //    mach_msg_type_number_t task_info_count;
@@ -38,8 +43,8 @@
 
 - (IBAction)memeryAction:(id)sender {
     //debug
-    [[TBPerforFPS sharedInstance] open];
-    //release no use
+    NSLog(@"memery use is %f mb", [TBMemeryUse usedMemoryInMB]);
+     //release no use
 }
 
 - (void)viewDidLoad {

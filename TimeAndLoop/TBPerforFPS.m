@@ -39,7 +39,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
         
         
-        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:       @selector(displayLinkTick:)];
+        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTick:)];
         [_displayLink setPaused:YES];
         [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     }
@@ -101,11 +101,11 @@
 //    }
 }
 
-- (void)applicationDidBecomeActiveNotification {
+- (void)applicationDidBecomeActiveNotification:(NSNotificationCenter *)notification {
     [self.displayLink setPaused:NO];
 }
 
-- (void)applicationWillResignActiveNotification {
+- (void)applicationWillResignActiveNotification:(NSNotificationCenter *)notification  {
     [self.displayLink setPaused:YES];
 }
 
