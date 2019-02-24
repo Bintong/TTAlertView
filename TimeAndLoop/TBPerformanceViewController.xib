@@ -34,7 +34,7 @@
                     <rect key="frame" x="102" y="203" width="159" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.38431372549999998" green="0.7843137255" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="cpu">
                         <color key="titleColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -50,6 +50,17 @@
                     </state>
                     <connections>
                         <action selector="memeryAction:" destination="-1" eventType="touchUpInside" id="8kK-bR-RXa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="va1-Mi-ObT">
+                    <rect key="frame" x="102" y="318" width="159" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.38431372549999998" green="0.7843137255" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="net 链接问题">
+                        <color key="titleColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="netReachability:" destination="-1" eventType="touchUpInside" id="tHw-Xd-VW7"/>
                     </connections>
                 </button>
             </subviews>

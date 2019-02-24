@@ -10,6 +10,8 @@
 #import "TBPerforFPS.h"
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
+#import "TBNetReachability.h"
+
 @interface TBPerformanceViewController ()
 
 @end
@@ -25,14 +27,7 @@
     
     TBCupUse *cpu = [[TBCupUse alloc] init];
     [cpu cpuUse];
-    //debug
-//    [[TBPerforFPS sharedInstance] close];
-    
-//
-//    kern_return_t kr;
-//    task_info_data_t tinfo;
-//    mach_msg_type_number_t task_info_count;
-    //release no use
+ 
 }
 
 - (IBAction)gpuAction:(id)sender {
@@ -46,6 +41,12 @@
     NSLog(@"memery use is %f mb", [TBMemeryUse usedMemoryInMB]);
      //release no use
 }
+- (IBAction)netReachability:(id)sender {
+    //debug
+    NSLog(@"net is reach is %d", [TBNetReachability socketReachabilityTest]);
+    //release no use
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

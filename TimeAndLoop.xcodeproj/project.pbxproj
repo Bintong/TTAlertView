@@ -121,6 +121,7 @@
 		A6F2D37F221BBF8C002836BC /* FPSDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */; };
 		A6F2D382221E8940002836BC /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D381221E8940002836BC /* TBCupUse.m */; };
 		A6F2D3852220DB13002836BC /* TBMemeryUse.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D3842220DB13002836BC /* TBMemeryUse.m */; };
+		A6F2D3882220EA57002836BC /* TBNetReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D3872220EA57002836BC /* TBNetReachability.m */; };
 		A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */; };
 		A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB7E041E68038E00AFDF14 /* ResultViewController.m */; };
 		A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF46861F68E03000112C22 /* LeakViewController.m */; };
@@ -338,6 +339,8 @@
 		A6F2D381221E8940002836BC /* TBCupUse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCupUse.m; sourceTree = "<group>"; };
 		A6F2D3832220DB13002836BC /* TBMemeryUse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBMemeryUse.h; sourceTree = "<group>"; };
 		A6F2D3842220DB13002836BC /* TBMemeryUse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBMemeryUse.m; sourceTree = "<group>"; };
+		A6F2D3862220EA57002836BC /* TBNetReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBNetReachability.h; sourceTree = "<group>"; };
+		A6F2D3872220EA57002836BC /* TBNetReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBNetReachability.m; sourceTree = "<group>"; };
 		A6F6FAA91FC3CAB20020A803 /* DCURLRouter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCURLRouter.plist; sourceTree = "<group>"; };
 		A6FB7E031E68038E00AFDF14 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		A6FB7E041E68038E00AFDF14 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
@@ -840,6 +843,8 @@
 				A6F2D37B221BBF8C002836BC /* FPSDemoController.h */,
 				A6F2D37C221BBF8C002836BC /* FPSDemoController.m */,
 				A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */,
+				A6F2D3862220EA57002836BC /* TBNetReachability.h */,
+				A6F2D3872220EA57002836BC /* TBNetReachability.m */,
 			);
 			name = "效率性能模块";
 			sourceTree = "<group>";
@@ -1019,6 +1024,7 @@
 				A667D37D1FC813F200755382 /* JFRegularViewModel.m in Sources */,
 				A6D11F3A2211BFBF0077EB7F /* TextureDemoController.m in Sources */,
 				A68DB4EF1FC711A8006C36C9 /* JFInvestTitleView.m in Sources */,
+				A6F2D3882220EA57002836BC /* TBNetReachability.m in Sources */,
 				A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */,
 				A68DB4EE1FC711A8006C36C9 /* JFBaoItemView.m in Sources */,
 				A68DB4ED1FC711A8006C36C9 /* JFInvestViewModel.m in Sources */,
