@@ -34,20 +34,12 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
-        
-        
-        _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTick:)];
-        [_displayLink setPaused:YES];
-        [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+       
     }
     return self;
 }
-
-- (void)displayLinkTick:(CADisplayLink *)disLink {
-    if (_lastTime == 0) {
+- (void)createFPSViewWithDisplay:(CADisplayLink *)disLink{
+     if (_lastTime == 0) {
         _lastTime = disLink.timestamp;
         return;
     }
@@ -70,17 +62,8 @@
 }
 
 - (void)open{
-//    NSArray *rootVCViewSubViews=[[UIApplication sharedApplication].delegate window].rootViewController.view.subviews;
-    
-//    for (UIView *v in  rootVCViewSubViews) {
-//        if ([v isKindOfClass:[UILabel class]] && v.tag == 101) {
-//            return;
-//        }
-//    }
-    
     [self.displayLink setPaused:NO];
     //显示ui
-
 }
 
 - (void)openWithAcitonHandle:(void (^)(NSInteger fpsValue))handler {
@@ -91,14 +74,6 @@
 - (void)close {
     NSLog(@"close fps");
     [self.displayLink setPaused:YES];
-    
-//    NSArray *rootVCViewSubViews=[[UIApplication sharedApplication].delegate window].rootViewController.view.subviews;
-//    for (UIView *label in rootVCViewSubViews) {
-//        if ([label isKindOfClass:[UILabel class]]&& label.tag==101) {
-//            [label removeFromSuperview];
-//            return;
-//        }
-//    }
 }
 
 - (void)applicationDidBecomeActiveNotification:(NSNotificationCenter *)notification {

@@ -10,7 +10,7 @@
 #import "mach/mach.h"
 @implementation TBCupUse
 
-- (void)cpuUse {
++ (void)cpuUse {
     float use = cpu_usage();
     NSLog(@"cpu %f ",use);
 }

@@ -16,6 +16,16 @@
     return memory / 1000.0 / 1000.0;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+
 + (int64_t)memoryUsage {
     int64_t memoryUsageInByte = 0;
     task_vm_info_data_t vmInfo;
@@ -24,6 +34,7 @@
     if(kernelReturn == KERN_SUCCESS) {
         memoryUsageInByte = (int64_t) vmInfo.phys_footprint;
         NSLog(@"Memory in use (in bytes): %lld", memoryUsageInByte);
+        NSLog(@"Memory in use (in mb): %lld", memoryUsageInByte/1000/1000);
     } else {
         NSLog(@"Error with task_info(): %s", mach_error_string(kernelReturn));
     }

@@ -1,8 +1,8 @@
 //
-//  TBCupUse.h
+//  TBPerformanceBoard.h
 //  TimeAndLoop
 //
-//  Created by BinTong on 2019/2/21.
+//  Created by BinTong on 2019/2/26.
 //  Copyright © 2019 TongBin. All rights reserved.
 //
 
@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TBCupUse : NSObject
+@interface TBPerformanceBoard : NSObject
 
-+ (void)cpuUse ;
+- (void)createPeroformanceBoard;
+
+- (void)open;
+
+- (void)close;
 
 @end
 

@@ -11,6 +11,7 @@
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
 #import "TBNetReachability.h"
+#import "TBPerformanceBoard.h"
 
 @interface TBPerformanceViewController ()
 
@@ -18,33 +19,28 @@
 
 @implementation TBPerformanceViewController
 - (IBAction)fpsAction:(id)sender {
-    //debug
-    [[TBPerforFPS sharedInstance] open];
-    //release no use
+ 
+    TBPerformanceBoard *board = [[TBPerformanceBoard alloc] init];
+    [board createPeroformanceBoard];
+    [board open];
+    
 }
 
 - (IBAction)cpuAction:(id)sender {
     
-    TBCupUse *cpu = [[TBCupUse alloc] init];
-    [cpu cpuUse];
+ 
  
 }
 
-- (IBAction)gpuAction:(id)sender {
-    //debug
-    [[TBPerforFPS sharedInstance] close];
-    //release no use
-}
+
 
 - (IBAction)memeryAction:(id)sender {
     //debug
-    NSLog(@"memery use is %f mb", [TBMemeryUse usedMemoryInMB]);
-     //release no use
+      //release no use
 }
 - (IBAction)netReachability:(id)sender {
     //debug
-    NSLog(@"net is reach is %d", [TBNetReachability socketReachabilityTest]);
-    //release no use
+     //release no use
 }
 
 
