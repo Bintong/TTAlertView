@@ -125,7 +125,6 @@
 		A6F2D371221A732F002836BC /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D368221A732F002836BC /* 0.jpg */; };
 		A6F2D376221BAED2002836BC /* TBPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D374221BAED2002836BC /* TBPerformanceViewController.m */; };
 		A6F2D377221BAED2002836BC /* TBPerformanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */; };
-		A6F2D37A221BB0B1002836BC /* TBPerforFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D379221BB0B1002836BC /* TBPerforFPS.m */; };
 		A6F2D37E221BBF8C002836BC /* FPSDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D37C221BBF8C002836BC /* FPSDemoController.m */; };
 		A6F2D37F221BBF8C002836BC /* FPSDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */; };
 		A6F2D382221E8940002836BC /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F2D381221E8940002836BC /* TBCupUse.m */; };
@@ -358,8 +357,6 @@
 		A6F2D373221BAED2002836BC /* TBPerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBPerformanceViewController.h; sourceTree = "<group>"; };
 		A6F2D374221BAED2002836BC /* TBPerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBPerformanceViewController.m; sourceTree = "<group>"; };
 		A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TBPerformanceViewController.xib; sourceTree = "<group>"; };
-		A6F2D378221BB0B1002836BC /* TBPerforFPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBPerforFPS.h; sourceTree = "<group>"; };
-		A6F2D379221BB0B1002836BC /* TBPerforFPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBPerforFPS.m; sourceTree = "<group>"; };
 		A6F2D37B221BBF8C002836BC /* FPSDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSDemoController.h; sourceTree = "<group>"; };
 		A6F2D37C221BBF8C002836BC /* FPSDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSDemoController.m; sourceTree = "<group>"; };
 		A6F2D37D221BBF8C002836BC /* FPSDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSDemoController.xib; sourceTree = "<group>"; };
@@ -916,8 +913,6 @@
 				A6F2D375221BAED2002836BC /* TBPerformanceViewController.xib */,
 				A6F2D3892224F4FB002836BC /* TBPerformanceBoard.h */,
 				A6F2D38A2224F4FB002836BC /* TBPerformanceBoard.m */,
-				A6F2D378221BB0B1002836BC /* TBPerforFPS.h */,
-				A6F2D379221BB0B1002836BC /* TBPerforFPS.m */,
 				A6F2D380221E8940002836BC /* TBCupUse.h */,
 				A6F2D381221E8940002836BC /* TBCupUse.m */,
 				A6F2D3832220DB13002836BC /* TBMemeryUse.h */,
@@ -1087,7 +1082,6 @@
 				A64AFB9B1E77F1DC00558869 /* NSString+Resolve.m in Sources */,
 				A64AFB991E77F1DC00558869 /* NSArray+Resolve.m in Sources */,
 				A667D3B91FCBBE9A00755382 /* JFTransferViewController.m in Sources */,
-				A6F2D37A221BB0B1002836BC /* TBPerforFPS.m in Sources */,
 				A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */,
 				A6F2D38B2224F4FB002836BC /* TBPerformanceBoard.m in Sources */,
 				A6F2D376221BAED2002836BC /* TBPerformanceViewController.m in Sources */,

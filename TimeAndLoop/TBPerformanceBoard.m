@@ -7,7 +7,7 @@
 //
 
 #import "TBPerformanceBoard.h"
-#import "TBPerforFPS.h"
+
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
 #import "TBNetReachability.h"
@@ -16,6 +16,7 @@
 @interface TBPerformanceBoard()
 
 @property (strong ,nonatomic) CADisplayLink *displayLink;
+@property (strong ,nonatomic) UIView *boardView;
 @property (strong ,nonatomic) UILabel *topLabel;
 
 @property (assign, nonatomic) NSTimeInterval lastTime;
@@ -25,13 +26,33 @@
 
 
 @implementation TBPerformanceBoard
+
+
+
+
+- (void)dealloc {
+    [_displayLink setPaused:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
++ (TBPerformanceBoard *)sharedInstance {
+    static TBPerformanceBoard *sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[TBPerformanceBoard alloc] init];
+    });
+    return sharedInstance;
+}
+
 - (void)open{
     [self.displayLink setPaused:NO];
 }
 
 - (void)close {
     NSLog(@"close fps");
-    [self.displayLink setPaused:YES];
+    [_boardView removeFromSuperview];
+    [_displayLink setPaused:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)createPeroformanceBoard {
@@ -49,7 +70,8 @@
 }
 
 - (void)createShowView{
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, SCREEN_WIDTH - 100, 25)];
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, SCREEN_WIDTH - 2, 25)];
+    _boardView = topView;
     topView.backgroundColor = [UIColor blackColor];
     topView.layer.cornerRadius = 4;
     topView.layer.masksToBounds = YES;
@@ -59,6 +81,7 @@
     
     
     UILabel *l = [self labelWithFontSize:12 FontColor:[UIColor whiteColor] frame:CGRectMake(0, 0, SCREEN_WIDTH - 100, 25) Text:@""];
+    l.textAlignment = NSTextAlignmentCenter;
     self.topLabel = l;
     [topView addSubview:l];
 }
@@ -80,12 +103,9 @@
             //reset
             _lastTime = disLink.timestamp;
             _count = 0;
-//            _lastFPSText = [NSString stringWithFormat:@"%d fps",(int)round(fps)];
          }else {
              
          }
-   
-    
 }
 
 - (void)takeReadingsFromFps:(CGFloat)fps {

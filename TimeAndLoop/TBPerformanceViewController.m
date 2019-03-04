@@ -7,7 +7,7 @@
 //
 
 #import "TBPerformanceViewController.h"
-#import "TBPerforFPS.h"
+
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
 #import "TBNetReachability.h"
@@ -18,20 +18,19 @@
 @end
 
 @implementation TBPerformanceViewController
-- (IBAction)fpsAction:(id)sender {
+- (IBAction)openBoard:(id)sender {
  
-    TBPerformanceBoard *board = [[TBPerformanceBoard alloc] init];
+    TBPerformanceBoard *board = [TBPerformanceBoard sharedInstance];
     [board createPeroformanceBoard];
     [board open];
 }
 
-- (IBAction)cpuAction:(id)sender {
-    
- 
+- (IBAction)closeBoard:(id)sender {
+    TBPerformanceBoard *board = [TBPerformanceBoard sharedInstance];
+    [board close];
  
 }
-
-
+ 
 
 - (IBAction)memeryAction:(id)sender {
     //debug

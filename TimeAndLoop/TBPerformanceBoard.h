@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TBPerformanceBoard : NSObject
 
++ (TBPerformanceBoard *)sharedInstance;
+
 - (void)createPeroformanceBoard;
 
 - (void)open;
