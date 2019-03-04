@@ -74,7 +74,7 @@
     
         if(timePassed >= 1.f) {
             CGFloat fps = _count/timePassed;
-            printf("----fps:%.1f, timePassed:%f\n", fps, timePassed);
+            NSLog(@"----fps:%.1f, timePassed:%f\n", fps, timePassed);
     
             [self takeReadingsFromFps:fps];
             //reset
