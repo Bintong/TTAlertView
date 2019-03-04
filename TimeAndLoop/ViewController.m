@@ -26,12 +26,14 @@
 #import "TextureDemoController.h"
 #import "CCViewController.h"
 #import "TBPerformanceViewController.h"
+#import "AsyDrawController.h"
+
+#import "Dog.h"
+#import "MyProxy.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) NSArray *arr;
-
-
-
 
 @end
 
@@ -40,7 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *ar = @[@"Texure",@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷",@"list-1"];
-    
     
     
     _arr = ar;
@@ -95,6 +96,11 @@
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
         ctr = [[TBPerformanceViewController alloc] init];
+//        ctr = [[AsyDrawController alloc] init];
+        
+//        Dog *d = [MyProxy proxyWithObj:[Dog alloc]];
+//        [d barking:4];
+//        return;
     }
     if (indexPath.row == 1) {
         ctr = [[KVOViewController alloc] init];

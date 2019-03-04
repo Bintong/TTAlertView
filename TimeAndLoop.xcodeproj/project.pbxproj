@@ -81,6 +81,12 @@
 		A667D3BD1FCBBFCE00755382 /* JFTransferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A667D3BC1FCBBFCE00755382 /* JFTransferCell.m */; };
 		A670689A1FCBEFAA00D6E4AD /* JFFeaturedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67068991FCBEFAA00D6E4AD /* JFFeaturedViewController.m */; };
 		A670689D1FCBEFC400D6E4AD /* FeaturedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A670689C1FCBEFC400D6E4AD /* FeaturedCell.m */; };
+		A67960222229414F00D96C09 /* MyProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A67960212229414F00D96C09 /* MyProxy.m */; };
+		A67960252229416300D96C09 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = A67960242229416300D96C09 /* Dog.m */; };
+		A6796035222AC6D300D96C09 /* TBCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6796034222AC6D300D96C09 /* TBCanvasView.m */; };
+		A6796038222AC81500D96C09 /* TBCanvasControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A6796037222AC81500D96C09 /* TBCanvasControl.m */; };
+		A679603B222AC84200D96C09 /* TBTextMixedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A679603A222AC84200D96C09 /* TBTextMixedView.m */; };
+		A679603F222AC8EF00D96C09 /* TBMutableAttributedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A679603E222AC8EF00D96C09 /* TBMutableAttributedItem.m */; };
 		A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */; };
 		A6805B791DCB3CCF002BE3F3 /* TTAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B781DCB3CCF002BE3F3 /* TTAlertViewController.m */; };
 		A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6805B7B1DCB3E88002BE3F3 /* TTAction.m */; };
@@ -98,6 +104,9 @@
 		A6D11F3F221542E10077EB7F /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D11F3D221542E10077EB7F /* CCViewController.m */; };
 		A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D11F3E221542E10077EB7F /* CCViewController.xib */; };
 		A6D11F43221545F70077EB7F /* Model_CC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D11F42221545F70077EB7F /* Model_CC.m */; };
+		A6D6A95A2228049100E0ACA8 /* AsyDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6A9592228049100E0ACA8 /* AsyDrawController.m */; };
+		A6D6A95D222808BB00E0ACA8 /* AsyCusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6A95C222808BB00E0ACA8 /* AsyCusView.m */; };
+		A6D6A96022281B8600E0ACA8 /* AsyCusLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6A95F22281B8600E0ACA8 /* AsyCusLayer.m */; };
 		A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */; };
 		A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */; };
 		A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EEF988202B08F700DBBB8F /* TableListViewController.m */; };
@@ -270,6 +279,18 @@
 		A67068991FCBEFAA00D6E4AD /* JFFeaturedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFFeaturedViewController.m; sourceTree = "<group>"; };
 		A670689B1FCBEFC400D6E4AD /* FeaturedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedCell.h; sourceTree = "<group>"; };
 		A670689C1FCBEFC400D6E4AD /* FeaturedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedCell.m; sourceTree = "<group>"; };
+		A67960202229414F00D96C09 /* MyProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProxy.h; sourceTree = "<group>"; };
+		A67960212229414F00D96C09 /* MyProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProxy.m; sourceTree = "<group>"; };
+		A67960232229416300D96C09 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		A67960242229416300D96C09 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		A6796033222AC6D300D96C09 /* TBCanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCanvasView.h; sourceTree = "<group>"; };
+		A6796034222AC6D300D96C09 /* TBCanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCanvasView.m; sourceTree = "<group>"; };
+		A6796036222AC81500D96C09 /* TBCanvasControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCanvasControl.h; sourceTree = "<group>"; };
+		A6796037222AC81500D96C09 /* TBCanvasControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCanvasControl.m; sourceTree = "<group>"; };
+		A6796039222AC84200D96C09 /* TBTextMixedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBTextMixedView.h; sourceTree = "<group>"; };
+		A679603A222AC84200D96C09 /* TBTextMixedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBTextMixedView.m; sourceTree = "<group>"; };
+		A679603D222AC8EF00D96C09 /* TBMutableAttributedItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBMutableAttributedItem.h; sourceTree = "<group>"; };
+		A679603E222AC8EF00D96C09 /* TBMutableAttributedItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBMutableAttributedItem.m; sourceTree = "<group>"; };
 		A6805B731DCB2949002BE3F3 /* TBAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAlertViewController.h; sourceTree = "<group>"; };
 		A6805B741DCB2949002BE3F3 /* TBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAlertViewController.m; sourceTree = "<group>"; };
 		A6805B771DCB3CCF002BE3F3 /* TTAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertViewController.h; sourceTree = "<group>"; };
@@ -306,6 +327,12 @@
 		A6D11F3E221542E10077EB7F /* CCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CCViewController.xib; sourceTree = "<group>"; };
 		A6D11F41221545F70077EB7F /* Model_CC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model_CC.h; sourceTree = "<group>"; };
 		A6D11F42221545F70077EB7F /* Model_CC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model_CC.m; sourceTree = "<group>"; };
+		A6D6A9582228049100E0ACA8 /* AsyDrawController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyDrawController.h; sourceTree = "<group>"; };
+		A6D6A9592228049100E0ACA8 /* AsyDrawController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyDrawController.m; sourceTree = "<group>"; };
+		A6D6A95B222808BB00E0ACA8 /* AsyCusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyCusView.h; sourceTree = "<group>"; };
+		A6D6A95C222808BB00E0ACA8 /* AsyCusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyCusView.m; sourceTree = "<group>"; };
+		A6D6A95E22281B8600E0ACA8 /* AsyCusLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyCusLayer.h; sourceTree = "<group>"; };
+		A6D6A95F22281B8600E0ACA8 /* AsyCusLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyCusLayer.m; sourceTree = "<group>"; };
 		A6EA81BE1E49DE70000669C1 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
 		A6EA81BF1E49DE70000669C1 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		A6EA81C01E49DE70000669C1 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
@@ -499,6 +526,8 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A679601F22293FDD00D96C09 /* NSProxy应用 */,
+				A6D6A9572227F26C00E0ACA8 /* 异步渲染的套路 */,
 				A6F2D372221BAE78002836BC /* 效率性能模块 */,
 				A6D11F3B221542B10077EB7F /* 深拷贝&前拷贝 */,
 				A6D11F342211BF610077EB7F /* Texture */,
@@ -506,6 +535,7 @@
 				A642FB8A1FC2B63900B6A4DC /* Router */,
 				A68FABD51EDEC22700207635 /* NSNotify */,
 				A6351AE71DB9F0A800221579 /* AppDelegate.m */,
+				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A6351AE91DB9F0A800221579 /* ViewController.h */,
 				A6351AEA1DB9F0A800221579 /* ViewController.m */,
 				A6351B161DB9F71E00221579 /* KVO */,
@@ -565,7 +595,6 @@
 				A6573A142015C37400F99F7B /* JFRouter.h */,
 				A6573A122015C37400F99F7B /* JFRouter.m */,
 				A6573A132015C37400F99F7B /* JFRouterProtocol.h */,
-				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A642FB8B1FC2CD6300B6A4DC /* RouterController.h */,
 				A642FB8C1FC2CD6300B6A4DC /* RouterController.m */,
 				A642FB8E1FC3B9AB00B6A4DC /* RouterTwoViewController.h */,
@@ -693,6 +722,39 @@
 			path = Featured;
 			sourceTree = "<group>";
 		};
+		A679601F22293FDD00D96C09 /* NSProxy应用 */ = {
+			isa = PBXGroup;
+			children = (
+				A67960202229414F00D96C09 /* MyProxy.h */,
+				A67960212229414F00D96C09 /* MyProxy.m */,
+				A67960232229416300D96C09 /* Dog.h */,
+				A67960242229416300D96C09 /* Dog.m */,
+			);
+			name = "NSProxy应用";
+			sourceTree = "<group>";
+		};
+		A679602F222AC52300D96C09 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				A6796033222AC6D300D96C09 /* TBCanvasView.h */,
+				A6796034222AC6D300D96C09 /* TBCanvasView.m */,
+				A6796036222AC81500D96C09 /* TBCanvasControl.h */,
+				A6796037222AC81500D96C09 /* TBCanvasControl.m */,
+				A6796039222AC84200D96C09 /* TBTextMixedView.h */,
+				A679603A222AC84200D96C09 /* TBTextMixedView.m */,
+			);
+			name = Canvas;
+			sourceTree = "<group>";
+		};
+		A679603C222AC88D00D96C09 /* mixitem */ = {
+			isa = PBXGroup;
+			children = (
+				A679603D222AC8EF00D96C09 /* TBMutableAttributedItem.h */,
+				A679603E222AC8EF00D96C09 /* TBMutableAttributedItem.m */,
+			);
+			name = mixitem;
+			sourceTree = "<group>";
+		};
 		A6805B761DCB3C96002BE3F3 /* TTAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +852,21 @@
 				A6D11F42221545F70077EB7F /* Model_CC.m */,
 			);
 			name = "深拷贝&前拷贝";
+			sourceTree = "<group>";
+		};
+		A6D6A9572227F26C00E0ACA8 /* 异步渲染的套路 */ = {
+			isa = PBXGroup;
+			children = (
+				A679603C222AC88D00D96C09 /* mixitem */,
+				A6D6A9582228049100E0ACA8 /* AsyDrawController.h */,
+				A6D6A9592228049100E0ACA8 /* AsyDrawController.m */,
+				A6D6A95B222808BB00E0ACA8 /* AsyCusView.h */,
+				A6D6A95C222808BB00E0ACA8 /* AsyCusView.m */,
+				A6D6A95E22281B8600E0ACA8 /* AsyCusLayer.h */,
+				A6D6A95F22281B8600E0ACA8 /* AsyCusLayer.m */,
+				A679602F222AC52300D96C09 /* Canvas */,
+			);
+			name = "异步渲染的套路";
 			sourceTree = "<group>";
 		};
 		A6EA81BD1E49DE53000669C1 /* TextFieldDelegate */ = {
@@ -982,6 +1059,7 @@
 				A667D3951FC951A000755382 /* CombinedHidden@2x.png in Sources */,
 				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
 				A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */,
+				A679603B222AC84200D96C09 /* TBTextMixedView.m in Sources */,
 				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
 				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
 				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,
@@ -993,6 +1071,7 @@
 				A667D39B1FC951A000755382 /* Group22@2x.png in Sources */,
 				A667D39C1FC951A000755382 /* Group22@3x.png in Sources */,
 				A667D39D1FC951A000755382 /* Page_Copy2@2x.png in Sources */,
+				A6796038222AC81500D96C09 /* TBCanvasControl.m in Sources */,
 				A667D39E1FC951A000755382 /* Page_Copy 2@3x.png in Sources */,
 				A667D39F1FC951A000755382 /* Page_1@2x.png in Sources */,
 				A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */,
@@ -1024,6 +1103,7 @@
 				A60592B41E5AC2A000C0E2FB /* NetController.m in Sources */,
 				A6D11F43221545F70077EB7F /* Model_CC.m in Sources */,
 				A6F2D35E221A4672002836BC /* TeureModel.m in Sources */,
+				A67960252229416300D96C09 /* Dog.m in Sources */,
 				A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */,
 				A64AFB9A1E77F1DC00558869 /* NSNull+Resolve.m in Sources */,
 				A64AFB831E77EE6B00558869 /* PlaceCityInfo.m in Sources */,
@@ -1043,8 +1123,10 @@
 				A64AFB971E77F1DC00558869 /* NSObject+Archive.m in Sources */,
 				A6805B7F1DCC2BEF002BE3F3 /* TTAlertView.m in Sources */,
 				A64AFB981E77F1DC00558869 /* NSDictionary+Resolve.m in Sources */,
+				A6D6A95D222808BB00E0ACA8 /* AsyCusView.m in Sources */,
 				A6EEF98F202B0DB500DBBB8F /* JFSeletSelfCell.m in Sources */,
 				A612EF1A1DBF56340051DFD4 /* CompleteDataViewController.m in Sources */,
+				A6D6A96022281B8600E0ACA8 /* AsyCusLayer.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A64AFB811E77EE6B00558869 /* InfoPutViewManager.m in Sources */,
 				A6351B1C1DB9F9A700221579 /* NSObject+KVO.m in Sources */,
@@ -1056,9 +1138,11 @@
 				A6F2D37E221BBF8C002836BC /* FPSDemoController.m in Sources */,
 				A612EF161DBF544C0051DFD4 /* CreditController.m in Sources */,
 				A667D37A1FC813BF00755382 /* JFRegularViewController.m in Sources */,
+				A6796035222AC6D300D96C09 /* TBCanvasView.m in Sources */,
 				A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */,
 				A667D3811FC9246700755382 /* JFRegularCell.m in Sources */,
 				A68DB4F11FC711A8006C36C9 /* UIView+Coordinate.m in Sources */,
+				A67960222229414F00D96C09 /* MyProxy.m in Sources */,
 				A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */,
 				A6FF46871F68E03000112C22 /* LeakViewController.m in Sources */,
 				A64C42D71DC73E1C00DDFE84 /* TaobaoVerificationController.m in Sources */,
@@ -1071,11 +1155,13 @@
 				A659DADF1F57FDC000320FF3 /* SMSViewController.m in Sources */,
 				A6EA81C11E49DE70000669C1 /* TextFieldViewController.m in Sources */,
 				A6EEF989202B08F700DBBB8F /* TableListViewController.m in Sources */,
+				A679603F222AC8EF00D96C09 /* TBMutableAttributedItem.m in Sources */,
 				A667D3AC1FC960BB00755382 /* JFNetLoanViewController.m in Sources */,
 				A6FF46931F6906A700112C22 /* Tec.m in Sources */,
 				A68DB4EA1FC711A8006C36C9 /* JFInvestCell.m in Sources */,
 				A642FB901FC3B9AB00B6A4DC /* RouterTwoViewController.m in Sources */,
 				A68DB4F21FC711A8006C36C9 /* UIView+DrawLine.m in Sources */,
+				A6D6A95A2228049100E0ACA8 /* AsyDrawController.m in Sources */,
 				A6351AE51DB9F0A800221579 /* main.m in Sources */,
 				A6FB7E051E68038E00AFDF14 /* ResultViewController.m in Sources */,
 				A68DB4F01FC711A8006C36C9 /* UIColor+Hex.m in Sources */,

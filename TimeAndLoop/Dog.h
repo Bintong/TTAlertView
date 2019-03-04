@@ -1,8 +1,8 @@
 //
-//  TBCupUse.h
+//  Dog.h
 //  TimeAndLoop
 //
-//  Created by BinTong on 2019/2/21.
+//  Created by BinTong on 2019/3/1.
 //  Copyright © 2019 TongBin. All rights reserved.
 //
 
@@ -10,11 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TBCupUse : NSObject
-
-+ (TBCupUse *)sharedInstance;
-
-- (float)cpuUseWithLink:(CADisplayLink *)disLink;
+@interface Dog : NSObject
+-(NSString *)barking:(NSInteger)months;
 
 @end
 

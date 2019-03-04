@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)UILabel *fpsLabel;
 
 + (TBPerforFPS *)sharedInstance;
-- (void)createFPSViewWithDisplay:(CADisplayLink *)disLink;
+- (NSString *)createFPSViewWithDisplay:(CADisplayLink *)disLink;
 - (void)open;
 - (void)openWithAcitonHandle:(void (^)(NSInteger fpsValue))handler;
 - (void)close;

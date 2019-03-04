@@ -8,11 +8,52 @@
 
 #import "TBCupUse.h"
 #import "mach/mach.h"
+@interface TBCupUse()
+
+@property (assign, nonatomic) CGFloat lastCpuUse;
+@property (assign, nonatomic) NSTimeInterval lastTime;
+@property (assign, nonatomic) NSUInteger count;
+@end
+
+
 @implementation TBCupUse
 
-+ (void)cpuUse {
-    float use = cpu_usage();
-    NSLog(@"cpu %f ",use);
++ (TBCupUse *)sharedInstance {
+    static TBCupUse *sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[TBCupUse alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (float)cpuUseWithLink:(CADisplayLink *)disLink{
+    
+
+    //当前时间戳
+    if(_lastTime == 0){
+        _lastTime = disLink.timestamp;
+    }
+    CFTimeInterval timePassed = disLink.timestamp - _lastTime;
+    
+    if(timePassed >= 1.f) {
+        float u =  cpu_usage();
+        NSLog(@"---cpu use is %0.2f",u);
+        _lastCpuUse = u;
+
+        _count = 0;
+
+        return _lastCpuUse;
+    }else {
+        return _lastCpuUse;
+    }
+    
+    
+    
+//    float u =  cpu_usage();
+//    _lastCpuUse = u;
+//    NSLog(@"cpu use is %0.2f",u);
+//    return u;
 }
 
 float cpu_usage() {

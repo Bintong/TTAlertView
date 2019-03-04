@@ -23,7 +23,6 @@
     TBPerformanceBoard *board = [[TBPerformanceBoard alloc] init];
     [board createPeroformanceBoard];
     [board open];
-    
 }
 
 - (IBAction)cpuAction:(id)sender {

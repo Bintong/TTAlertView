@@ -9,11 +9,29 @@
 #import "TBMemeryUse.h"
 #import "mach/mach.h"
 
+@interface TBMemeryUse()
+
+@property (assign, nonatomic) NSTimeInterval lastTime;
+@property (assign, nonatomic) CGFloat lastMemeryUse;
+
+@end
+
 @implementation TBMemeryUse
 
-+ (CGFloat)usedMemoryInMB{
++ (TBMemeryUse *)sharedInstance {
+    static TBMemeryUse *sharedInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[TBMemeryUse alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (CGFloat)usedMemoryInMBWithLink:(CADisplayLink *)disLink{
+    
     int64_t memory = [TBMemeryUse memoryUsage];
-    return memory / 1000.0 / 1000.0;
+    _lastMemeryUse = memory;
+    return _lastMemeryUse / 1000.0 / 1000.0;
 }
 
 - (instancetype)init

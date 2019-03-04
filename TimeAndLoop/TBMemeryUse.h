@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TBMemeryUse : NSObject
-+ (CGFloat)usedMemoryInMB;
+
++ (TBMemeryUse *)sharedInstance;
+
+
+- (CGFloat)usedMemoryInMBWithLink:(CADisplayLink *)disLink;
 
 @end
 

@@ -14,6 +14,8 @@
 @property (assign, nonatomic) NSTimeInterval lastTime;
 @property (assign, nonatomic) NSUInteger count;
 
+@property (copy,nonatomic)NSString *lastFPSText;
+
 @end
 
 @implementation TBPerforFPS
@@ -38,28 +40,31 @@
     }
     return self;
 }
-- (void)createFPSViewWithDisplay:(CADisplayLink *)disLink{
-     if (_lastTime == 0) {
-        _lastTime = disLink.timestamp;
-        return;
-    }
-    
+- (NSString *)createFPSViewWithDisplay:(CADisplayLink *)disLink{
+    //执行次数
     _count ++;
-    NSTimeInterval interval = disLink.timestamp - _lastTime;
-    if (interval < 1) {
-        return;
+    //当前时间戳
+    if(_lastTime == 0){
+        _lastTime = disLink.timestamp;
     }
-    _lastTime = disLink.timestamp;
-    float fps = _count/interval;
-    _count = 0;
-    NSString *text = [NSString stringWithFormat:@"%d fps",(int)round(fps)];
+    CFTimeInterval timePassed = disLink.timestamp - _lastTime;
     
-    NSLog(@"fps is %@",text);
-    if (_fpsHandler) {
-        _fpsHandler((int)round(fps));
+    if(timePassed >= 1.f) {
+        CGFloat fps = _count/timePassed;
+        printf("----fps:%.1f, timePassed:%f\n", fps, timePassed);
+        
+        //reset
+        _lastTime = disLink.timestamp;
+        _count = 0;
+        _lastFPSText = [NSString stringWithFormat:@"%d fps",(int)round(fps)];
+        return _lastFPSText;
+    }else {
+      return _lastFPSText;
     }
-    
 }
+
+    
+
 
 - (void)open{
     [self.displayLink setPaused:NO];
@@ -67,7 +72,7 @@
 }
 
 - (void)openWithAcitonHandle:(void (^)(NSInteger fpsValue))handler {
-    [self open ];
+    [self open];
     self.fpsHandler = handler;
 }
 
