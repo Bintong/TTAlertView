@@ -18,6 +18,9 @@
 @property (strong ,nonatomic) CADisplayLink *displayLink;
 @property (strong ,nonatomic) UILabel *topLabel;
 
+@property (assign, nonatomic) NSTimeInterval lastTime;
+@property (assign, nonatomic) NSUInteger count;
+
 @end
 
 
@@ -62,13 +65,37 @@
 
 - (void)displayLinkTick:(CADisplayLink *)disLink {
     
-    float cpuUse =  [[TBCupUse sharedInstance]cpuUseWithLink:disLink];
-    float memeryUse = [[TBMemeryUse sharedInstance] usedMemoryInMBWithLink:disLink];
-//    [TBNetReachability socketReachabilityTestWithLink:disLink];
-    NSString *fps =  [[TBPerforFPS sharedInstance] createFPSViewWithDisplay:disLink];
-    NSString *string = [NSString stringWithFormat:@"cpu:%0.2f%%;memery:%0.2fMb;fps:%@",cpuUse,memeryUse,fps];
+         _count ++;
+        //当前时间戳
+        if(_lastTime == 0){
+            _lastTime = disLink.timestamp;
+        }
+        CFTimeInterval timePassed = disLink.timestamp - _lastTime;
+    
+        if(timePassed >= 1.f) {
+            CGFloat fps = _count/timePassed;
+            printf("----fps:%.1f, timePassed:%f\n", fps, timePassed);
+    
+            [self takeReadingsFromFps:fps];
+            //reset
+            _lastTime = disLink.timestamp;
+            _count = 0;
+//            _lastFPSText = [NSString stringWithFormat:@"%d fps",(int)round(fps)];
+         }else {
+             
+         }
+   
+    
+}
+
+- (void)takeReadingsFromFps:(CGFloat)fps {
+    float cpuUse =  [[TBCupUse sharedInstance] cpuUse];
+    float memeryUse = [[TBMemeryUse sharedInstance] usedMemoryInMB];
+    //    [TBNetReachability socketReachabilityTestWithLink:disLink];
+    
+    NSString *string = [NSString stringWithFormat:@"cpu:%0.2f%%;memery:%0.2fMb;fps:%0.2f",cpuUse,memeryUse,fps];
     _topLabel.text = string;
-  
+    
 }
 
 - (UILabel *)labelWithFontSize:(CGFloat)fontSize FontColor:(UIColor *)fontColor  frame:(CGRect)frame Text:(NSString *)text{

@@ -27,7 +27,7 @@
     return sharedInstance;
 }
 
-- (CGFloat)usedMemoryInMBWithLink:(CADisplayLink *)disLink{
+- (CGFloat)usedMemoryInMB{
     
     int64_t memory = [TBMemeryUse memoryUsage];
     _lastMemeryUse = memory;

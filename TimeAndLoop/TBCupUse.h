@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (TBCupUse *)sharedInstance;
 
-- (float)cpuUseWithLink:(CADisplayLink *)disLink;
+- (float)cpuUse;
 
 @end
 

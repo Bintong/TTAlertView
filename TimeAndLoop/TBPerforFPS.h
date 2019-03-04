@@ -1,27 +1,27 @@
+////
+////  TBPerforFPS.h
+////  TimeAndLoop
+////
+////  Created by BinTong on 2019/2/19.
+////  Copyright © 2019 TongBin. All rights reserved.
+////
 //
-//  TBPerforFPS.h
-//  TimeAndLoop
+//#import <Foundation/Foundation.h>
 //
-//  Created by BinTong on 2019/2/19.
-//  Copyright © 2019 TongBin. All rights reserved.
+//NS_ASSUME_NONNULL_BEGIN
 //
-
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface TBPerforFPS : NSObject
-
-
-@property (nonatomic,strong)UILabel *fpsLabel;
-
-+ (TBPerforFPS *)sharedInstance;
-- (NSString *)createFPSViewWithDisplay:(CADisplayLink *)disLink;
-- (void)open;
-- (void)openWithAcitonHandle:(void (^)(NSInteger fpsValue))handler;
-- (void)close;
-
-
-@end
-
-NS_ASSUME_NONNULL_END
+//@interface TBPerforFPS : NSObject
+//
+//
+//@property (nonatomic,strong)UILabel *fpsLabel;
+//
+//+ (TBPerforFPS *)sharedInstance;
+//- (NSString *)screenFps;
+//- (void)open;
+//- (void)openWithAcitonHandle:(void (^)(NSInteger fpsValue))handler;
+//- (void)close;
+//
+//
+//@end
+//
+//NS_ASSUME_NONNULL_END

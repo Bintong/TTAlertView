@@ -27,33 +27,11 @@
     return sharedInstance;
 }
 
-- (float)cpuUseWithLink:(CADisplayLink *)disLink{
-    
-
-    //当前时间戳
-    if(_lastTime == 0){
-        _lastTime = disLink.timestamp;
-    }
-    CFTimeInterval timePassed = disLink.timestamp - _lastTime;
-    
-    if(timePassed >= 1.f) {
-        float u =  cpu_usage();
-        NSLog(@"---cpu use is %0.2f",u);
-        _lastCpuUse = u;
-
-        _count = 0;
-
-        return _lastCpuUse;
-    }else {
-        return _lastCpuUse;
-    }
-    
-    
-    
-//    float u =  cpu_usage();
-//    _lastCpuUse = u;
-//    NSLog(@"cpu use is %0.2f",u);
-//    return u;
+- (float)cpuUse{
+    float u =  cpu_usage();
+    _lastCpuUse = u;
+    NSLog(@"cpu use is %0.2f",u);
+    return u;
 }
 
 float cpu_usage() {
