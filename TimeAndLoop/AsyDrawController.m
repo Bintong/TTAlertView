@@ -29,8 +29,9 @@
     AsyCusView *v = [[AsyCusView alloc] initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 2 * 50, 5000)];
     v.text = textStr;
     v.font = [UIFont systemFontOfSize:16];
+    v.textColor = [UIColor redColor];
     [self.view addSubview:v];
-    [v.layer setNeedsDisplay];
+//    [v.layer setNeedsDisplay];
     
 //    YYTLabel *lb = [[YYTLabel alloc] initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 2 * 50, 5000)];
 //    lb.text = textStr;

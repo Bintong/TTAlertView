@@ -35,11 +35,13 @@
 
 
 
-
+//默认调用 
 - (void)drawRect:(CGRect)rect{
     NSLog(@"%s",__func__);
 }
 
+
+//默认调用
 - (void)displayLayer:(CALayer *)layer {
     NSLog(@"%s",__func__);
     NSLog(@"--是不是main Thread %d",[[NSThread currentThread] isMainThread]);
@@ -50,15 +52,15 @@
         //大小
         __block CGSize size = CGSizeZero;
         __block CGFloat scale = [UIScreen mainScreen].scale;
-        
+
         dispatch_sync(dispatch_get_main_queue(), ^{
             size = self.bounds.size; //只能在🧵中调用
             scale = [UIScreen mainScreen].scale;
         });
-        
+
         UIGraphicsBeginImageContextWithOptions(size, NO, scale);
         CGContextRef context = UIGraphicsGetCurrentContext();
-        
+
         [self draw:context size:size];
         //获取上下文
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -66,8 +68,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.layer.contents = (__bridge id)(image.CGImage);
         });
-    
-    }); 
+
+    });
 }
 //by self  not system size 为指定frame context 为上下文
 - (void)draw:(CGContextRef)context size:(CGSize)size {
@@ -75,19 +77,22 @@
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     CGContextTranslateCTM(context, 0, size.height);
     CGContextScaleCTM(context, 1.0,-1.0);
-    
+    //创建路径
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, NULL, CGRectMake(0, 0, size.width, size.height));
+    CGPathAddRect(path, NULL, CGRectMake(0, 0, size.width, size.height));//形状
     
     
     NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:self.text];
     
     [attString addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, self.text.length)];
-    
+    [attString addAttribute:NSForegroundColorAttributeName  value:self.textColor range:NSMakeRange(0, self.text.length)];
     
     CTFramesetterRef frameseter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
     CTFrameRef frame = CTFramesetterCreateFrame(frameseter, CFRangeMake(0, attString.length), path, NULL);
+    
+
     CTFrameDraw(frame, context);
+//    CFRelease(frameseter);
     
 }
 

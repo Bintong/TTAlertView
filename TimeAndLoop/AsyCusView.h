@@ -18,6 +18,8 @@ typedef void(^AsyncDrawCallback)(BOOL drawInBackground);
 //设置字体
 @property(nonatomic, strong) UIFont *font;
 
+@property(nonatomic, strong) UIColor *textColor;
+
 
 
 @end
