@@ -47,8 +47,15 @@
 //    dispatch_queue_t draw_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_queue_t draw_queue = dispatch_queue_create("com.thread.my", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(draw_queue, ^{
-        CGSize size = self.bounds.size;
-        CGFloat scale = [UIScreen mainScreen].scale;
+        //大小
+        __block CGSize size = CGSizeZero;
+        __block CGFloat scale = [UIScreen mainScreen].scale;
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            size = self.bounds.size; //只能在🧵中调用
+            scale = [UIScreen mainScreen].scale;
+        });
+        
         UIGraphicsBeginImageContextWithOptions(size, NO, scale);
         CGContextRef context = UIGraphicsGetCurrentContext();
         
@@ -60,11 +67,9 @@
             self.layer.contents = (__bridge id)(image.CGImage);
         });
     
-    });
-    
-    
+    }); 
 }
-
+//by self  not system size 为指定frame context 为上下文
 - (void)draw:(CGContextRef)context size:(CGSize)size {
     //将坐标系上下翻转。因为底层坐标系和UIKit的坐标系原点位置不同。
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -82,7 +87,6 @@
     
     CTFramesetterRef frameseter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
     CTFrameRef frame = CTFramesetterCreateFrame(frameseter, CFRangeMake(0, attString.length), path, NULL);
-    
     CTFrameDraw(frame, context);
     
 }

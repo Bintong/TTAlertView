@@ -95,8 +95,8 @@
     
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
-        ctr = [[TBPerformanceViewController alloc] init];
-//        ctr = [[AsyDrawController alloc] init];
+//        ctr = [[TBPerformanceViewController alloc] init];
+        ctr = [[AsyDrawController alloc] init];
         
 //        Dog *d = [MyProxy proxyWithObj:[Dog alloc]];
 //        [d barking:4];

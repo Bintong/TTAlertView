@@ -8,6 +8,8 @@
 
 #import "AsyDrawController.h"
 #import "AsyCusView.h"
+#import "YYTLabel.h"
+
 @interface AsyDrawController ()
 
 @end
@@ -29,6 +31,16 @@
     v.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:v];
     [v.layer setNeedsDisplay];
+    
+//    YYTLabel *lb = [[YYTLabel alloc] initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 2 * 50, 5000)];
+//    lb.text = textStr;
+//    lb.font = [UIFont systemFontOfSize:16];
+//    lb.te
+//    [self.view addSubview:lb];
+//    [lb.layer setNeedsDisplay];
+  
+    
+    
 //
 //    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(50, 200, [UIScreen mainScreen].bounds.size.width - 2 * 50, 5000)];
 //    l.text = textStr;
