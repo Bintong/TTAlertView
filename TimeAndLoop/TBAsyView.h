@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SculptItem.h"
 
-#import "TBCoreAttributedItem.h"
 
 @interface TBAsyView : UIView
 
-@property (nonatomic, strong) TBCoreAttributedItem *attributedItem;
+@property (nonatomic, strong) SculptItem *attributedItem;
 
 
 @end

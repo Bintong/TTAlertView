@@ -10,6 +10,11 @@
 #import "AsyCusLayer.h"
 #import <CoreText/CoreText.h>
 
+@interface TBAsyView(){
+    BOOL _pendingAttachmentUpdates; //标示位置
+}
+@end
+
 
 @implementation TBAsyView
 
@@ -44,6 +49,22 @@
     NSLog(@"%s",__func__);
 }
 
+
+- (void)setAttributedItem:(SculptItem *)attributedItem {
+    if (_attributedItem != attributedItem)
+    {
+        _attributedItem = attributedItem;
+        
+        [self setNeedsDisplayAsync];
+        
+        _pendingAttachmentUpdates = YES;
+    }
+}
+
+
+- (void)setNeedsDisplayAsync {
+    [self setNeedsDisplay];
+}
 
 //默认调用
 - (void)displayLayer:(CALayer *)layer {
@@ -85,18 +106,14 @@
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddRect(path, NULL, CGRectMake(0, 0, size.width, size.height));//形状
     
-    
-    NSMutableAttributedString * attString = [[NSMutableAttributedString alloc] initWithString:self.attributedItem.text];
-    
-    [attString addAttribute:NSFontAttributeName value:self.attributedItem.font range:NSMakeRange(0, self.attributedItem.text.length)];
-//    [attString addAttribute:NSForegroundColorAttributeName  value:self.textColor range:NSMakeRange(0, self.text.length)];
-    
+    NSAttributedString *attString = self.attributedItem.resultString;
+ 
     CTFramesetterRef frameseter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);
     CTFrameRef frame = CTFramesetterCreateFrame(frameseter, CFRangeMake(0, attString.length), path, NULL);
     
     
     CTFrameDraw(frame, context);
-    //    CFRelease(frameseter);
+    CFRelease(frameseter);
 }
 
 @end

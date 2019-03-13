@@ -10,7 +10,8 @@
 #import "AsyCusView.h"
 
 #import "TBAsyView.h"
-#import "TBCoreAttributedItem.h"
+
+
 
 @interface AsyCusCell()
 
@@ -55,7 +56,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _cellLabel.attributedItem = [TBCoreAttributedItem itemWithText:_cellTitleString];
+//    _cellLabel.attributedItem = [TBCoreAttributedItem itemWithText:_cellTitleString];
 //    _cellLabel.text = _cellTitleString;
 //    _cellLabel.font = [UIFont systemFontOfSize:14];
 //    _cellLabel.textColor = [UIColor redColor];

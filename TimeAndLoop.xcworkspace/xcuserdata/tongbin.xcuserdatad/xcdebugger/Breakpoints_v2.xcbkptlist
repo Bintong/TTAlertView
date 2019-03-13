@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/AsyCusView.m"
-            timestampString = "573733610.32611"
+            timestampString = "574166066.111681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/AsyCusView.m"
-            timestampString = "573733610.326208"
+            timestampString = "574166066.1117589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/AsyCusCell.m"
-            timestampString = "573733610.3262841"
+            timestampString = "574167211.621353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-layoutSubviews"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/AsyCusCell.m"
-            timestampString = "573733610.326787"
+            timestampString = "574167211.621428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-initWithStyle:reuseIdentifier:"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +90,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/AsyCusView.m"
-            timestampString = "573733610.327126"
+            timestampString = "574166066.111962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "-displayLayer:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeAndLoop/TBAsyView.m"
+            timestampString = "574167211.621537"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-draw:size:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeAndLoop/SculptNormlTextController.m"
+            timestampString = "574167211.621594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

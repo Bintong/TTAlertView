@@ -28,8 +28,13 @@
 #import "TBPerformanceViewController.h"
 #import "AsyDrawController.h"
 
+#import "SCViewController.h"
+
+
 #import "Dog.h"
 #import "MyProxy.h"
+
+
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -96,7 +101,7 @@
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
 //        ctr = [[TBPerformanceViewController alloc] init];
-        ctr = [[AsyDrawController alloc] init];
+        ctr = [[SCViewController alloc] init];
         
 //        Dog *d = [MyProxy proxyWithObj:[Dog alloc]];
 //        [d barking:4];
