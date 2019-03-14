@@ -19,8 +19,8 @@
     NSMutableAttributedString *_textStorage;
 }
 
-@property (nonatomic, strong, readwrite) NSMutableAttributedString *resultString;
-@property (nonatomic, strong) NSMutableArray <SCTextAttachment *> *arrayAttachments;
+@property (nonatomic, strong, readwrite) NSMutableAttributedString *resultString; //最后的结构分类
+@property (nonatomic, strong) NSMutableArray <SCTextAttachment *> *arrayAttachments; //集合 附件
 
 @end
 
@@ -30,7 +30,7 @@
     self = [super init];
     if (self) {
         _textStorage = [[NSMutableAttributedString alloc] initWithString:text];
-        [_textStorage  addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, text.length)];
+        [_textStorage  addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, text.length)];//初始化
         [_textStorage  addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, text.length)];
         
         _resultString = nil;
@@ -41,7 +41,7 @@
 }
 
 - (NSAttributedString *)resultString {
-    [self rebuildIfNeeded];
+    [self rebuildIfNeeded]; //渲染attribute 的属性
     return _resultString;
 }
 
@@ -60,16 +60,13 @@
     return text;
 }
 
-- (SculptItem *)appendImageWithName:(NSString *)imgname size:(CGSize)size
-{
+- (SculptItem *)appendImageWithName:(NSString *)imgname size:(CGSize)size {
     UIImage *image = [UIImage imageNamed:imgname];
     return [self appendImageWithImage:image size:size];
 }
 
-- (SculptItem *)appendImageWithImage:(UIImage *)image size:(CGSize)size
-{
+- (SculptItem *)appendImageWithImage:(UIImage *)image size:(CGSize)size {
     SCTextAttachment *att = [SCTextAttachment textAttachmentWithContents:image type:SCGAttachmentTypeStaticImage size:size];
-    
     return [self appendAttachment:att];
 }
 
@@ -103,15 +100,12 @@
 - (void)setFont:(UIFont *)font {
     [self setNeedsRebuild];
     [_textStorage  addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, _textStorage.length)];
-
 }
 
 - (void)setColor:(UIColor *)color {
     [self setNeedsRebuild];
     [_textStorage  addAttribute:NSFontAttributeName value:color range:NSMakeRange(0, _textStorage.length)];
 }
-
-
 
 - (void)setNeedsRebuild
 {

@@ -21,13 +21,18 @@
     self.view.backgroundColor = [UIColor whiteColor];
     SculptItem *item = [SculptItem itemWithText:@"hello world"];
     [item appendText:@"hello world"];
+    [item appendText:@"hello world"];
+    [item appendText:@"hello world"];
+    [item appendText:@"hello world"];
+    [item appendText:@"hello world"];
+    
     TBAsyView *v = [[TBAsyView alloc] initWithFrame:CGRectZero];
     v.attributedItem = item;
     
-    CGSize size = CGSizeMake(100, 100);//后期编写layout 文件 根据内容动态大小
+    CGSize size = CGSizeMake(200, 200);//后期编写layout 文件 根据内容动态大小
     
     v.frame = CGRectMake(100, 100, size.width, size.height);
-    [v.attributedItem rebuildIfNeeded];//位置有带更改
+//    [v.attributedItem rebuildIfNeeded];//位置有带更改
     
     [self.view addSubview:v];
     
