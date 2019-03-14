@@ -22,6 +22,7 @@
 
 - (void)setColor:(UIColor *)color;
 
+- (SculptItem *)appendText:(NSString *)text;
 - (SculptItem *)appendAttributedItem:(SculptItem *)item;
 
 

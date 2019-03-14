@@ -17,7 +17,6 @@
     } _flags;
     
     NSMutableAttributedString *_textStorage;
-    
 }
 
 @property (nonatomic, strong, readwrite) NSMutableAttributedString *resultString;
@@ -36,8 +35,14 @@
         
         _resultString = nil;
         _flags.needsRebuild = YES;
+        _arrayAttachments = [NSMutableArray array];
     }
     return self;
+}
+
+- (NSAttributedString *)resultString {
+    [self rebuildIfNeeded];
+    return _resultString;
 }
 
 + (instancetype)itemWithText:(nullable NSString *)text {
@@ -68,7 +73,17 @@
     return [self appendAttachment:att];
 }
 
-
+- (SculptItem *)appendText:(NSString *)text {
+    SculptItem *item = [SculptItem itemWithText:text];
+    for (SCTextAttachment *textAtt in item.arrayAttachments) {
+        textAtt.position += _textStorage.length;
+        [_arrayAttachments addObject:textAtt];
+    }
+    
+    [_textStorage appendAttributedString:item.resultString];
+    [self setNeedsRebuild];
+    return self;
+}
 
 - (SculptItem *)appendAttachment:(SCTextAttachment *)att
 {
@@ -103,9 +118,19 @@
     _flags.needsRebuild = YES;
 }
 
-//- (SculptItem *)appendAttributedItem:(SCTextAttachment *)item {
-//     
-//}
+- (SculptItem *)appendAttributedItem:(SculptItem *)item {
+    if (item && item.resultString) {
+        
+        for (SCTextAttachment *att in item.arrayAttachments) {
+            att.position += _textStorage.length;
+            [_arrayAttachments addObject:att];
+        }
+        
+        [_textStorage appendAttributedString:item.resultString];
+        [self setNeedsRebuild];
+    }
+    return self;
+}
 
 
 - (void)rebuildIfNeeded {
