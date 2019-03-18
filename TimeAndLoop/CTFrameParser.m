@@ -12,6 +12,89 @@
 
 
 @implementation CTFrameParser
++(UIColor *)colorFromTemplate:(NSString *)name{
+    
+    if ([name isEqualToString:@"blue"]) {
+        return [UIColor blueColor];
+    }else if ([name isEqualToString:@"red"]){
+        return [UIColor redColor];
+    }else if ([name isEqualToString:@"black"]){
+        return [UIColor blackColor];
+    }else{
+        return nil;
+    }
+}
+
++(NSAttributedString *)parseAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
+    
+    //设置颜色
+    UIColor *color = [self colorFromTemplate:dict[@"color"]];
+    if (color) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
+    }
+    
+    //设置字号
+    CGFloat fontSize = [dict[@"size"] floatValue];
+    if (fontSize>0) {
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
+    
+    NSString *content = dict[@"content"];
+    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+}
+
+
++(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
+    if (data) {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        if ([array isKindOfClass:[NSArray class]]) {
+            for (NSDictionary *dict in array) {
+                NSString *type = dict[@"type"];
+                if ([type isEqualToString:@"txt"]) {
+                    NSAttributedString *as = [self parseAttributeContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                }
+            }
+        }
+    }
+    return  result;
+}
+//方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
++(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
+    
+    NSAttributedString *content = [self loadTemplateFile:path config:config];
+    return [self parseAttributedContent:content config:config];
+}
++(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
+    //创建CTFrameStterRef实例
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);
+    
+    //获得要绘制的区域的高度
+    CGSize restrictSize = CGSizeMake(config.width, CGFLOAT_MAX);
+    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), nil, restrictSize, nil);
+    CGFloat textHeight = coreTextSize.height;
+    
+    //生成CTFrameRef实例
+    CTFrameRef frame = [self createFrameWithFramesetter:framesetter config:config height:textHeight];
+    
+    //将生成好的CTFrameRef实例和计算好的绘制高度保存到CoreTextData实例中，最后返回CoreTextData实例
+    CoreTextData *data = [[CoreTextData alloc] init];
+    data.ctFrame = frame;
+    data.height = textHeight;
+    
+    //释放内存
+    CFRelease(framesetter);
+    CFRelease(frame);
+    
+    return data;
+}
+
 //给内容设置配置信息
 +(CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config{
     

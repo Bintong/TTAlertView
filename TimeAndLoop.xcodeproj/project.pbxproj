@@ -30,6 +30,7 @@
 		A6351B221DBC7F0100221579 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351B211DBC7F0100221579 /* Message.m */; };
 		A642FB8D1FC2CD6300B6A4DC /* RouterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A642FB8C1FC2CD6300B6A4DC /* RouterController.m */; };
 		A642FB901FC3B9AB00B6A4DC /* RouterTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A642FB8F1FC3B9AB00B6A4DC /* RouterTwoViewController.m */; };
+		A644100F223FBC6000161782 /* JsonTemplate.json in Resources */ = {isa = PBXBuildFile; fileRef = A644100E223FB1D600161782 /* JsonTemplate.json */; };
 		A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */; };
 		A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB701E77EE6B00558869 /* InfoPutController.m */; };
 		A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB721E77EE6B00558869 /* InfoPutManager.m */; };
@@ -199,6 +200,7 @@
 		A642FB8C1FC2CD6300B6A4DC /* RouterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterController.m; sourceTree = "<group>"; };
 		A642FB8E1FC3B9AB00B6A4DC /* RouterTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterTwoViewController.h; sourceTree = "<group>"; };
 		A642FB8F1FC3B9AB00B6A4DC /* RouterTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTwoViewController.m; sourceTree = "<group>"; };
+		A644100E223FB1D600161782 /* JsonTemplate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonTemplate.json; sourceTree = "<group>"; };
 		A64AFB6D1E77EE6B00558869 /* InfoPutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutCell.h; sourceTree = "<group>"; };
 		A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPutCell.m; sourceTree = "<group>"; };
 		A64AFB6F1E77EE6B00558869 /* InfoPutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutController.h; sourceTree = "<group>"; };
@@ -843,6 +845,7 @@
 				A6A522E3223F855300B3D25D /* CTDisplayView.m */,
 				A6A522E5223F9C8300B3D25D /* SculptSysController.h */,
 				A6A522E6223F9C8300B3D25D /* SculptSysController.m */,
+				A644100E223FB1D600161782 /* JsonTemplate.json */,
 			);
 			name = "同步排版渲染";
 			sourceTree = "<group>";
@@ -1054,6 +1057,7 @@
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
 				A6F2D37F221BBF8C002836BC /* FPSDemoController.xib in Resources */,
 				A6F2D36D221A732F002836BC /* 6.jpg in Resources */,
+				A644100F223FBC6000161782 /* JsonTemplate.json in Resources */,
 				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
 				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
 				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
