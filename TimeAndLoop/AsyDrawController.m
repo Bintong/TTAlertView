@@ -8,7 +8,7 @@
 
 #import "AsyDrawController.h"
 #import "AsyCusView.h"
-#import "YYTLabel.h"
+
 #import "AsyCusCell.h"
 @interface AsyDrawController ()<UITableViewDelegate,UITableViewDataSource>
 

@@ -62,11 +62,11 @@
 
 - (SculptItem *)appendImageWithName:(NSString *)imgname size:(CGSize)size {
     UIImage *image = [UIImage imageNamed:imgname];
-    return [self appendImageWithImage:image size:size];
+    return [self appendImageWithImage:image size:size];//仅仅转换
 }
 
 - (SculptItem *)appendImageWithImage:(UIImage *)image size:(CGSize)size {
-    SCTextAttachment *att = [SCTextAttachment textAttachmentWithContents:image type:SCGAttachmentTypeStaticImage size:size];
+    SCTextAttachment *att = [SCTextAttachment textAttachmentWithContents:image type:SCGAttachmentTypeStaticImage size:size];//only make attachment
     return [self appendAttachment:att];
 }
 
@@ -153,7 +153,7 @@
                                  (NSString *)NSStrikethroughStyleAttributeName,
                                  (NSString *)NSStrikethroughColorAttributeName,
                                  (NSString *)kCTRunDelegateAttributeName,
-                                 @"WMGTextAttachmentAttributeName",
+                                 @"SCGTextAttachmentAttributeName",
 //                                 WMGTextDefaultForegroundColorAttributeName,
 //                                 WMGTextStrikethroughStyleAttributeName,
 //                                 WMGTextStrikethroughColorAttributeName

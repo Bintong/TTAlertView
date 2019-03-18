@@ -8,6 +8,8 @@
 
 #import "SCViewController.h"
 #import "SculptNormlTextController.h"
+#import "SculptDrawImgController.h"
+#import "SculptSysController.h"
 
 
 @interface SCViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -22,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"普通文本渲染",@"wo",@"wdf",@"列表渲染"];
+    self.dataArray = @[@"普通文本渲染",@"普通渲染图片方式",@"同步绘制",@"列表渲染"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
@@ -70,7 +72,10 @@
     UIViewController *ctr ;
     if (indexPath.row == 0) {
         ctr = [[SculptNormlTextController alloc] init];
-        
+    }else if(indexPath.row == 1){
+        ctr = [[SculptDrawImgController alloc] init];
+    }else if(indexPath.row == 2){
+        ctr = [[SculptSysController alloc] init];
     }
     [self.navigationController pushViewController:ctr animated:YES];
 }

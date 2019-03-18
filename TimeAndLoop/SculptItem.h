@@ -24,6 +24,7 @@
 
 - (SculptItem *)appendText:(NSString *)text;
 - (SculptItem *)appendAttributedItem:(SculptItem *)item;
+- (SculptItem *)appendImageWithName:(NSString *)imgname size:(CGSize)size;
 
 
 - (void)rebuildIfNeeded;

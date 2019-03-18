@@ -23,6 +23,7 @@
     [item appendText:@"hello world"];
     [item appendText:@"hello world"];
     [item appendText:@"hello world"];
+//    [item appendImageWithName:@"123" size:CGSizeMake(15, 15)];
     [item appendText:@"hello world"];
     [item appendText:@"hello world"];
     

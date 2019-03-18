@@ -62,12 +62,18 @@
                           @"ascent":@10,
                           @"decent":@10,};
     CTRunDelegateRef runDelegate = CTRunDelegateCreate(&callback, (__bridge_retained void *)ref);
+//    [attrStr addAttribute:(id)kCTRunDelegateAttributeName
+//                    value:(__bridge id)runDelegate
+//                    range:NSMakeRange(0, 1)];
+    
     // 设置CTRunDelegateRef 和 文本颜色， 由于占位的“*”不需要显示，故设为透明色
     NSMutableDictionary *placeholderAttributes = [NSMutableDictionary dictionaryWithDictionary:attributes];
     
     [placeholderAttributes addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)runDelegate,
                                                      (NSString*)kCTRunDelegateAttributeName,
-                                                     [UIColor clearColor].CGColor,(NSString*)kCTForegroundColorAttributeName, attachment,
+                                                     [UIColor clearColor].CGColor,
+                                                     (NSString*)kCTForegroundColorAttributeName,
+                                                     attachment,
                                                      @"SCGTextAttachmentAttributeName",
                                                      nil]];
     CFRelease(runDelegate);
