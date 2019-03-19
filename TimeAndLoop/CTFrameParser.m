@@ -9,7 +9,7 @@
 #import "CTFrameParser.h"
 #import "CTFrameParserConfig.h"
 #import "CoreTextData.h"
-
+#import "CoreTextImageData.h"
 
 @implementation CTFrameParser
 +(UIColor *)colorFromTemplate:(NSString *)name{
@@ -48,7 +48,7 @@
 }
 
 
-+(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
++(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config  imageArray:(NSMutableArray *)imageArray{
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
     if (data) {
@@ -59,18 +59,71 @@
                 if ([type isEqualToString:@"txt"]) {
                     NSAttributedString *as = [self parseAttributeContentFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
+                }else if ([type isEqualToString:@"img"]){
+                    
+                    //创建CoreTextImageData,保存图片到imageArray数组中
+                    CoreTextImageData *imageData = [[CoreTextImageData alloc] init];
+                    imageData.name = dict[@"name"];
+                    imageData.position = [result length];
+                    [imageArray addObject:imageData];
+                    
+                    //创建空白占位符，并且设置它的CTRunDelegate信息
+                    NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
                 }
+             
             }
         }
     }
     return  result;
 }
+#pragma mark - 添加设置CTRunDelegate信息的方法
+static CGFloat ascentCallback(void *ref){
+    
+    return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"height"] floatValue];
+}
+static CGFloat descentCallback(void *ref){
+    
+    return 0;
+}
+static CGFloat widthCallback(void *ref){
+    
+    return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"width"] floatValue];
+}
+
+//方法五：接受一个NSAttributedString和一个Config参数，将NSAttributedString转换成CoreTextData返回
+
++(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config{
+    
+    CTRunDelegateCallbacks callbacks;
+    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
+    callbacks.version = kCTRunDelegateVersion1;
+    callbacks.getAscent = ascentCallback;
+    callbacks.getDescent = descentCallback;
+    callbacks.getWidth = widthCallback;
+    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);
+    
+    //使用0xFFFC作为空白占位符
+    unichar objectReplacementChar = 0xFFFC;
+    NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSDictionary *attributes = [self attributesWithConfig:config];
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
+    CFRelease(delegate);
+    return space;
+}
+
 //方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
 +(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
+    NSMutableArray *imageArray = [NSMutableArray array];
+    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray];
+    CoreTextData *data = [self parseAttributedContent:content config:config];
+    data.imageArray = imageArray;
     
-    NSAttributedString *content = [self loadTemplateFile:path config:config];
-    return [self parseAttributedContent:content config:config];
+    return data;
+//    return [self parseAttributedContent:content config:config];
 }
+
 +(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
     //创建CTFrameStterRef实例
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);

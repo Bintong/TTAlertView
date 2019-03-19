@@ -31,6 +31,9 @@
 		A642FB8D1FC2CD6300B6A4DC /* RouterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A642FB8C1FC2CD6300B6A4DC /* RouterController.m */; };
 		A642FB901FC3B9AB00B6A4DC /* RouterTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A642FB8F1FC3B9AB00B6A4DC /* RouterTwoViewController.m */; };
 		A644100F223FBC6000161782 /* JsonTemplate.json in Resources */ = {isa = PBXBuildFile; fileRef = A644100E223FB1D600161782 /* JsonTemplate.json */; };
+		A6441012223FBF9B00161782 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6441011223FBF9B00161782 /* CoreTextImageData.m */; };
+		A64410152240B0BE00161782 /* image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64410132240B0BE00161782 /* image-1.jpg */; };
+		A64410162240B0BE00161782 /* image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64410142240B0BE00161782 /* image-2.jpg */; };
 		A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */; };
 		A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB701E77EE6B00558869 /* InfoPutController.m */; };
 		A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB721E77EE6B00558869 /* InfoPutManager.m */; };
@@ -201,6 +204,10 @@
 		A642FB8E1FC3B9AB00B6A4DC /* RouterTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RouterTwoViewController.h; sourceTree = "<group>"; };
 		A642FB8F1FC3B9AB00B6A4DC /* RouterTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RouterTwoViewController.m; sourceTree = "<group>"; };
 		A644100E223FB1D600161782 /* JsonTemplate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonTemplate.json; sourceTree = "<group>"; };
+		A6441010223FBF9B00161782 /* CoreTextImageData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
+		A6441011223FBF9B00161782 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
+		A64410132240B0BE00161782 /* image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-1.jpg"; sourceTree = "<group>"; };
+		A64410142240B0BE00161782 /* image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-2.jpg"; sourceTree = "<group>"; };
 		A64AFB6D1E77EE6B00558869 /* InfoPutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutCell.h; sourceTree = "<group>"; };
 		A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPutCell.m; sourceTree = "<group>"; };
 		A64AFB6F1E77EE6B00558869 /* InfoPutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutController.h; sourceTree = "<group>"; };
@@ -835,6 +842,8 @@
 		A6BB4AC8223788A4001D190A /* 同步排版渲染 */ = {
 			isa = PBXGroup;
 			children = (
+				A64410132240B0BE00161782 /* image-1.jpg */,
+				A64410142240B0BE00161782 /* image-2.jpg */,
 				A6A522D9223F80B700B3D25D /* CTFrameParserConfig.h */,
 				A6A522DA223F80B700B3D25D /* CTFrameParserConfig.m */,
 				A6A522DC223F80C600B3D25D /* CTFrameParser.h */,
@@ -846,6 +855,8 @@
 				A6A522E5223F9C8300B3D25D /* SculptSysController.h */,
 				A6A522E6223F9C8300B3D25D /* SculptSysController.m */,
 				A644100E223FB1D600161782 /* JsonTemplate.json */,
+				A6441010223FBF9B00161782 /* CoreTextImageData.h */,
+				A6441011223FBF9B00161782 /* CoreTextImageData.m */,
 			);
 			name = "同步排版渲染";
 			sourceTree = "<group>";
@@ -1051,6 +1062,7 @@
 				A6F2D36B221A732F002836BC /* 5.jpg in Resources */,
 				A6BB4AD7223A0A22001D190A /* 123.png in Resources */,
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
+				A64410152240B0BE00161782 /* image-1.jpg in Resources */,
 				A6F2D371221A732F002836BC /* 0.jpg in Resources */,
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
 				A6F2D36F221A732F002836BC /* 3.jpg in Resources */,
@@ -1059,6 +1071,7 @@
 				A6F2D36D221A732F002836BC /* 6.jpg in Resources */,
 				A644100F223FBC6000161782 /* JsonTemplate.json in Resources */,
 				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
+				A64410162240B0BE00161782 /* image-2.jpg in Resources */,
 				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
 				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
 				A6F2D36E221A732F002836BC /* 2.jpg in Resources */,
@@ -1104,6 +1117,7 @@
 				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
 				A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */,
 				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
+				A6441012223FBF9B00161782 /* CoreTextImageData.m in Sources */,
 				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
 				A6BB4ADA223A3376001D190A /* SculptDrawImgController.m in Sources */,
 				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,

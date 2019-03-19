@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoreTextData : NSObject
 @property (assign,nonatomic)CTFrameRef ctFrame;
 @property (assign,nonatomic)CGFloat height;
+
+@property (strong,nonatomic)NSArray *imageArray;
 @end
 
 NS_ASSUME_NONNULL_END
