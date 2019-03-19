@@ -1,7 +1,5 @@
 
 [
-    
-   
     {
         "name":"image-2.jpg",
         "width":200,
@@ -25,6 +23,13 @@
         "content":"Quartz是一个2D图形渲染引擎，能够处理OSX和iOS中图形显示问题。",
         "size":16,
         "type":"txt"
+    },
+    {
+        "color":"purple",
+        "content":"hello 链接",
+        "size":16,
+        "url":"https://www.rentalcars.com/Home.do?affiliateCode=booking-com&adplat=footer&preflang=en"
+        "type":"link"
     },
     {
         "name":"image-1.jpg",
