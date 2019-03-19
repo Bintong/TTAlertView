@@ -8,16 +8,27 @@
 
 #import "CTDisplayView.h"
 #import "CoreTextImageData.h"
+#import "CoreTextLinkData.h"
+#import "CoreTextUtils.h"
 
 @interface CTDisplayView()<UIGestureRecognizerDelegate>
 
 @property (strong,nonatomic)UIImageView *tapImgeView;
+
 @property (strong,nonatomic)UIView *coverView;
+
+@property (strong,nonatomic)UIWebView *webView;
+//@property (strong,nonatomic)
+
 
 @end
 
 @implementation CTDisplayView
 
+- (void)dealloc {
+    _coverView = nil;
+    _webView = nil;
+}
 
 //初始化方法
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -56,6 +67,14 @@
             break;
         }
     }
+    
+    //web
+    //点击链接
+    CoreTextLinkData *linkData = [CoreTextUtils touchLinkInView:self atPoint:point data:self.data];
+    if (linkData) {
+        [self showTapLink:linkData.url];
+        return;
+    }
 }
 
 //显示图片
@@ -67,7 +86,6 @@
     _tapImgeView = [[UIImageView alloc] initWithImage:tapImage];
     _tapImgeView.frame = CGRectMake(0, 0, 300, 200);
     _tapImgeView.center = keyWindow.center;
-    
     
     //蒙版
     _coverView = [[UIView alloc] initWithFrame:keyWindow.bounds];
@@ -84,6 +102,32 @@
     [_coverView removeFromSuperview];
 }
 
+
+//显示链接网页
+-(void)showTapLink:(NSString *)urlStr{
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    //网页
+    _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 300, 400)];
+    _webView.center = keyWindow.center;
+    [_webView setScalesPageToFit:YES];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+    [_webView loadRequest:request];
+    
+    //蒙版
+    _coverView = [[UIView alloc] initWithFrame:keyWindow.bounds];
+    [_coverView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)]];
+    _coverView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.6];
+    _coverView.userInteractionEnabled = YES;
+    
+    [keyWindow addSubview:_coverView];
+    [keyWindow addSubview:_webView];
+}
+-(void)hide{
+    [_webView removeFromSuperview];
+    [_coverView removeFromSuperview];
+}
 
 //重写drawRect方法
 - (void)drawRect:(CGRect)rect {

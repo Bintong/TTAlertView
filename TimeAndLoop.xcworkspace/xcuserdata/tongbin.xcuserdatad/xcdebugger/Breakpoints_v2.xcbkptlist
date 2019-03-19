@@ -84,7 +84,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/SculptSysController.m"
-            timestampString = "574671045.740678"
+            timestampString = "574680347.39371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -100,12 +100,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TimeAndLoop/CTFrameParser.m"
-            timestampString = "574671045.740749"
+            timestampString = "574680347.3938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "+loadTemplateFile:config:"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "+loadTemplateFile:config:imageArray:linkArray:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

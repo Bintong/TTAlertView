@@ -34,6 +34,8 @@
 		A6441012223FBF9B00161782 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6441011223FBF9B00161782 /* CoreTextImageData.m */; };
 		A64410152240B0BE00161782 /* image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64410132240B0BE00161782 /* image-1.jpg */; };
 		A64410162240B0BE00161782 /* image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64410142240B0BE00161782 /* image-2.jpg */; };
+		A64410192240DE2E00161782 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = A64410182240DE2E00161782 /* CoreTextLinkData.m */; };
+		A644101C2240DE4E00161782 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A644101B2240DE4E00161782 /* CoreTextUtils.m */; };
 		A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */; };
 		A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB701E77EE6B00558869 /* InfoPutController.m */; };
 		A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB721E77EE6B00558869 /* InfoPutManager.m */; };
@@ -208,6 +210,10 @@
 		A6441011223FBF9B00161782 /* CoreTextImageData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
 		A64410132240B0BE00161782 /* image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-1.jpg"; sourceTree = "<group>"; };
 		A64410142240B0BE00161782 /* image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-2.jpg"; sourceTree = "<group>"; };
+		A64410172240DE2E00161782 /* CoreTextLinkData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextLinkData.h; sourceTree = "<group>"; };
+		A64410182240DE2E00161782 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
+		A644101A2240DE4E00161782 /* CoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
+		A644101B2240DE4E00161782 /* CoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
 		A64AFB6D1E77EE6B00558869 /* InfoPutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutCell.h; sourceTree = "<group>"; };
 		A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPutCell.m; sourceTree = "<group>"; };
 		A64AFB6F1E77EE6B00558869 /* InfoPutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutController.h; sourceTree = "<group>"; };
@@ -857,6 +863,10 @@
 				A644100E223FB1D600161782 /* JsonTemplate.json */,
 				A6441010223FBF9B00161782 /* CoreTextImageData.h */,
 				A6441011223FBF9B00161782 /* CoreTextImageData.m */,
+				A64410172240DE2E00161782 /* CoreTextLinkData.h */,
+				A64410182240DE2E00161782 /* CoreTextLinkData.m */,
+				A644101A2240DE4E00161782 /* CoreTextUtils.h */,
+				A644101B2240DE4E00161782 /* CoreTextUtils.m */,
 			);
 			name = "同步排版渲染";
 			sourceTree = "<group>";
@@ -1164,6 +1174,7 @@
 				A6D11F43221545F70077EB7F /* Model_CC.m in Sources */,
 				A6BB4ACE2237AF46001D190A /* SculptNormlTextController.m in Sources */,
 				A6A522E7223F9C8300B3D25D /* SculptSysController.m in Sources */,
+				A644101C2240DE4E00161782 /* CoreTextUtils.m in Sources */,
 				A6F2D35E221A4672002836BC /* TeureModel.m in Sources */,
 				A67960252229416300D96C09 /* Dog.m in Sources */,
 				A6805B7C1DCB3E88002BE3F3 /* TTAction.m in Sources */,
@@ -1193,6 +1204,7 @@
 				A6D6A96022281B8600E0ACA8 /* AsyCusLayer.m in Sources */,
 				A6351B191DB9F73300221579 /* KVOViewController.m in Sources */,
 				A64AFB811E77EE6B00558869 /* InfoPutViewManager.m in Sources */,
+				A64410192240DE2E00161782 /* CoreTextLinkData.m in Sources */,
 				A6351B1C1DB9F9A700221579 /* NSObject+KVO.m in Sources */,
 				A612EF241DBF66600051DFD4 /* IdentityController.m in Sources */,
 				A64AFB801E77EE6B00558869 /* InfoPutObject.m in Sources */,

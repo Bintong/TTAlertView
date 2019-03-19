@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign,nonatomic)CGFloat height;
 
 @property (strong,nonatomic)NSArray *imageArray;
+
+@property (strong,nonatomic)NSArray *linkArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

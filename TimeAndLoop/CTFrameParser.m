@@ -10,6 +10,8 @@
 #import "CTFrameParserConfig.h"
 #import "CoreTextData.h"
 #import "CoreTextImageData.h"
+#import "CoreTextLinkData.h"
+
 
 @implementation CTFrameParser
 +(UIColor *)colorFromTemplate:(NSString *)name{
@@ -48,7 +50,7 @@
 }
 
 
-+(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config  imageArray:(NSMutableArray *)imageArray{
++(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config  imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
     if (data) {
@@ -70,6 +72,20 @@
                     //创建空白占位符，并且设置它的CTRunDelegate信息
                     NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
+                } else if ([type isEqualToString:@"link"]){
+                    
+                    NSUInteger startPos = result.length;
+                    NSAttributedString *as = [self parseAttributeContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                    
+                    //创建CoreTextLinkData
+                    NSUInteger length = result.length - startPos;
+                    NSRange linkRange = NSMakeRange(startPos, length);
+                    CoreTextLinkData *linkData = [[CoreTextLinkData alloc] init];
+                    linkData.title = dict[@"content"];
+                    linkData.url   = dict[@"url"];
+                    linkData.range = linkRange;
+                    [linkArray addObject:linkData];
                 }
              
             }
@@ -116,10 +132,13 @@ static CGFloat widthCallback(void *ref){
 //方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
 +(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
     NSMutableArray *imageArray = [NSMutableArray array];
-    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray];
+    NSMutableArray *linkArray  = [NSMutableArray array];
+
+    NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
     CoreTextData *data = [self parseAttributedContent:content config:config];
     data.imageArray = imageArray;
-    
+    data.linkArray = linkArray;
+
     return data;
 //    return [self parseAttributedContent:content config:config];
 }
