@@ -24,7 +24,7 @@
     
     //创建画布
     CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-100);
+    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-120);
     dispaleView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:dispaleView];
     
@@ -46,7 +46,7 @@
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:content attributes:attr];
     [attributeString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:26] range:NSMakeRange(0, 15)];
     [attributeString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(0, 15)];
- 
+  
     //创建绘制数据实例
     CoreTextData *data = [CTFrameParser parseAttributedContent:attributeString config:config];
     */
@@ -60,6 +60,7 @@
     dispaleView.backgroundColor = [UIColor yellowColor];
     
     // Do any additional setup after loading the view.
+  
 }
 
 /*

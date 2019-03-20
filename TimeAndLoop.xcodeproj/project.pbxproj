@@ -36,6 +36,7 @@
 		A64410162240B0BE00161782 /* image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A64410142240B0BE00161782 /* image-2.jpg */; };
 		A64410192240DE2E00161782 /* CoreTextLinkData.m in Sources */ = {isa = PBXBuildFile; fileRef = A64410182240DE2E00161782 /* CoreTextLinkData.m */; };
 		A644101C2240DE4E00161782 /* CoreTextUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A644101B2240DE4E00161782 /* CoreTextUtils.m */; };
+		A644101E2242383900161782 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = A644101D2242383900161782 /* File.strings */; };
 		A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */; };
 		A64AFB7E1E77EE6B00558869 /* InfoPutController.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB701E77EE6B00558869 /* InfoPutController.m */; };
 		A64AFB7F1E77EE6B00558869 /* InfoPutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A64AFB721E77EE6B00558869 /* InfoPutManager.m */; };
@@ -214,6 +215,7 @@
 		A64410182240DE2E00161782 /* CoreTextLinkData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
 		A644101A2240DE4E00161782 /* CoreTextUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextUtils.h; sourceTree = "<group>"; };
 		A644101B2240DE4E00161782 /* CoreTextUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextUtils.m; sourceTree = "<group>"; };
+		A644101D2242383900161782 /* File.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
 		A64AFB6D1E77EE6B00558869 /* InfoPutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutCell.h; sourceTree = "<group>"; };
 		A64AFB6E1E77EE6B00558869 /* InfoPutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPutCell.m; sourceTree = "<group>"; };
 		A64AFB6F1E77EE6B00558869 /* InfoPutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPutController.h; sourceTree = "<group>"; };
@@ -867,6 +869,7 @@
 				A64410182240DE2E00161782 /* CoreTextLinkData.m */,
 				A644101A2240DE4E00161782 /* CoreTextUtils.h */,
 				A644101B2240DE4E00161782 /* CoreTextUtils.m */,
+				A644101D2242383900161782 /* File.strings */,
 			);
 			name = "同步排版渲染";
 			sourceTree = "<group>";
@@ -1073,6 +1076,7 @@
 				A6BB4AD7223A0A22001D190A /* 123.png in Resources */,
 				A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */,
 				A64410152240B0BE00161782 /* image-1.jpg in Resources */,
+				A644101E2242383900161782 /* File.strings in Resources */,
 				A6F2D371221A732F002836BC /* 0.jpg in Resources */,
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
 				A6F2D36F221A732F002836BC /* 3.jpg in Resources */,

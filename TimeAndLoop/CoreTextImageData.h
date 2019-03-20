@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoreTextImageData : NSObject
 
 //图片资源名称
-@property (copy,nonatomic)NSString *name;
+@property (copy,nonatomic) NSString *name;
 //图片位置的起始点
-@property (assign,nonatomic)CGFloat position;
+@property (assign,nonatomic) CGFloat position;
 //图片的尺寸
-@property (assign,nonatomic)CGRect imagePostion;
+@property (assign,nonatomic) CGRect imagePostion;
 
 @end
 

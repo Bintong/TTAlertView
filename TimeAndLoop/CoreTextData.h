@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 //用于保存由CTFrameParser类生成的CTFrameRef实例，以及CTFrameRef实际绘制需要的高度
 @interface CoreTextData : NSObject
-@property (assign,nonatomic)CTFrameRef ctFrame;
+
+@property (assign,nonatomic)CTFrameRef ctFrame; //被保存的对象
+
 @property (assign,nonatomic)CGFloat height;
 
 @property (strong,nonatomic)NSArray *imageArray;

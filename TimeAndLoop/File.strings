@@ -1,0 +1,16 @@
+/* 
+  File.strings
+  TimeAndLoop
+
+  Created by BinTong on 2019/3/20.
+  Copyright © 2019 TongBin. All rights reserved.
+*/
+
+
+
+//CTFrameParserConfig 配置基本的页面 =》读取文件 =》返回CoreTextData 对象（CTFrameRef class）=》 view 的- (void)drawRect:(CGRect)rect 方法用对象///CTFrameDraw(self.data.ctFrame, context);
+
+//Draws an entire frame into a context. -CTFrameDraw
+
+//Draws an image into a graphics context. -CGContextDrawImage
+

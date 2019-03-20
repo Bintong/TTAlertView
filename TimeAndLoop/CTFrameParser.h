@@ -10,7 +10,7 @@
 #import "CoreTextData.h"
 @class CTFrameParserConfig;
 
-//用于生成最后绘制界面需要的CTFrameRef实例 很像解析器
+//用于生成最后绘制界面需要的CTFrameRef实例 很像解析器 A reference to a Core text frame object
 @interface CTFrameParser : NSObject
 
 /**

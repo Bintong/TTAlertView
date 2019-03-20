@@ -14,6 +14,11 @@
 
 
 @implementation CTFrameParser
+
+
+
+
+
 +(UIColor *)colorFromTemplate:(NSString *)name{
     
     if ([name isEqualToString:@"blue"]) {
@@ -107,10 +112,17 @@ static CGFloat widthCallback(void *ref){
     return [(NSNumber *)[(__bridge NSDictionary *)ref objectForKey:@"width"] floatValue];
 }
 
-//方法五：接受一个NSAttributedString和一个Config参数，将NSAttributedString转换成CoreTextData返回
+
+//
 
 +(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config{
-    
+//    {
+//        height = 108;
+//        name = "image-2.jpg";
+//        type = img;
+//        width = 200;
+//    }
+
     CTRunDelegateCallbacks callbacks;
     memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;
@@ -129,20 +141,20 @@ static CGFloat widthCallback(void *ref){
     return space;
 }
 
-//方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
+//image 方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
 +(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
     NSMutableArray *imageArray = [NSMutableArray array];
     NSMutableArray *linkArray  = [NSMutableArray array];
 
     NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
-    CoreTextData *data = [self parseAttributedContent:content config:config];
+    CoreTextData *data = [self parseAttributedContent:content config:config];// get imagearray  and link array
     data.imageArray = imageArray;
     data.linkArray = linkArray;
 
     return data;
 //    return [self parseAttributedContent:content config:config];
 }
-
+//content string
 +(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
     //创建CTFrameStterRef实例
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);

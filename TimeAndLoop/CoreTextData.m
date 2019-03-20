@@ -27,13 +27,13 @@
     }
 }
 
--(void)setImageArray:(NSArray *)imageArray{
+-(void)setImageArray:(NSArray *)imageArray {
     _imageArray = imageArray;
     [self fillImagePosition];
     
 }
 //填充图片
--(void)fillImagePosition{
+-(void)fillImagePosition {
     if (self.imageArray.count==0) {
         return;
     }
@@ -51,8 +51,9 @@
         CTLineRef line = (__bridge CTLineRef)lines[i];
         NSArray *runObjArray = (NSArray *)CTLineGetGlyphRuns(line);
         for (id runObj in runObjArray) {
-            CTRunRef run = (__bridge CTRunRef)runObj;
+            CTRunRef run = (__bridge CTRunRef)runObj;//A reference to a run object.
             NSDictionary *runAttributes = (NSDictionary *)CTRunGetAttributes(run);
+            //The dictionary returned is either the same one that was set as an attribute dictionary on the original attributed string or a dictionary that has been manufactured by the layout engine. Attribute dictionaries can be manufactured in the case of font substitution or if the run is missing critical attributes.
             CTRunDelegateRef delegate = (__bridge CTRunDelegateRef)[runAttributes valueForKey:(id)kCTRunDelegateAttributeName];
             if (delegate == nil) {
                 continue;
