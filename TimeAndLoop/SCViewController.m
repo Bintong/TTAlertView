@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"普通文本渲染",@"普通渲染图片方式",@"同步绘制",@"列表渲染"];
+    self.dataArray = @[@"普通文本渲染",@"文本渲染 控制布局"@"普通渲染图片方式",@"同步绘制",@"列表渲染"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
