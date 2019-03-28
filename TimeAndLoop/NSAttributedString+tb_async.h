@@ -1,8 +1,8 @@
 //
-//  TBMemeryUse.h
+//  NSAttributedString+tb_async.h
 //  TimeAndLoop
 //
-//  Created by BinTong on 2019/2/23.
+//  Created by BinTong on 2019/3/21.
 //  Copyright © 2019 TongBin. All rights reserved.
 //
 
@@ -10,13 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TBMemeryUse : NSObject
-
-+ (TBMemeryUse *)sharedInstance;
+@interface NSAttributedString (tb_async)
 
 
-- (CGFloat)usedMemoryInMB;
-
+- (CGSize)tb_sizeConstrainedToWidth:(CGFloat)width;
 @end
 
 NS_ASSUME_NONNULL_END

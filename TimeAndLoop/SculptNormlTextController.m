@@ -9,7 +9,7 @@
 #import "SculptNormlTextController.h"
 #import "SculptItem.h"
 #import "TBAsyView.h"
-
+#import "NSAttributedString+tb_async.h"
 @interface SculptNormlTextController ()
 
 @end
@@ -22,18 +22,16 @@
     SculptItem *item = [SculptItem itemWithText:@"hello world"];
     [item appendText:@"hello world"];
     [item appendText:@"hello world"];
-    [item appendText:@"hello world"];
+//    [item appendText:@"hello world"];
 //    [item appendImageWithName:@"123" size:CGSizeMake(15, 15)];
-    [item appendText:@"hello world"];
-    [item appendText:@"hello world"];
+//    [item appendText:@"hello world"];
+//    [item appendText:@"hello world"];
     
     TBAsyView *v = [[TBAsyView alloc] initWithFrame:CGRectZero];
     v.attributedItem = item;
-    
-    CGSize size = CGSizeMake(200, 200);//后期编写layout 文件 根据内容动态大小
-    
-    v.frame = CGRectMake(100, 100, size.width, size.height);
-//    [v.attributedItem rebuildIfNeeded];//位置有带更改
+    CGSize size =  [item.resultString tb_sizeConstrainedToWidth:self.view.frame.size.width - 20];//后期编写layout 文件 根据内容动态大小
+    v.frame = CGRectMake(10, 100, size.width, size.height);
+ 
     
     [self.view addSubview:v];
     

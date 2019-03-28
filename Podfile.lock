@@ -16,6 +16,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
+  - TBPerformanceView (0.1.0.2)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - DCURLRouter (~> 0.81)
   - JLRoutes
+  - TBPerformanceView (from `/Users/tongbin/Documents/TBPerformanceView/`)
   - Texture
   - YYModel
 
@@ -41,15 +43,20 @@ SPEC REPOS:
     - Texture
     - YYModel
 
+EXTERNAL SOURCES:
+  TBPerformanceView:
+    :path: "/Users/tongbin/Documents/TBPerformanceView/"
+
 SPEC CHECKSUMS:
   DCURLRouter: 6bb8d5c85390f5ce5a9966ad68e0e994a3e89b25
   JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  TBPerformanceView: 5954a702046bb3a6ae224dbfffcb867be67d8777
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 9aa8ef8d1a04069dc22f1d165f429aa626ee92d3
+PODFILE CHECKSUM: 0bfcce82491815e6b07c9ba03760f12488f07754
 
 COCOAPODS: 1.5.3

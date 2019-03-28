@@ -54,6 +54,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"JsonTemplate" ofType:@"json"];
     //创建绘制数据实例
     CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
+    //在整体绘制之前，我们要得到所有图片在CTFrame中位置
     
     dispaleView.data = data;
     dispaleView.height = data.height;

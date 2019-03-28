@@ -37,13 +37,13 @@
     if (self.imageArray.count==0) {
         return;
     }
-    NSArray *lines = (NSArray *)CTFrameGetLines(self.ctFrame);
-    NSInteger lineCount = [lines count];
-    CGPoint lineOrigins[lineCount];
-    CTFrameGetLineOrigins(self.ctFrame, CFRangeMake(0, 0), lineOrigins);
+    NSArray *lines = (NSArray *)CTFrameGetLines(self.ctFrame); //整体绘制之前，我们要得到所有图片在CTFrame中位置
+    NSInteger lineCount = [lines count];////获取线的数量
+    CGPoint lineOrigins[lineCount]; //每行开始的坐标 //建立起点的数组（cgpoint类型为结构体，故用C语言的数组）
+    CTFrameGetLineOrigins(self.ctFrame, CFRangeMake(0, 0), lineOrigins); //获取起点
     
     int imgIndex = 0;
-    CoreTextImageData *imageData = self.imageArray[0];
+    CoreTextImageData *imageData = self.imageArray[0]; //就是图片数组中第一个的图片信息对象
     for (int i=0; i<lineCount; i++) {
         if (imageData==nil) {
             break;
@@ -59,7 +59,7 @@
                 continue;
             }
             
-            NSDictionary *metaDic = CTRunDelegateGetRefCon(delegate);
+            NSDictionary *metaDic = CTRunDelegateGetRefCon(delegate);////获得图片元数据
             if (![metaDic isKindOfClass:[NSDictionary class]]) {
                 continue;
             }

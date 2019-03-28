@@ -21,7 +21,8 @@
 - (IBAction)openBoard:(id)sender {
  
     TBPerformanceBoard *board = [TBPerformanceBoard sharedInstance];
-    [board createPeroformanceBoard];
+//    [board createPeroformanceWithDeviceInfo:self.view.window];
+    [board createClickPeroformanceWithDeviceInfo:self];
     [board open];
 }
 

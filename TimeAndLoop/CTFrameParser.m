@@ -134,7 +134,7 @@ static CGFloat widthCallback(void *ref){
     //使用0xFFFC作为空白占位符
     unichar objectReplacementChar = 0xFFFC;
     NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSDictionary *attributes = [self attributesWithConfig:config];
+    NSDictionary *attributes = [self attributesWithConfig:config]; //;//获得文本整体的风格字典，比如行间距，字体大小之类的信息。
     NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
     CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
     CFRelease(delegate);
@@ -148,15 +148,14 @@ static CGFloat widthCallback(void *ref){
 
     NSAttributedString *content = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
     CoreTextData *data = [self parseAttributedContent:content config:config];// get imagearray  and link array
-    data.imageArray = imageArray;
+    data.imageArray = imageArray; //image 的set 方法
     data.linkArray = linkArray;
-
     return data;
 //    return [self parseAttributedContent:content config:config];
 }
 //content string
 +(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
-    //创建CTFrameStterRef实例
+    //创建CTFrameStterRef实例 //A reference to a Core Foundation framesetter object.
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);
     
     //获得要绘制的区域的高度
@@ -171,6 +170,7 @@ static CGFloat widthCallback(void *ref){
     CoreTextData *data = [[CoreTextData alloc] init];
     data.ctFrame = frame;
     data.height = textHeight;
+    //这个后边在外部跟随着 image 的
     
     //释放内存
     CFRelease(framesetter);
@@ -237,7 +237,7 @@ static CGFloat widthCallback(void *ref){
 
 //创建CTFrameRef绘制路径实例
 +(CTFrameRef)createFrameWithFramesetter:(CTFramesetterRef)framesetter config:(CTFrameParserConfig *)config height:(CGFloat)height{
-    
+    //创建矩形的路径 指定文字的绘制范围
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddRect(path, NULL, CGRectMake(0, 0, config.width, height));
     

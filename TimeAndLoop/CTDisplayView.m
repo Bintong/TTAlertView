@@ -148,11 +148,11 @@
 //    }
     if (self.data) {
         
-        CTFrameDraw(self.data.ctFrame, context);
+        CTFrameDraw(self.data.ctFrame, context); //文字绘画
         for (CoreTextImageData *imageData in self.data.imageArray) {
             
             UIImage *image = [UIImage imageNamed:imageData.name];
-            CGContextDrawImage(context, imageData.imagePostion, image.CGImage);
+            CGContextDrawImage(context, imageData.imagePostion, image.CGImage);//图片绘画
         }
     }
     
