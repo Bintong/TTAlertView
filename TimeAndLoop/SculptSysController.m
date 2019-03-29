@@ -84,8 +84,8 @@
     
     
     TTObjLabel *label = [[TTObjLabel alloc] init];
-    label.tt_text = @"hello world";
-    label.tt_font_size = 14;
+    label.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
+    label.tt_font_size = 18;
     label.tt_color = [UIColor redColor];
     [label drawAtView];
     
