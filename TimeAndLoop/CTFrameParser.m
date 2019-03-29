@@ -14,10 +14,7 @@
 
 
 @implementation CTFrameParser
-
-
-
-
+ 
 
 +(UIColor *)colorFromTemplate:(NSString *)name{
     

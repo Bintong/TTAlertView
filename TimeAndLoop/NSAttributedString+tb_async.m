@@ -10,6 +10,7 @@
 #import "UIView+Coordinate.h"
  #define CGFLOAT_CEIL(value) ceil(value)
 @implementation NSAttributedString (tb_async)
+
 - (CGSize)tb_sizeConstrainedToWidth:(CGFloat)width {
 //    return CGSizeMake(0, 0);
     

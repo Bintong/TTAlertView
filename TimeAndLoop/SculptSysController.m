@@ -12,6 +12,10 @@
 #import "CTFrameParserConfig.h"
 #import "CTFrameParser.h"
 #import "CoreTextData.h"
+
+
+//other style
+#import "TTObjLabel.h"
 @interface SculptSysController ()
 
 @end
@@ -23,15 +27,15 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //创建画布
-    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-120);
-    dispaleView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:dispaleView];
+//    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+//    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-120);
+//    dispaleView.backgroundColor = [UIColor whiteColor];
+//    [self.view addSubview:dispaleView];
     
     //设置配置信息
-    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
-    config.textColor = [UIColor redColor];
-    config.width = dispaleView.width;
+//    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+//    config.textColor = [UIColor redColor];
+//    config.width = dispaleView.width;
     /*
     //设置内容
     NSString *content =  @"CoreText是用于处理文字和字体的底层技术。"
@@ -50,20 +54,47 @@
     //创建绘制数据实例
     CoreTextData *data = [CTFrameParser parseAttributedContent:attributeString config:config];
     */
+    
+    
+    /*
     //获取模板文件
     NSString *path = [[NSBundle mainBundle] pathForResource:@"JsonTemplate" ofType:@"json"];
     //创建绘制数据实例
     CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
-    //在整体绘制之前，我们要得到所有图片在CTFrame中位置
-    
     dispaleView.data = data;
     dispaleView.height = data.height;
     dispaleView.backgroundColor = [UIColor yellowColor];
+    */
     
-    // Do any additional setup after loading the view.
-  
+    [self loadOtherStyle];
+    
+ 
 }
 
+
+- (void)loadOtherStyle {
+    
+    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-120);
+    dispaleView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:dispaleView];
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+    config.textColor = [UIColor redColor];
+    config.width = dispaleView.width;
+    
+    
+    TTObjLabel *label = [[TTObjLabel alloc] init];
+    label.tt_text = @"hello world";
+    label.tt_font_size = 14;
+    label.tt_color = [UIColor redColor];
+    [label drawAtView];
+    
+    CoreTextData *data = [CTFrameParser parseAttributedContent:label.tt_attribute config:config];
+
+    dispaleView.data = data;
+    
+    
+}
 /*
 #pragma mark - Navigation
 

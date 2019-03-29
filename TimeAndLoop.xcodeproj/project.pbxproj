@@ -19,6 +19,9 @@
 		A612EF341DC1F74C0051DFD4 /* PersonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A612EF331DC1F74C0051DFD4 /* PersonInfoCell.m */; };
 		A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A612EF351DC332B00051DFD4 /* arrow@2x.png */; };
 		A612EF381DC332B00051DFD4 /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A612EF361DC332B00051DFD4 /* arrow@3x.png */; };
+		A62905D6224CCBA50048455B /* SculptFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905D5224CCBA50048455B /* SculptFrameController.m */; };
+		A62905D9224CD85F0048455B /* SculptAttributeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905D8224CD85F0048455B /* SculptAttributeItem.m */; };
+		A62905DD224DC9D10048455B /* TTObjLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905DC224DC9D10048455B /* TTObjLabel.m */; };
 		A6351AE51DB9F0A800221579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE41DB9F0A800221579 /* main.m */; };
 		A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE71DB9F0A800221579 /* AppDelegate.m */; };
 		A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AEA1DB9F0A800221579 /* ViewController.m */; };
@@ -177,6 +180,12 @@
 		A612EF331DC1F74C0051DFD4 /* PersonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoCell.m; sourceTree = "<group>"; };
 		A612EF351DC332B00051DFD4 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		A612EF361DC332B00051DFD4 /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
+		A62905D4224CCBA50048455B /* SculptFrameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SculptFrameController.h; sourceTree = "<group>"; };
+		A62905D5224CCBA50048455B /* SculptFrameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SculptFrameController.m; sourceTree = "<group>"; };
+		A62905D7224CD85F0048455B /* SculptAttributeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SculptAttributeItem.h; sourceTree = "<group>"; };
+		A62905D8224CD85F0048455B /* SculptAttributeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SculptAttributeItem.m; sourceTree = "<group>"; };
+		A62905DB224DC9D10048455B /* TTObjLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTObjLabel.h; sourceTree = "<group>"; };
+		A62905DC224DC9D10048455B /* TTObjLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTObjLabel.m; sourceTree = "<group>"; };
 		A6351AE01DB9F0A800221579 /* TimeAndLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6351AE41DB9F0A800221579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6351AE61DB9F0A800221579 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -530,6 +539,22 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A62905D3224CCAA30048455B /* layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = layout;
+			sourceTree = "<group>";
+		};
+		A62905DA224DBFF00048455B /* 贴近自然应用 */ = {
+			isa = PBXGroup;
+			children = (
+				A62905DB224DC9D10048455B /* TTObjLabel.h */,
+				A62905DC224DC9D10048455B /* TTObjLabel.m */,
+			);
+			name = "贴近自然应用";
+			sourceTree = "<group>";
+		};
 		A6351AD71DB9F0A800221579 = {
 			isa = PBXGroup;
 			children = (
@@ -839,6 +864,7 @@
 		A6BB4AC8223788A4001D190A /* 同步排版渲染 */ = {
 			isa = PBXGroup;
 			children = (
+				A62905DA224DBFF00048455B /* 贴近自然应用 */,
 				A64410132240B0BE00161782 /* image-1.jpg */,
 				A64410142240B0BE00161782 /* image-2.jpg */,
 				A6A522D9223F80B700B3D25D /* CTFrameParserConfig.h */,
@@ -872,6 +898,8 @@
 				A6BB4AD42238DDF5001D190A /* SCTextAttachment.m */,
 				A644103D2243B85C00161782 /* NSAttributedString+tb_async.h */,
 				A644103E2243B85C00161782 /* NSAttributedString+tb_async.m */,
+				A62905D7224CD85F0048455B /* SculptAttributeItem.h */,
+				A62905D8224CD85F0048455B /* SculptAttributeItem.m */,
 			);
 			name = HelperClass;
 			sourceTree = "<group>";
@@ -905,12 +933,15 @@
 		A6D6A9572227F26C00E0ACA8 /* 异步渲染的套路 */ = {
 			isa = PBXGroup;
 			children = (
+				A62905D3224CCAA30048455B /* layout */,
 				A6BB4AD6223A0A22001D190A /* 123.png */,
 				A6BB4ACF2237AFB9001D190A /* HelperClass */,
 				A6BB4AC92237AA8F001D190A /* SCViewController.h */,
 				A6BB4ACA2237AA8F001D190A /* SCViewController.m */,
 				A6BB4ACC2237AF46001D190A /* SculptNormlTextController.h */,
 				A6BB4ACD2237AF46001D190A /* SculptNormlTextController.m */,
+				A62905D4224CCBA50048455B /* SculptFrameController.h */,
+				A62905D5224CCBA50048455B /* SculptFrameController.m */,
 				A6BB4AD8223A3376001D190A /* SculptDrawImgController.h */,
 				A6BB4AD9223A3376001D190A /* SculptDrawImgController.m */,
 				A6D6A9582228049100E0ACA8 /* AsyDrawController.h */,
@@ -1109,6 +1140,7 @@
 				A6BB4ABD2232058C001D190A /* AsyCusCell.m in Sources */,
 				A667D3941FC951A000755382 /* jfbIcon@3x.png in Sources */,
 				A667D3951FC951A000755382 /* CombinedHidden@2x.png in Sources */,
+				A62905DD224DC9D10048455B /* TTObjLabel.m in Sources */,
 				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
 				A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */,
 				A644103F2243B85C00161782 /* NSAttributedString+tb_async.m in Sources */,
@@ -1130,6 +1162,7 @@
 				A667D39E1FC951A000755382 /* Page_Copy 2@3x.png in Sources */,
 				A667D39F1FC951A000755382 /* Page_1@2x.png in Sources */,
 				A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */,
+				A62905D6224CCBA50048455B /* SculptFrameController.m in Sources */,
 				A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */,
 				A670689D1FCBEFC400D6E4AD /* FeaturedCell.m in Sources */,
 				A6A522DE223F80C600B3D25D /* CTFrameParser.m in Sources */,
@@ -1166,6 +1199,7 @@
 				A64AFB831E77EE6B00558869 /* PlaceCityInfo.m in Sources */,
 				A667D37D1FC813F200755382 /* JFRegularViewModel.m in Sources */,
 				A6D11F3A2211BFBF0077EB7F /* TextureDemoController.m in Sources */,
+				A62905D9224CD85F0048455B /* SculptAttributeItem.m in Sources */,
 				A68DB4EF1FC711A8006C36C9 /* JFInvestTitleView.m in Sources */,
 				A6BB4ACB2237AA8F001D190A /* SCViewController.m in Sources */,
 				A6F2D3882220EA57002836BC /* TBNetReachability.m in Sources */,

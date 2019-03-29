@@ -31,11 +31,7 @@
     v.attributedItem = item;
     CGSize size =  [item.resultString tb_sizeConstrainedToWidth:self.view.frame.size.width - 20];//后期编写layout 文件 根据内容动态大小
     v.frame = CGRectMake(10, 100, size.width, size.height);
- 
-    
     [self.view addSubview:v];
-    
-    
     // Do any additional setup after loading the view.
 }
 
