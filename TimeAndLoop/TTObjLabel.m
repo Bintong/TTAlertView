@@ -64,7 +64,8 @@
 }
 
 - (void)drawAtView {
-    [self.tt_attribute addAttributes:self.attributTextDic range:NSMakeRange(0, self.tt_text.length)];
+    [self.tt_attribute addAttributes:self.attributTextDic
+                               range:NSMakeRange(0, self.tt_text.length)];
 }
 
 @end

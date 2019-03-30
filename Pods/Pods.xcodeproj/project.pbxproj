@@ -347,14 +347,6 @@
 		A58353C0DD9589C64A80BD1167C5BD8E /* Pods-TimeAndLoop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044EA80D3B9823E0CBFD5A8288D3F9F /* Pods-TimeAndLoop-dummy.m */; };
 		A5BA39D88D86410598122581C23CD03B /* ASImageNode+tvOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D364346757DE5F50E6F7FB699017FCB /* ASImageNode+tvOS.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A5EB8C9EA467AC89771A697B525824B7 /* ASTextLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B0C3A011B3CFE5BBA05D46A8386160D7 /* ASTextLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A62905C7224C91910048455B /* TestLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905C3224C91900048455B /* TestLayerController.m */; };
-		A62905C8224C91910048455B /* TestLayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A62905C4224C91900048455B /* TestLayerController.h */; };
-		A62905C9224C91910048455B /* TestCusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905C5224C91900048455B /* TestCusView.m */; };
-		A62905CA224C91910048455B /* TestCusView.h in Headers */ = {isa = PBXBuildFile; fileRef = A62905C6224C91900048455B /* TestCusView.h */; };
-		A62905CD224C92A60048455B /* CheckLayerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A62905CB224C92A60048455B /* CheckLayerManager.h */; };
-		A62905CE224C92A60048455B /* CheckLayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905CC224C92A60048455B /* CheckLayerManager.m */; };
-		A62905D1224C94F70048455B /* CheckLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A62905CF224C94F70048455B /* CheckLayerView.h */; };
-		A62905D2224C94F70048455B /* CheckLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905D0224C94F70048455B /* CheckLayerView.m */; };
 		A6623311F36C42DA97626D02E5FAC37F /* ASDimension.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01B225A2B894D1209245022667D1F2F4 /* ASDimension.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A67906C722FF2F024398CF1C13283D6B /* PINRemoteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F8CA2F34E29A6BB47698D54DECA2AD /* PINRemoteLock.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A6B4026CE45ABC4E208201B175A4F61E /* ASCollectionViewLayoutInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 513C6959D2B1231B0CFEBB57D4F3FB52 /* ASCollectionViewLayoutInspector.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -992,14 +984,14 @@
 		A5BC964D83FF047F6FE75029A7A5D494 /* ASLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayout.mm; path = Source/Layout/ASLayout.mm; sourceTree = "<group>"; };
 		A5C89563BF99EFC676BB40D00A86A1DC /* ASInsetLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASInsetLayoutSpec.mm; path = Source/Layout/ASInsetLayoutSpec.mm; sourceTree = "<group>"; };
 		A5EE65552771BC392727C74DBD2189F8 /* ASCollectionLayoutDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionLayoutDelegate.h; path = Source/Details/ASCollectionLayoutDelegate.h; sourceTree = "<group>"; };
-		A62905C3224C91900048455B /* TestLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestLayerController.m; path = ../CheckLayer/TestLayerController.m; sourceTree = "<group>"; };
-		A62905C4224C91900048455B /* TestLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestLayerController.h; path = ../CheckLayer/TestLayerController.h; sourceTree = "<group>"; };
-		A62905C5224C91900048455B /* TestCusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestCusView.m; path = ../CheckLayer/TestCusView.m; sourceTree = "<group>"; };
-		A62905C6224C91900048455B /* TestCusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestCusView.h; path = ../CheckLayer/TestCusView.h; sourceTree = "<group>"; };
-		A62905CB224C92A60048455B /* CheckLayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CheckLayerManager.h; path = ../CheckLayer/CheckLayerManager.h; sourceTree = "<group>"; };
-		A62905CC224C92A60048455B /* CheckLayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CheckLayerManager.m; path = ../CheckLayer/CheckLayerManager.m; sourceTree = "<group>"; };
-		A62905CF224C94F70048455B /* CheckLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CheckLayerView.h; path = ../CheckLayer/CheckLayerView.h; sourceTree = "<group>"; };
-		A62905D0224C94F70048455B /* CheckLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CheckLayerView.m; path = ../CheckLayer/CheckLayerView.m; sourceTree = "<group>"; };
+		A6329FCA224F40850080365A /* CheckLayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckLayerManager.m; sourceTree = "<group>"; };
+		A6329FCB224F40850080365A /* TestLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLayerController.m; sourceTree = "<group>"; };
+		A6329FCC224F40850080365A /* TestCusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCusView.m; sourceTree = "<group>"; };
+		A6329FCD224F40850080365A /* CheckLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLayerView.h; sourceTree = "<group>"; };
+		A6329FCE224F40850080365A /* TestLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayerController.h; sourceTree = "<group>"; };
+		A6329FCF224F40850080365A /* CheckLayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLayerManager.h; sourceTree = "<group>"; };
+		A6329FD0224F40850080365A /* CheckLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckLayerView.m; sourceTree = "<group>"; };
+		A6329FD1224F40850080365A /* TestCusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCusView.h; sourceTree = "<group>"; };
 		A68F36F4DCAD688C3A812B5524B0B5E4 /* NSData+ImageDetectors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageDetectors.m"; path = "Source/Classes/Categories/NSData+ImageDetectors.m"; sourceTree = "<group>"; };
 		A744FD6E0BAFA8A43656629543700447 /* ASCollectionLayoutDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionLayoutDefines.m; path = Source/Private/ASCollectionLayoutDefines.m; sourceTree = "<group>"; };
 		A761CDCD908DB4905ADE93CA6F086303 /* ASYogaUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASYogaUtilities.h; path = Source/Layout/ASYogaUtilities.h; sourceTree = "<group>"; };
@@ -1826,7 +1818,7 @@
 		7661B85C22785E80F2015802C564CB9F /* TBPerformanceView */ = {
 			isa = PBXGroup;
 			children = (
-				A62905AE224B650F0048455B /* CheckLayer */,
+				A6329FC9224F40850080365A /* CheckLayer */,
 				EA7D4A2368F0C91CCCEE27BC2C07EEC5 /* LMCheckObject.h */,
 				B177004FC3E333D4ACF661CCB1EE5138 /* LMCheckObject.m */,
 				5B2C21CC0027935B60A6F6B6E11BB741 /* PrefixHeader.pch */,
@@ -1949,20 +1941,20 @@
 			path = PINCache;
 			sourceTree = "<group>";
 		};
-		A62905AE224B650F0048455B /* CheckLayer */ = {
+		A6329FC9224F40850080365A /* CheckLayer */ = {
 			isa = PBXGroup;
 			children = (
-				A62905C6224C91900048455B /* TestCusView.h */,
-				A62905C5224C91900048455B /* TestCusView.m */,
-				A62905C4224C91900048455B /* TestLayerController.h */,
-				A62905C3224C91900048455B /* TestLayerController.m */,
-				A62905CB224C92A60048455B /* CheckLayerManager.h */,
-				A62905CC224C92A60048455B /* CheckLayerManager.m */,
-				A62905CF224C94F70048455B /* CheckLayerView.h */,
-				A62905D0224C94F70048455B /* CheckLayerView.m */,
+				A6329FCA224F40850080365A /* CheckLayerManager.m */,
+				A6329FCB224F40850080365A /* TestLayerController.m */,
+				A6329FCC224F40850080365A /* TestCusView.m */,
+				A6329FCD224F40850080365A /* CheckLayerView.h */,
+				A6329FCE224F40850080365A /* TestLayerController.h */,
+				A6329FCF224F40850080365A /* CheckLayerManager.h */,
+				A6329FD0224F40850080365A /* CheckLayerView.m */,
+				A6329FD1224F40850080365A /* TestCusView.h */,
 			);
 			name = CheckLayer;
-			path = TBPerformanceView/Classes/Layer;
+			path = TBPerformanceView/Classes/CheckLayer;
 			sourceTree = "<group>";
 		};
 		A8A15F0CB39127CF61FDBBC13C5CB450 /* Products */ = {
@@ -2449,10 +2441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D2EF5683D3AF851F606BF865B35958F /* LMCheckObject.h in Headers */,
-				A62905CD224C92A60048455B /* CheckLayerManager.h in Headers */,
 				671D84554BA910AE658D3AD5A3BB6EE4 /* TBCupUse.h in Headers */,
 				AE4225950BA129DB3382DD9C24BEAFCC /* TBDeviceInfo.h in Headers */,
-				A62905C8224C91910048455B /* TestLayerController.h in Headers */,
 				609E82B00C3650B307A5AC44D86BE5D6 /* TBDirctoryController.h in Headers */,
 				556D045878A7D14E1628C00BD321CE91 /* TBDirctoryModel.h in Headers */,
 				7BCE22940A0737B09892E9C2C2B8EC71 /* TBFileManager.h in Headers */,
@@ -2460,10 +2450,8 @@
 				C304A298413AB3EE5EE38008A001758A /* TBPerformanceBoard.h in Headers */,
 				C584C316A5910ED5D63673665C20C6C0 /* TPerformanceDetailController.h in Headers */,
 				94C8402C23E083AFC16676ED3DE25B1E /* UIColor+WPHEX.h in Headers */,
-				A62905D1224C94F70048455B /* CheckLayerView.h in Headers */,
 				47FAF7A42336E809F77F1E33857CE6EA /* UILabel+wpadd.h in Headers */,
 				91DACC6464829C4B9D28D00A3B1BFB0F /* UIView+Coordinate.h in Headers */,
-				A62905CA224C91910048455B /* TestCusView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2929,20 +2917,16 @@
 				72816C352900F8A07E6ACAD6962AA3CF /* LMCheckObject.m in Sources */,
 				335AD52CD2B3460731E293CE1D6644A2 /* PrefixHeader.pch in Sources */,
 				F595207FDC34D8BF1573858A5EF5FB16 /* TBCupUse.m in Sources */,
-				A62905CE224C92A60048455B /* CheckLayerManager.m in Sources */,
 				C661AB00D45D44F88207089D22479556 /* TBDeviceInfo.m in Sources */,
 				A070AEFFDFC6D4ADF53FC604EAE8B99B /* TBDirctoryController.m in Sources */,
 				ED49B237EFAA06A0955EDDD7F22F7C10 /* TBDirctoryModel.m in Sources */,
-				A62905D2224C94F70048455B /* CheckLayerView.m in Sources */,
 				9983B1361E075F2858F38908A5ED9308 /* TBFileManager.m in Sources */,
 				559A9B2636F70A1F605B1C45D283A359 /* TBMemeryUse.m in Sources */,
 				FDF08DE7BFE8B39E394AA0A1D00D2CEC /* TBPerformanceBoard.m in Sources */,
-				A62905C7224C91910048455B /* TestLayerController.m in Sources */,
 				A0420FCE207B0F5CEAE51B702A32B43E /* TBPerformanceView-dummy.m in Sources */,
 				452116B8762842B6D10365ABC0FA7E64 /* TPerformanceDetailController.m in Sources */,
 				AC5AE3E9564739DE00CB3578CD852853 /* UIColor+WPHEX.m in Sources */,
 				B39CA9E0A4C5D11227488E6FF97F74DE /* UILabel+wpadd.m in Sources */,
-				A62905C9224C91910048455B /* TestCusView.m in Sources */,
 				4D3570F8B881C4C432945E1C0351F060 /* UIView+Coordinate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
