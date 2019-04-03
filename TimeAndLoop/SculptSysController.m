@@ -87,8 +87,8 @@
     
     TTObjLabel *label = [[TTObjLabel alloc] init];
     label.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
-    label.tt_font_size = 18;
-    label.tt_color = [UIColor redColor];
+    label.tt_font_size = 12;
+    label.tt_color = [UIColor whiteColor];
     [label synthesisAttributString];
     
     
@@ -97,14 +97,23 @@
     image.imageName = @"image-4.jpg";
     image.tt_width = 300;
     image.tt_height = 200;
-    NSAttributedString *fin =   [image companionWithAttribute:label.tt_attribute config:config];
+    NSAttributedString *fin = [image companionWithAttribute:label.tt_attribute config:config];
+    
+    
+    TTObjLabel *label1 = [[TTObjLabel alloc] init];
+    label1.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
+    label1.tt_font_size = 12;
+    label1.tt_color = [UIColor greenColor];
+    [label1 synthesisAttributString];
+    NSAttributedString *fin1 = [label1 companionWithAttribute:fin config:config];
+    
+    
+    
     
     //---理论上应该放在一起------------------------------------------------------------------------
-    CoreTextData *data = [CTFrameParser pareseAttributedContents:fin imgs:image.coreImages config:config];
-    
-    
+    CoreTextData *data = [CTFrameParser pareseAttributedContents:fin1 imgs:image.coreImages config:config];
     dispaleView.data = data;
-    [dispaleView setNeedsLayout];
+//    [dispaleView setNeedsLayout];
     //------------------------------------------------------------------------------------------
 }
 /*

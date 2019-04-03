@@ -61,4 +61,12 @@
                                range:NSMakeRange(0, self.tt_text.length)];
 }
 
+- (NSMutableString *)companionWithAttribute:(NSAttributedString *)attribute config:(CTFrameParserConfig *)config {
+   
+    NSMutableAttributedString *temp = [[NSMutableAttributedString alloc] init];
+    [temp appendAttributedString:attribute];
+    [temp appendAttributedString:self.tt_attribute];
+    return temp;
+}
+
 @end

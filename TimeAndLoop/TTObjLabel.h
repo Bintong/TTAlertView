@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTFrameParserConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)synthesisAttributString;
 
 - (NSAttributedString *)combinationLabelAttributString:(NSString *)text fontSize:(CGFloat)font color:(UIColor *)color;
+
+
+- (NSAttributedString *)companionWithAttribute:(NSAttributedString *)attribute config:(CTFrameParserConfig *)config;
 
 @end
 
