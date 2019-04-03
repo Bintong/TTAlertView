@@ -112,7 +112,7 @@ static CGFloat widthCallback(void *ref){
 
 //
 
-+(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config{
++(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config {
 //    {
 //        height = 108;
 //        name = "image-2.jpg";
@@ -150,6 +150,15 @@ static CGFloat widthCallback(void *ref){
     return data;
 //    return [self parseAttributedContent:content config:config];
 }
+
++ (CoreTextData *)pareseAttributedContents:(NSAttributedString *)content imgs:(NSArray *)images config:(CTFrameParserConfig *)config{
+    CoreTextData *data = [self parseAttributedContent:content config:config];// get imagearray  and link array
+    data.imageArray = images;
+    return data;
+}
+
+
+
 //content string
 +(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
     //创建CTFrameStterRef实例 //A reference to a Core Foundation framesetter object.

@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *tt_text;
 @property (nonatomic, assign) CGFloat tt_font_size;
 @property (nonatomic, strong) UIColor *tt_color;
-
+//finially attributeString
 @property (nonatomic, strong) NSMutableAttributedString *tt_attribute;
 
-- (void)drawAtView;
+- (void)synthesisAttributString;
 
 - (NSAttributedString *)combinationLabelAttributString:(NSString *)text fontSize:(CGFloat)font color:(UIColor *)color;
 

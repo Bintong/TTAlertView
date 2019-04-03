@@ -50,6 +50,14 @@
  */
 +(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config;
 
+//image to attribute
+
++ (CoreTextData *)pareseAttributedContents:(NSAttributedString *)content imgs:(NSArray *)images config:(CTFrameParserConfig *)config;
+
+
+//占位符
++(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config;
+
 @end
 
 

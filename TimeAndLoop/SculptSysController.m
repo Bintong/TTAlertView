@@ -16,6 +16,8 @@
 
 //other style
 #import "TTObjLabel.h"
+#import "TTObjImageLabel.h"
+
 @interface SculptSysController ()
 
 @end
@@ -74,10 +76,10 @@
 
 - (void)loadOtherStyle {
     
-    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    dispaleView.center = CGPointMake(self.view.center.x, self.view.center.y-120);
-    dispaleView.backgroundColor = [UIColor whiteColor];
+    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(15, 90, SCREEN_WIDTH - 30, 400)];
+    dispaleView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:dispaleView];
+    
     CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
     config.textColor = [UIColor redColor];
     config.width = dispaleView.width;
@@ -87,13 +89,23 @@
     label.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
     label.tt_font_size = 18;
     label.tt_color = [UIColor redColor];
-    [label drawAtView];
+    [label synthesisAttributString];
     
-    CoreTextData *data = [CTFrameParser parseAttributedContent:label.tt_attribute config:config];
-
+    
+    
+    TTObjImageLabel *image = [[TTObjImageLabel alloc] init];
+    image.imageName = @"image-4.jpg";
+    image.tt_width = 300;
+    image.tt_height = 200;
+    NSAttributedString *fin =   [image companionWithAttribute:label.tt_attribute config:config];
+    
+    //---理论上应该放在一起------------------------------------------------------------------------
+    CoreTextData *data = [CTFrameParser pareseAttributedContents:fin imgs:image.coreImages config:config];
+    
+    
     dispaleView.data = data;
-    
-    
+    [dispaleView setNeedsLayout];
+    //------------------------------------------------------------------------------------------
 }
 /*
 #pragma mark - Navigation

@@ -22,6 +22,9 @@
 		A62905D6224CCBA50048455B /* SculptFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905D5224CCBA50048455B /* SculptFrameController.m */; };
 		A62905D9224CD85F0048455B /* SculptAttributeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905D8224CD85F0048455B /* SculptAttributeItem.m */; };
 		A62905DD224DC9D10048455B /* TTObjLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A62905DC224DC9D10048455B /* TTObjLabel.m */; };
+		A6329FD72250FA200080365A /* TTObjImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6329FD62250FA200080365A /* TTObjImageLabel.m */; };
+		A632A05122545CF50080365A /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A632A05022545CF50080365A /* image-3.png */; };
+		A632A05322545D570080365A /* image-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A05222545D570080365A /* image-4.jpg */; };
 		A6351AE51DB9F0A800221579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE41DB9F0A800221579 /* main.m */; };
 		A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE71DB9F0A800221579 /* AppDelegate.m */; };
 		A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AEA1DB9F0A800221579 /* ViewController.m */; };
@@ -186,6 +189,10 @@
 		A62905D8224CD85F0048455B /* SculptAttributeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SculptAttributeItem.m; sourceTree = "<group>"; };
 		A62905DB224DC9D10048455B /* TTObjLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTObjLabel.h; sourceTree = "<group>"; };
 		A62905DC224DC9D10048455B /* TTObjLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTObjLabel.m; sourceTree = "<group>"; };
+		A6329FD52250FA200080365A /* TTObjImageLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTObjImageLabel.h; sourceTree = "<group>"; };
+		A6329FD62250FA200080365A /* TTObjImageLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTObjImageLabel.m; sourceTree = "<group>"; };
+		A632A05022545CF50080365A /* image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-3.png"; sourceTree = "<group>"; };
+		A632A05222545D570080365A /* image-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-4.jpg"; sourceTree = "<group>"; };
 		A6351AE01DB9F0A800221579 /* TimeAndLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6351AE41DB9F0A800221579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6351AE61DB9F0A800221579 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -551,6 +558,8 @@
 			children = (
 				A62905DB224DC9D10048455B /* TTObjLabel.h */,
 				A62905DC224DC9D10048455B /* TTObjLabel.m */,
+				A6329FD52250FA200080365A /* TTObjImageLabel.h */,
+				A6329FD62250FA200080365A /* TTObjImageLabel.m */,
 			);
 			name = "贴近自然应用";
 			sourceTree = "<group>";
@@ -867,6 +876,8 @@
 				A62905DA224DBFF00048455B /* 贴近自然应用 */,
 				A64410132240B0BE00161782 /* image-1.jpg */,
 				A64410142240B0BE00161782 /* image-2.jpg */,
+				A632A05022545CF50080365A /* image-3.png */,
+				A632A05222545D570080365A /* image-4.jpg */,
 				A6A522D9223F80B700B3D25D /* CTFrameParserConfig.h */,
 				A6A522DA223F80B700B3D25D /* CTFrameParserConfig.m */,
 				A6A522DC223F80C600B3D25D /* CTFrameParser.h */,
@@ -1093,12 +1104,14 @@
 				A6F2D371221A732F002836BC /* 0.jpg in Resources */,
 				A6F6FAAA1FC3CAB20020A803 /* DCURLRouter.plist in Resources */,
 				A6F2D36F221A732F002836BC /* 3.jpg in Resources */,
+				A632A05322545D570080365A /* image-4.jpg in Resources */,
 				A6351AF01DB9F0A800221579 /* Assets.xcassets in Resources */,
 				A6F2D36D221A732F002836BC /* 6.jpg in Resources */,
 				A644100F223FBC6000161782 /* JsonTemplate.json in Resources */,
 				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
 				A64410162240B0BE00161782 /* image-2.jpg in Resources */,
 				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
+				A632A05122545CF50080365A /* image-3.png in Resources */,
 				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
 				A6F2D36E221A732F002836BC /* 2.jpg in Resources */,
 				A6F2D36A221A732F002836BC /* 4.jpg in Resources */,
@@ -1164,6 +1177,7 @@
 				A667D3A01FC951A000755382 /* Page_1@3x.png in Sources */,
 				A62905D6224CCBA50048455B /* SculptFrameController.m in Sources */,
 				A667D3A11FC951A000755382 /* Page_2@2x.png in Sources */,
+				A6329FD72250FA200080365A /* TTObjImageLabel.m in Sources */,
 				A670689D1FCBEFC400D6E4AD /* FeaturedCell.m in Sources */,
 				A6A522DE223F80C600B3D25D /* CTFrameParser.m in Sources */,
 				A667D3A21FC951A000755382 /* Page_2@3x.png in Sources */,

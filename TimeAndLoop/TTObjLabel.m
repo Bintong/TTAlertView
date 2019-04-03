@@ -16,8 +16,6 @@
 @property (strong, nonatomic) NSMutableDictionary *dic;
 @property (strong, nonatomic) NSMutableDictionary *attributTextDic;
 
-
-
 @end
 
 @implementation TTObjLabel
@@ -34,7 +32,6 @@
 
 - (void)setTt_font_size:(CGFloat)tt_font_size {
     [_dic setObject:@(tt_font_size) forKey:@"size"];
-    //
     [_attributTextDic setObject:[UIFont systemFontOfSize:tt_font_size] forKey:NSFontAttributeName];
 }
 
@@ -48,7 +45,6 @@
     _tt_text = tt_text;
     [_dic setObject:tt_text forKey:@"content"];
     _tt_attribute = [[NSMutableAttributedString alloc] initWithString:tt_text];
-    
 }
 
 
@@ -57,13 +53,10 @@
 }
 
 - (NSAttributedString *)combinationLabelAttributString:(NSString *)text fontSize:(CGFloat)font color:(UIColor *)color {
-    
-    
-
     return nil;
 }
 
-- (void)drawAtView {
+- (void)synthesisAttributString {
     [self.tt_attribute addAttributes:self.attributTextDic
                                range:NSMakeRange(0, self.tt_text.length)];
 }
