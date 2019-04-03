@@ -101,7 +101,7 @@
     
     
     TTObjLabel *label1 = [[TTObjLabel alloc] init];
-    label1.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
+    label1.tt_text = @"Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分";
     label1.tt_font_size = 12;
     label1.tt_color = [UIColor greenColor];
     [label1 synthesisAttributString];
@@ -112,6 +112,7 @@
     
     //---理论上应该放在一起------------------------------------------------------------------------
     CoreTextData *data = [CTFrameParser pareseAttributedContents:fin1 imgs:image.coreImages config:config];
+    dispaleView.height = data.height;
     dispaleView.data = data;
 //    [dispaleView setNeedsLayout];
     //------------------------------------------------------------------------------------------

@@ -137,7 +137,7 @@
     //1.获取当前绘图上下文
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    //2.旋转坐坐标系(默认和UIKit坐标是相反的)
+//    2.旋转坐坐标系(默认和UIKit坐标是相反的)
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);

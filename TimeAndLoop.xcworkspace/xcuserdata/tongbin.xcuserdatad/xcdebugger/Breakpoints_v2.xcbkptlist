@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TimeAndLoop/CoreTextData.m"
-            timestampString = "575969946.6618381"
+            filePath = "TimeAndLoop/SculptSysController.m"
+            timestampString = "575971869.739146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-setImageArray:"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-loadOtherStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TimeAndLoop/TTObjImageLabel.m"
-            timestampString = "575969946.66216"
+            filePath = "TimeAndLoop/CTDisplayView.m"
+            timestampString = "575971869.739861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-companionWithAttribute:config:"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-drawRect:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeAndLoop/SculptSysController.m"
+            timestampString = "575971869.740069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-loadOtherStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

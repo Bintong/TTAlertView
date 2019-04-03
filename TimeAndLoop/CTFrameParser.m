@@ -154,6 +154,7 @@ static CGFloat widthCallback(void *ref){
 + (CoreTextData *)pareseAttributedContents:(NSAttributedString *)content imgs:(NSArray *)images config:(CTFrameParserConfig *)config{
     CoreTextData *data = [self parseAttributedContent:content config:config];// get imagearray  and link array
     data.imageArray = images;
+    
     return data;
 }
 
