@@ -11,7 +11,7 @@
 #import "SculptDrawImgController.h"
 #import "SculptSysController.h"
 #import "SculptFrameController.h"
-
+#import "TravelViewController.h"
 @interface SCViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"普通文本渲染",@"文本渲染 控制布局",@"普通渲染图片方式",@"同步绘制",@"列表渲染"];
+    self.dataArray = @[@"一个游记",@"一个列表",@"一本书demo"]; //@[@"普通文本渲染",@"文本渲染 控制布局",@"普通渲染图片方式",@"同步绘制",@"列表渲染"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
@@ -71,7 +71,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *ctr ;
     if (indexPath.row == 0) {
-        ctr = [[SculptNormlTextController alloc] init];
+//        ctr = [[TravelViewController alloc] init];
+        ctr = [[SculptSysController alloc] init];
     }else if(indexPath.row == 2){
         ctr = [[SculptFrameController alloc] init];
         

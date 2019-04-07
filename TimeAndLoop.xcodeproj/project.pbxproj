@@ -25,6 +25,7 @@
 		A6329FD72250FA200080365A /* TTObjImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A6329FD62250FA200080365A /* TTObjImageLabel.m */; };
 		A632A05122545CF50080365A /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A632A05022545CF50080365A /* image-3.png */; };
 		A632A05322545D570080365A /* image-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A05222545D570080365A /* image-4.jpg */; };
+		A632A0612254C4740080365A /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A632A0602254C4740080365A /* TravelViewController.m */; };
 		A6351AE51DB9F0A800221579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE41DB9F0A800221579 /* main.m */; };
 		A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE71DB9F0A800221579 /* AppDelegate.m */; };
 		A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AEA1DB9F0A800221579 /* ViewController.m */; };
@@ -193,6 +194,9 @@
 		A6329FD62250FA200080365A /* TTObjImageLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTObjImageLabel.m; sourceTree = "<group>"; };
 		A632A05022545CF50080365A /* image-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-3.png"; sourceTree = "<group>"; };
 		A632A05222545D570080365A /* image-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-4.jpg"; sourceTree = "<group>"; };
+		A632A05F2254C4740080365A /* TravelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelViewController.h; sourceTree = "<group>"; };
+		A632A0602254C4740080365A /* TravelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelViewController.m; sourceTree = "<group>"; };
+		A632A0622255D9BC0080365A /* travel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = travel.json; sourceTree = "<group>"; };
 		A6351AE01DB9F0A800221579 /* TimeAndLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6351AE41DB9F0A800221579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6351AE61DB9F0A800221579 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -564,6 +568,27 @@
 			name = "贴近自然应用";
 			sourceTree = "<group>";
 		};
+		A632A05D2254C4390080365A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A64410132240B0BE00161782 /* image-1.jpg */,
+				A64410142240B0BE00161782 /* image-2.jpg */,
+				A632A05022545CF50080365A /* image-3.png */,
+				A632A05222545D570080365A /* image-4.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		A632A05E2254C44C0080365A /* 游记 */ = {
+			isa = PBXGroup;
+			children = (
+				A632A05F2254C4740080365A /* TravelViewController.h */,
+				A632A0602254C4740080365A /* TravelViewController.m */,
+				A632A0622255D9BC0080365A /* travel.json */,
+			);
+			name = "游记";
+			sourceTree = "<group>";
+		};
 		A6351AD71DB9F0A800221579 = {
 			isa = PBXGroup;
 			children = (
@@ -873,11 +898,9 @@
 		A6BB4AC8223788A4001D190A /* 同步排版渲染 */ = {
 			isa = PBXGroup;
 			children = (
+				A632A05E2254C44C0080365A /* 游记 */,
+				A632A05D2254C4390080365A /* images */,
 				A62905DA224DBFF00048455B /* 贴近自然应用 */,
-				A64410132240B0BE00161782 /* image-1.jpg */,
-				A64410142240B0BE00161782 /* image-2.jpg */,
-				A632A05022545CF50080365A /* image-3.png */,
-				A632A05222545D570080365A /* image-4.jpg */,
 				A6A522D9223F80B700B3D25D /* CTFrameParserConfig.h */,
 				A6A522DA223F80B700B3D25D /* CTFrameParserConfig.m */,
 				A6A522DC223F80C600B3D25D /* CTFrameParser.h */,
@@ -1193,6 +1216,7 @@
 				A64AFB7D1E77EE6B00558869 /* InfoPutCell.m in Sources */,
 				A6F2D376221BAED2002836BC /* TBPerformanceViewController.m in Sources */,
 				A64DBE2C1FCE505D00AE0A72 /* JFCurrentViewController.m in Sources */,
+				A632A0612254C4740080365A /* TravelViewController.m in Sources */,
 				A64AFB9C1E77F1DC00558869 /* NSValue+Resolve.m in Sources */,
 				A6805B751DCB2949002BE3F3 /* TBAlertViewController.m in Sources */,
 				A612EF341DC1F74C0051DFD4 /* PersonInfoCell.m in Sources */,

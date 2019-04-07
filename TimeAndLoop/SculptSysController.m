@@ -108,10 +108,17 @@
     NSAttributedString *fin1 = [label1 companionWithAttribute:fin config:config];
     
     
+    TTObjImageLabel *image2 = [[TTObjImageLabel alloc] init];
+    image2.imageName = @"image-4.jpg";
+    image2.tt_width = 300;
+    image2.tt_height = 200;
+    
+    NSAttributedString *fin2 = [image companionWithAttribute:fin1 config:config];
+
     
     
     //---理论上应该放在一起------------------------------------------------------------------------
-    CoreTextData *data = [CTFrameParser pareseAttributedContents:fin1 imgs:image.coreImages config:config];
+    CoreTextData *data = [CTFrameParser pareseAttributedContents:fin2 imgs:image.coreImages config:config];
     dispaleView.height = data.height;
     dispaleView.data = data;
 //    [dispaleView setNeedsLayout];
