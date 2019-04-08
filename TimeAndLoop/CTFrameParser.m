@@ -47,6 +47,14 @@
         CFRelease(fontRef);
     }
     
+    //行间距
+    CGFloat linespace = [dict[@"linespace"] floatValue];
+    if (linespace > 0) {
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:linespace];
+        attributes[(id)kCTParagraphStyleAttributeName] = (id)paragraphStyle;
+    } 
+    
     NSString *content = dict[@"content"];
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
