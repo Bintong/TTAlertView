@@ -48,14 +48,14 @@
     }
     
     //行间距
-    CGFloat linespace = [dict[@"linespace"] floatValue];
-    if (linespace > 0) {
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-        [paragraphStyle setLineSpacing:linespace];
-        attributes[(id)kCTParagraphStyleAttributeName] = (id)paragraphStyle;
-    } 
+//    CGFloat linespace = [dict[@"linespace"] floatValue];
+//    if (linespace > 0) {
+//        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//        [paragraphStyle setLineSpacing:linespace];
+//        attributes[(id)kCTParagraphStyleAttributeName] = (id)paragraphStyle;
+//    }
     
-    NSString *content = dict[@"content"];
+    NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
 
@@ -230,11 +230,20 @@ static CGFloat widthCallback(void *ref){
     CGFloat fontSize = config.fontSize;
     CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
     CGFloat lineSpcing = config.lineSpace;
-    const CFIndex kNumberOfSettings = 3;
+    CGFloat para_space = config.paragraphSpace;
+    CGFloat headIndent = config.headIndent;
+    CGFloat firstIndent = 15;
+    CGFloat tailIndent = SCREEN_WIDTH - config.tailIndent;
+    const CFIndex kNumberOfSettings = 7;
     CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
         {kCTParagraphStyleSpecifierLineSpacingAdjustment,sizeof(CGFloat),&lineSpcing},
         {kCTParagraphStyleSpecifierMaximumLineSpacing,sizeof(CGFloat),&lineSpcing},
         {kCTParagraphStyleSpecifierMinimumLineSpacing,sizeof(CGFloat),&lineSpcing},
+        {kCTParagraphStyleSpecifierParagraphSpacingBefore,sizeof(CGFloat),&para_space},
+        {kCTParagraphStyleSpecifierHeadIndent,sizeof(CGFloat),&headIndent},
+        {kCTParagraphStyleSpecifierFirstLineHeadIndent,sizeof(CGFloat),&firstIndent},
+        {kCTParagraphStyleSpecifierTailIndent,sizeof(CGFloat), &tailIndent}
+
     };
     
     CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);

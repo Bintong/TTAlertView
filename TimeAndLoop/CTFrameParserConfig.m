@@ -15,8 +15,11 @@
     if (self) {
         _width = 200.f;
         _fontSize = 16.0f;
-        _lineSpace = 8.0f;
+        _lineSpace = 3.0f;
+        _paragraphSpace = 10.0f;
         _textColor = [UIColor redColor];
+        _headIndent = 15;
+        _tailIndent = 15;
     }
     return self;
 }

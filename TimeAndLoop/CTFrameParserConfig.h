@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic ,assign)CGFloat width;
 @property (nonatomic, assign)CGFloat fontSize;
 @property (nonatomic, assign)CGFloat lineSpace;
+@property (nonatomic, assign)CGFloat paragraphSpace;
+@property (nonatomic, assign)CGFloat headIndent;
+@property (nonatomic, assign)CGFloat tailIndent;
 @property (nonatomic, strong)UIColor *textColor;
 
 @end
