@@ -18,7 +18,8 @@
         "color":"black",
         "content":"没有多大变化的外观，但处理器有所更新 \n",
         "size":18,
-        "type":"txt"
+        "type":"sub_title",
+        "bold":1
     },
     {
         "color":"black",

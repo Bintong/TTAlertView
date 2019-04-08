@@ -29,6 +29,28 @@
     }
 }
 
+//特色处理
++(NSAttributedString *)parseSubTitleAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
+    
+    //设置颜色
+    UIColor *color = [self colorFromTemplate:dict[@"color"]];
+    if (color) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
+    }
+    //bold
+    BOOL bold = [dict[@"bold"] boolValue];
+    //设置字号
+    CGFloat fontSize = [dict[@"size"] floatValue];
+    if (fontSize>0) {
+        CTFontRef fontRef = CTFontCreateWithName(bold? (CFStringRef)@"Helvetica-Bold":(CFStringRef)@"Helvetic", fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
+    NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
+    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+}
+    
 +(NSAttributedString *)parseAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
@@ -47,18 +69,9 @@
         CFRelease(fontRef);
     }
     
-    //行间距
-//    CGFloat linespace = [dict[@"linespace"] floatValue];
-//    if (linespace > 0) {
-//        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-//        [paragraphStyle setLineSpacing:linespace];
-//        attributes[(id)kCTParagraphStyleAttributeName] = (id)paragraphStyle;
-//    }
-    
     NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
-
 
 +(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config  imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
     NSData *data = [NSData dataWithContentsOfFile:path];
@@ -70,6 +83,9 @@
                 NSString *type = dict[@"type"];
                 if ([type isEqualToString:@"txt"]) {
                     NSAttributedString *as = [self parseAttributeContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                }else if ([type isEqualToString:@"sub_title"]){
+                    NSAttributedString *as = [self parseSubTitleAttributeContentFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
                 }else if ([type isEqualToString:@"img"]){
                     
