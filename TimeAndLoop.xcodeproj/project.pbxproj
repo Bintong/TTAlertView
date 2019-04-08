@@ -26,6 +26,10 @@
 		A632A05122545CF50080365A /* image-3.png in Resources */ = {isa = PBXBuildFile; fileRef = A632A05022545CF50080365A /* image-3.png */; };
 		A632A05322545D570080365A /* image-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A05222545D570080365A /* image-4.jpg */; };
 		A632A0612254C4740080365A /* TravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A632A0602254C4740080365A /* TravelViewController.m */; };
+		A632A067225AF01E0080365A /* ifanr_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A064225AF01E0080365A /* ifanr_2.jpg */; };
+		A632A068225AF01E0080365A /* ifanr_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A065225AF01E0080365A /* ifanr_3.jpg */; };
+		A632A069225AF01E0080365A /* ifanr_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A632A066225AF01E0080365A /* ifanr_1.jpg */; };
+		A632A06A225AF3000080365A /* travel.json in Resources */ = {isa = PBXBuildFile; fileRef = A632A0622255D9BC0080365A /* travel.json */; };
 		A6351AE51DB9F0A800221579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE41DB9F0A800221579 /* main.m */; };
 		A6351AE81DB9F0A800221579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AE71DB9F0A800221579 /* AppDelegate.m */; };
 		A6351AEB1DB9F0A800221579 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6351AEA1DB9F0A800221579 /* ViewController.m */; };
@@ -197,6 +201,9 @@
 		A632A05F2254C4740080365A /* TravelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelViewController.h; sourceTree = "<group>"; };
 		A632A0602254C4740080365A /* TravelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelViewController.m; sourceTree = "<group>"; };
 		A632A0622255D9BC0080365A /* travel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = travel.json; sourceTree = "<group>"; };
+		A632A064225AF01E0080365A /* ifanr_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ifanr_2.jpg; sourceTree = "<group>"; };
+		A632A065225AF01E0080365A /* ifanr_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ifanr_3.jpg; sourceTree = "<group>"; };
+		A632A066225AF01E0080365A /* ifanr_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ifanr_1.jpg; sourceTree = "<group>"; };
 		A6351AE01DB9F0A800221579 /* TimeAndLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeAndLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6351AE41DB9F0A800221579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6351AE61DB9F0A800221579 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -585,8 +592,19 @@
 				A632A05F2254C4740080365A /* TravelViewController.h */,
 				A632A0602254C4740080365A /* TravelViewController.m */,
 				A632A0622255D9BC0080365A /* travel.json */,
+				A632A063225AF01E0080365A /* tmp_imgs */,
 			);
 			name = "游记";
+			sourceTree = "<group>";
+		};
+		A632A063225AF01E0080365A /* tmp_imgs */ = {
+			isa = PBXGroup;
+			children = (
+				A632A064225AF01E0080365A /* ifanr_2.jpg */,
+				A632A065225AF01E0080365A /* ifanr_3.jpg */,
+				A632A066225AF01E0080365A /* ifanr_1.jpg */,
+			);
+			path = tmp_imgs;
 			sourceTree = "<group>";
 		};
 		A6351AD71DB9F0A800221579 = {
@@ -1118,6 +1136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F2D36C221A732F002836BC /* 7.jpg in Resources */,
+				A632A068225AF01E0080365A /* ifanr_3.jpg in Resources */,
 				A6351AF31DB9F0A800221579 /* LaunchScreen.storyboard in Resources */,
 				A6F2D36B221A732F002836BC /* 5.jpg in Resources */,
 				A6BB4AD7223A0A22001D190A /* 123.png in Resources */,
@@ -1133,12 +1152,15 @@
 				A644100F223FBC6000161782 /* JsonTemplate.json in Resources */,
 				A6F2D369221A732F002836BC /* 8.jpg in Resources */,
 				A64410162240B0BE00161782 /* image-2.jpg in Resources */,
+				A632A069225AF01E0080365A /* ifanr_1.jpg in Resources */,
 				A6F2D370221A732F002836BC /* 1.jpg in Resources */,
 				A632A05122545CF50080365A /* image-3.png in Resources */,
 				A6D11F40221542E10077EB7F /* CCViewController.xib in Resources */,
 				A6F2D36E221A732F002836BC /* 2.jpg in Resources */,
 				A6F2D36A221A732F002836BC /* 4.jpg in Resources */,
 				A612EF371DC332B00051DFD4 /* arrow@2x.png in Resources */,
+				A632A067225AF01E0080365A /* ifanr_2.jpg in Resources */,
+				A632A06A225AF3000080365A /* travel.json in Resources */,
 				A6EA81C21E49DE70000669C1 /* TextFieldViewController.xib in Resources */,
 				A6F2D377221BAED2002836BC /* TBPerformanceViewController.xib in Resources */,
 			);

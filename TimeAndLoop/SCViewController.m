@@ -71,8 +71,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *ctr ;
     if (indexPath.row == 0) {
-//        ctr = [[TravelViewController alloc] init];
-        ctr = [[SculptSysController alloc] init];
+        ctr = [[TravelViewController alloc] init];
+//        ctr = [[SculptSysController alloc] init];
     }else if(indexPath.row == 2){
         ctr = [[SculptFrameController alloc] init];
         

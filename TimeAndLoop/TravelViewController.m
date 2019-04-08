@@ -7,6 +7,10 @@
 //
 
 #import "TravelViewController.h"
+#import "CoreTextData.h"
+#import "CTDisplayView.h"
+#import "CTFrameParser.h"
+#import "CTFrameParserConfig.h"
 
 @interface TravelViewController ()
 
@@ -16,9 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+   
+    CTDisplayView *dispaleView = [[CTDisplayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+    dispaleView.backgroundColor = [UIColor whiteColor];
     
-    // Do any additional setup after loading the view.
+    CTFrameParserConfig *config = [[CTFrameParserConfig alloc] init];
+//    config.textColor = [UIColor redColor];
+    config.width = dispaleView.width;
+    
+   
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"travel" ofType:@"json"];
+    //创建绘制数据实例
+    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
+    dispaleView.data = data;
+    dispaleView.height = data.height;
+    dispaleView.backgroundColor = [UIColor yellowColor];
+    
+    [self.view addSubview:dispaleView];
+
+     
 }
 
 /*
