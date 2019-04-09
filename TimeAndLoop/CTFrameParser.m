@@ -29,7 +29,7 @@
     }
 }
 
-//特色处理
+//特色处理 txt
 +(NSAttributedString *)parseSubTitleAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
     
@@ -50,7 +50,7 @@
     NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
-    
+//特色处理 subtitle
 +(NSAttributedString *)parseAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
@@ -71,6 +71,33 @@
     
     NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+}
+
+
+//图片
++(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config {
+    //    {
+    //        height = 108;
+    //        name = "image-2.jpg";
+    //        type = img;
+    //        width = 200;
+    //    }
+    CTRunDelegateCallbacks callbacks;
+    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
+    callbacks.version = kCTRunDelegateVersion1;
+    callbacks.getAscent = ascentCallback;
+    callbacks.getDescent = descentCallback;
+    callbacks.getWidth = widthCallback;
+    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);
+    
+    //使用0xFFFC作为空白占位符
+    unichar objectReplacementChar = 0xFFFC;
+    NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
+    NSDictionary *attributes = [self attributesWithConfig:config]; //;//获得文本整体的风格字典，比如行间距，字体大小之类的信息。
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
+    CFRelease(delegate);
+    return space;
 }
 
 +(NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config  imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
@@ -134,33 +161,6 @@ static CGFloat widthCallback(void *ref){
 }
 
 
-//
-
-+(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config {
-//    {
-//        height = 108;
-//        name = "image-2.jpg";
-//        type = img;
-//        width = 200;
-//    }
-
-    CTRunDelegateCallbacks callbacks;
-    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
-    callbacks.version = kCTRunDelegateVersion1;
-    callbacks.getAscent = ascentCallback;
-    callbacks.getDescent = descentCallback;
-    callbacks.getWidth = widthCallback;
-    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);
-    
-    //使用0xFFFC作为空白占位符
-    unichar objectReplacementChar = 0xFFFC;
-    NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSDictionary *attributes = [self attributesWithConfig:config]; //;//获得文本整体的风格字典，比如行间距，字体大小之类的信息。
-    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
-    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
-    CFRelease(delegate);
-    return space;
-}
 
 //image 方法一：用于提供对外的接口，调用方法二实现从一个JSON的模板文件中读取内容，然后调用方法五生成的CoreTextData
 +(CoreTextData *)parseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
