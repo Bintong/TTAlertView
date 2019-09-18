@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "42A03C0FEC29BE9CC508763B58786869"
+               BlueprintIdentifier = "02D8B5C9A6ABDB135F6056B560D403A4"
                BuildableName = "libDCURLRouter.a"
                BlueprintName = "DCURLRouter"
                ReferencedContainer = "container:Pods.xcodeproj">

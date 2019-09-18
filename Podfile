@@ -9,5 +9,5 @@ target 'TimeAndLoop' do
   pod 'Texture'
   pod 'JLRoutes'
   pod 'YYModel'
-  pod 'TBPerformanceView', :path =>'/Users/tongbin/Documents/TBPerformanceView/'
+  pod 'TBToolCategory', :path =>'/Users/tongbin/Documents/GitHub/TBToolCategory/'
 end

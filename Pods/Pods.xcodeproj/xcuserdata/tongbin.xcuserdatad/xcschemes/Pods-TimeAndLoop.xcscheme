@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB796A0830BB1E5679CAA468D082B91F"
+               BlueprintIdentifier = "3DF766D783B0DB30E2993CD72DCE330F"
                BuildableName = "libPods-TimeAndLoop.a"
                BlueprintName = "Pods-TimeAndLoop"
                ReferencedContainer = "container:Pods.xcodeproj">
