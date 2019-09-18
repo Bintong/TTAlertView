@@ -76,7 +76,6 @@
     lbTitle.textAlignment = NSTextAlignmentLeft;
     lbTitle.text = text;
     return lbTitle;
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

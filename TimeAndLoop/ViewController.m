@@ -29,12 +29,12 @@
 #import "AsyDrawController.h"
 
 #import "SCViewController.h"
-
+#import "USMainViewController.h"
 
 #import "Dog.h"
 #import "MyProxy.h"
 
-
+#import "TBRunTimeClass.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -46,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *ar = @[@"Texure",@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷",@"list-1"];
+    NSArray *ar = @[@"单独 USD" ,@"Texure",@"kvo",@"厚本金融",@"自定义alertView",@"textfield",@"net get",@"固话",@"result",@"信息第二部填写",@"通知",@"验证码的页面ui",@"instrument",@"router",@"jiufuInvest",@"Reg",@"网贷",@"list-1"];
     
     
     _arr = ar;
@@ -101,11 +101,10 @@
     if (indexPath.row == 0) {
 //        ctr = [[TextureDemoController alloc] init];
 //        ctr = [[TBPerformanceViewController alloc] init];
-        ctr = [[SCViewController alloc] init];
-        
-//        Dog *d = [MyProxy proxyWithObj:[Dog alloc]];
-//        [d barking:4];
-//        return;
+        ctr = [[USMainViewController alloc] init];
+//        TBRunTimeClass *ru =  [[TBRunTimeClass alloc] init];
+//        [ru swizzledFunction];
+ 
     }
     if (indexPath.row == 1) {
         ctr = [[KVOViewController alloc] init];

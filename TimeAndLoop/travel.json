@@ -2,6 +2,15 @@
     
     {
         "color":"black",
+        "content":"2019 款 MateBook X Pro 评测：手机厂商造电脑会有何不同？\n",
+        "size":20,
+        "linespace":0.1,
+        "paragraphSpace":40,
+        "type":"title",
+        "bold":1
+    },
+    {
+        "color":"black",
         "content":"正如我们从未认为 PC 行业是「夕阳行业」一样，目前已经有许多有实力的手机厂商也看到了 PC 行业的潜力，纷纷跨界到 PC 行业打算分一杯羹。而这背后的意图，也是为了构建自家产品的完整生态，而跑马圈地.\n",
         "size":16,
         "linespace":3,
@@ -29,14 +38,14 @@
     },
     {
         "name":"ifanr_1.jpg",
-        "width":200,
-        "height":108,
+        "width":300,
+        "height":200,
         "type":"img"
     },
     {
         "name":"ifanr_2.jpg",
-        "width":200,
-        "height":108,
+        "width":300,
+        "height":200,
         "type":"img"
     },
     {

@@ -19,6 +19,7 @@
         _paragraphSpace = 10.0f;
         _textColor = [UIColor redColor];
         _headIndent = 15;
+        _leftIndent = 15;
         _tailIndent = 15;
     }
     return self;

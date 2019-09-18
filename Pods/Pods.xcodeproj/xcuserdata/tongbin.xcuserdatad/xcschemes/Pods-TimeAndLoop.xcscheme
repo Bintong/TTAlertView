@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F29670B293945796FA03F729C1388ECF"
+               BlueprintIdentifier = "AB796A0830BB1E5679CAA468D082B91F"
                BuildableName = "libPods-TimeAndLoop.a"
                BlueprintName = "Pods-TimeAndLoop"
                ReferencedContainer = "container:Pods.xcodeproj">

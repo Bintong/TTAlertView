@@ -29,28 +29,8 @@
     }
 }
 
+
 //特色处理 txt
-+(NSAttributedString *)parseSubTitleAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
-    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
-    
-    //设置颜色
-    UIColor *color = [self colorFromTemplate:dict[@"color"]];
-    if (color) {
-        attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
-    }
-    //bold
-    BOOL bold = [dict[@"bold"] boolValue];
-    //设置字号
-    CGFloat fontSize = [dict[@"size"] floatValue];
-    if (fontSize>0) {
-        CTFontRef fontRef = CTFontCreateWithName(bold? (CFStringRef)@"Helvetica-Bold":(CFStringRef)@"Helvetic", fontSize, NULL);
-        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
-        CFRelease(fontRef);
-    }
-    NSString *content = dict[@"content"];//attributes 获取全局后-局部更改
-    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
-}
-//特色处理 subtitle
 +(NSAttributedString *)parseAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
@@ -73,6 +53,60 @@
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
 }
 
+//特色处理 subtitle
++(NSAttributedString *)parseSubTitleAttributeContentFromNSDictionary:(NSDictionary*)dict config:(CTFrameParserConfig *)config{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self attributesWithConfig:config]];
+    
+    //设置颜色
+    UIColor *color = [self colorFromTemplate:dict[@"color"]];
+    if (color) {
+        attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
+    }
+    //bold
+    BOOL bold = [dict[@"bold"] boolValue];
+    //设置字号
+    CGFloat fontSize = [dict[@"size"] floatValue];
+    if (fontSize>0) {
+        CTFontRef fontRef = CTFontCreateWithName(bold? (CFStringRef)@"Helvetica-Bold":(CFStringRef)@"Helvetic", fontSize, NULL);
+        attributes[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+        CFRelease(fontRef);
+    }
+    //行间距
+    CGFloat lineSpace = [dict[@"linespace"] floatValue];
+    if (lineSpace > 0) {
+        
+    }
+    CGFloat paragraphSpace = [dict[@"paragraphSpace"] floatValue];
+    if (paragraphSpace > 0) {
+        
+        CGFloat lineSpcing = [dict[@"linespace"] floatValue]? [dict[@"linespace"] floatValue] : 3;//config.lineSpace;
+        CGFloat para_space = paragraphSpace;
+        CGFloat headIndent = config.headIndent;
+        CGFloat firstIndent = config.leftIndent;
+        
+        CGFloat tailIndent = SCREEN_WIDTH - config.tailIndent;
+        const CFIndex kNumberOfSettings = 7;
+        CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
+            {kCTParagraphStyleSpecifierLineSpacingAdjustment,sizeof(CGFloat),&lineSpcing},
+            
+            {kCTParagraphStyleSpecifierParagraphSpacingBefore,sizeof(CGFloat),&para_space},
+            {kCTParagraphStyleSpecifierHeadIndent,sizeof(CGFloat),&headIndent},//首行 头部孔隙 缩紧 ----
+            {kCTParagraphStyleSpecifierFirstLineHeadIndent,sizeof(CGFloat),&firstIndent},//头行-------
+            {kCTParagraphStyleSpecifierTailIndent,sizeof(CGFloat), &tailIndent}//宽度
+            
+        };
+        
+        CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
+        attributes[(id)kCTParagraphStyleAttributeName] = (__bridge id)theParagraphRef;
+
+        CFRelease(theParagraphRef);
+    }
+    NSString *content = dict[@"content"];
+     //attributes 获取全局后-局部更改
+    return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+}
+
+
 
 //图片
 +(NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config {
@@ -88,13 +122,15 @@
     callbacks.getAscent = ascentCallback;
     callbacks.getDescent = descentCallback;
     callbacks.getWidth = widthCallback;
-    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);
+    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)dict);//call back
     
-    //使用0xFFFC作为空白占位符
     unichar objectReplacementChar = 0xFFFC;
     NSString *content = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSDictionary *attributes = [self attributesWithConfig:config]; //;//获得文本整体的风格字典，比如行间距，字体大小之类的信息。
-    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:content attributes:attributes];
+    NSString *p_label_content = [NSString stringWithFormat:@"%@ \n",content];
+    
+    NSDictionary *attributes = [self attributes_ImageViewDictionary:dict config:config]; //;//获得文本整体的风格字典，比如行间距，字体大小之类的信息。
+    NSMutableAttributedString *space = [[NSMutableAttributedString alloc] initWithString:p_label_content attributes:attributes];
+    
     CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1), kCTRunDelegateAttributeName, delegate);
     CFRelease(delegate);
     return space;
@@ -114,7 +150,10 @@
                 }else if ([type isEqualToString:@"sub_title"]){
                     NSAttributedString *as = [self parseSubTitleAttributeContentFromNSDictionary:dict config:config];
                     [result appendAttributedString:as];
-                }else if ([type isEqualToString:@"img"]){
+                }else if([type isEqualToString:@"title"]){
+                    NSAttributedString *as = [self parseSubTitleAttributeContentFromNSDictionary:dict config:config];
+                    [result appendAttributedString:as];
+                } else if ([type isEqualToString:@"img"]){
                     
                     //创建CoreTextImageData,保存图片到imageArray数组中
                     CoreTextImageData *imageData = [[CoreTextImageData alloc] init];
@@ -187,6 +226,7 @@ static CGFloat widthCallback(void *ref){
 //content string
 +(CoreTextData *)parseAttributedContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config {
     //创建CTFrameStterRef实例 //A reference to a Core Foundation framesetter object.
+    // will call back image cfrundelegate
     CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);
     
     //获得要绘制的区域的高度
@@ -248,7 +288,44 @@ static CGFloat widthCallback(void *ref){
     CGFloat lineSpcing = config.lineSpace;
     CGFloat para_space = config.paragraphSpace;
     CGFloat headIndent = config.headIndent;
-    CGFloat firstIndent = 15;
+    CGFloat firstIndent = config.leftIndent;
+    
+    CGFloat tailIndent = SCREEN_WIDTH - config.tailIndent;
+    const CFIndex kNumberOfSettings = 7;
+    CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
+        {kCTParagraphStyleSpecifierLineSpacingAdjustment,sizeof(CGFloat),&lineSpcing},
+        {kCTParagraphStyleSpecifierMaximumLineSpacing,sizeof(CGFloat),&lineSpcing},
+        {kCTParagraphStyleSpecifierMinimumLineSpacing,sizeof(CGFloat),&lineSpcing},
+        {kCTParagraphStyleSpecifierParagraphSpacingBefore,sizeof(CGFloat),&para_space},
+        {kCTParagraphStyleSpecifierHeadIndent,sizeof(CGFloat),&headIndent},//首行 头部孔隙 缩紧 ----
+        {kCTParagraphStyleSpecifierFirstLineHeadIndent,sizeof(CGFloat),&firstIndent},//头行-------
+        {kCTParagraphStyleSpecifierTailIndent,sizeof(CGFloat), &tailIndent}//宽度
+
+    };
+    
+    CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
+    UIColor *textColor = config.textColor;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
+    dict[(id)kCTFontAttributeName] = (__bridge id)fontRef;
+    dict[(id)kCTParagraphStyleAttributeName] = (__bridge id)theParagraphRef;
+    
+    CFRelease(fontRef);
+    CFRelease(theParagraphRef);
+    return dict;
+}
+
+
++(NSDictionary *)attributes_ImageViewDictionary:(NSDictionary *)imageInfo config:(CTFrameParserConfig *)config{
+    
+    CGFloat fontSize = config.fontSize;
+    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
+    CGFloat lineSpcing = config.lineSpace;
+    CGFloat para_space = config.paragraphSpace;
+    CGFloat headIndent = config.headIndent;
+    CGFloat firstIndent = (SCREEN_WIDTH -  [imageInfo[@"width"] floatValue])/2;
+    
     CGFloat tailIndent = SCREEN_WIDTH - config.tailIndent;
     const CFIndex kNumberOfSettings = 7;
     CTParagraphStyleSetting theSettings[kNumberOfSettings] = {
@@ -259,7 +336,7 @@ static CGFloat widthCallback(void *ref){
         {kCTParagraphStyleSpecifierHeadIndent,sizeof(CGFloat),&headIndent},
         {kCTParagraphStyleSpecifierFirstLineHeadIndent,sizeof(CGFloat),&firstIndent},
         {kCTParagraphStyleSpecifierTailIndent,sizeof(CGFloat), &tailIndent}
-
+        
     };
     
     CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);

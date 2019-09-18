@@ -115,6 +115,10 @@
 		A68DB4F01FC711A8006C36C9 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E51FC711A8006C36C9 /* UIColor+Hex.m */; };
 		A68DB4F11FC711A8006C36C9 /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E71FC711A8006C36C9 /* UIView+Coordinate.m */; };
 		A68DB4F21FC711A8006C36C9 /* UIView+DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */; };
+		A694E4E12331C84000E782F7 /* USMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A694E4E02331C84000E782F7 /* USMainViewController.m */; };
+		A694E4E62331C98000E782F7 /* KChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A694E4E52331C98000E782F7 /* KChartViewController.m */; };
+		A695937422793A6300481220 /* TBRunTimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A695937322793A6300481220 /* TBRunTimeClass.m */; };
+		A695937722793D1B00481220 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A695937622793D1B00481220 /* Person.m */; };
 		A6A522DB223F80B700B3D25D /* CTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A522DA223F80B700B3D25D /* CTFrameParserConfig.m */; };
 		A6A522DE223F80C600B3D25D /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A522DD223F80C600B3D25D /* CTFrameParser.m */; };
 		A6A522E1223F80D200B3D25D /* CoreTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A522E0223F80D200B3D25D /* CoreTextData.m */; };
@@ -362,6 +366,14 @@
 		A68DB4E71FC711A8006C36C9 /* UIView+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Coordinate.m"; sourceTree = "<group>"; };
 		A68DB4E81FC711A8006C36C9 /* UIView+DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawLine.h"; sourceTree = "<group>"; };
 		A68DB4E91FC711A8006C36C9 /* UIView+DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawLine.m"; sourceTree = "<group>"; };
+		A694E4DF2331C84000E782F7 /* USMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USMainViewController.h; sourceTree = "<group>"; };
+		A694E4E02331C84000E782F7 /* USMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USMainViewController.m; sourceTree = "<group>"; };
+		A694E4E42331C98000E782F7 /* KChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KChartViewController.h; sourceTree = "<group>"; };
+		A694E4E52331C98000E782F7 /* KChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KChartViewController.m; sourceTree = "<group>"; };
+		A695937222793A6300481220 /* TBRunTimeClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBRunTimeClass.h; sourceTree = "<group>"; };
+		A695937322793A6300481220 /* TBRunTimeClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBRunTimeClass.m; sourceTree = "<group>"; };
+		A695937522793D1B00481220 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A695937622793D1B00481220 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		A6A522D9223F80B700B3D25D /* CTFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
 		A6A522DA223F80B700B3D25D /* CTFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
 		A6A522DC223F80C600B3D25D /* CTFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTFrameParser.h; sourceTree = "<group>"; };
@@ -632,6 +644,8 @@
 		A6351AE21DB9F0A800221579 /* TimeAndLoop */ = {
 			isa = PBXGroup;
 			children = (
+				A694E4E22331C8FA00E782F7 /* USD */,
+				A695937122793A0E00481220 /* rumtime相关联系 */,
 				A679601F22293FDD00D96C09 /* NSProxy应用 */,
 				A6BB4AC8223788A4001D190A /* 同步排版渲染 */,
 				A6D6A9572227F26C00E0ACA8 /* 异步渲染的套路 */,
@@ -645,6 +659,8 @@
 				A6351AE61DB9F0A800221579 /* AppDelegate.h */,
 				A6351AE91DB9F0A800221579 /* ViewController.h */,
 				A6351AEA1DB9F0A800221579 /* ViewController.m */,
+				A694E4DF2331C84000E782F7 /* USMainViewController.h */,
+				A694E4E02331C84000E782F7 /* USMainViewController.m */,
 				A6351B161DB9F71E00221579 /* KVO */,
 				A612EF041DBF53E70051DFD4 /* Houbank */,
 				A6351AEF1DB9F0A800221579 /* Assets.xcassets */,
@@ -913,6 +929,34 @@
 			name = NSNotify;
 			sourceTree = "<group>";
 		};
+		A694E4E22331C8FA00E782F7 /* USD */ = {
+			isa = PBXGroup;
+			children = (
+				A694E4E32331C96900E782F7 /* kChart */,
+			);
+			name = USD;
+			sourceTree = "<group>";
+		};
+		A694E4E32331C96900E782F7 /* kChart */ = {
+			isa = PBXGroup;
+			children = (
+				A694E4E42331C98000E782F7 /* KChartViewController.h */,
+				A694E4E52331C98000E782F7 /* KChartViewController.m */,
+			);
+			name = kChart;
+			sourceTree = "<group>";
+		};
+		A695937122793A0E00481220 /* rumtime相关联系 */ = {
+			isa = PBXGroup;
+			children = (
+				A695937222793A6300481220 /* TBRunTimeClass.h */,
+				A695937322793A6300481220 /* TBRunTimeClass.m */,
+				A695937522793D1B00481220 /* Person.h */,
+				A695937622793D1B00481220 /* Person.m */,
+			);
+			name = "rumtime相关联系";
+			sourceTree = "<group>";
+		};
 		A6BB4AC8223788A4001D190A /* 同步排版渲染 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1117,6 +1161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1201,10 +1246,13 @@
 				A62905DD224DC9D10048455B /* TTObjLabel.m in Sources */,
 				A667D3961FC951A000755382 /* CombinedHidden@3x.png in Sources */,
 				A6F2D35B221930A5002836BC /* TexureCellNode.m in Sources */,
+				A694E4E12331C84000E782F7 /* USMainViewController.m in Sources */,
 				A644103F2243B85C00161782 /* NSAttributedString+tb_async.m in Sources */,
 				A667D3971FC951A000755382 /* CombinedShape@2x.png in Sources */,
 				A6441012223FBF9B00161782 /* CoreTextImageData.m in Sources */,
 				A667D3981FC951A000755382 /* CombinedShape@3x.png in Sources */,
+				A695937422793A6300481220 /* TBRunTimeClass.m in Sources */,
+				A695937722793D1B00481220 /* Person.m in Sources */,
 				A6BB4ADA223A3376001D190A /* SculptDrawImgController.m in Sources */,
 				A667D3991FC951A000755382 /* Group21Copy@2x.png in Sources */,
 				A667D3B51FC97B4400755382 /* JFNetLoanViewMananger.m in Sources */,
@@ -1259,6 +1307,7 @@
 				A64AFB831E77EE6B00558869 /* PlaceCityInfo.m in Sources */,
 				A667D37D1FC813F200755382 /* JFRegularViewModel.m in Sources */,
 				A6D11F3A2211BFBF0077EB7F /* TextureDemoController.m in Sources */,
+				A694E4E62331C98000E782F7 /* KChartViewController.m in Sources */,
 				A62905D9224CD85F0048455B /* SculptAttributeItem.m in Sources */,
 				A68DB4EF1FC711A8006C36C9 /* JFInvestTitleView.m in Sources */,
 				A6BB4ACB2237AA8F001D190A /* SCViewController.m in Sources */,
